@@ -3,9 +3,4 @@
 
 == Wozu ableiten?
 
-Hier ein Beispiel.
-
-[stem]
-++++
-int_1^oo f(x)dx
-++++
+TBD
