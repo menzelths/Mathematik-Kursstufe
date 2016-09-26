@@ -13,7 +13,10 @@ Bilde die Ableitungen von stem:[f(x)=x^2 * x^3] und stem:[g(x)=x^5].
 
 Beide Funktionen haben die gleich Ableitung stem:[f'(x)=g'(x)=5x^4], da stem:[f(x)=x^2*x^3=x^5=g(x)], wodurch auch deren Ableitungen identisch sein müssen.
 
+[WARNING]
+====
 Ein häufiger Fehler ist, dass für stem:[f'(x)=2x * 3x ^2] berechnet wird, da die beiden Faktoren stem:[x^2] und stem:[x^3] einzeln abgeleitet werden und das Produkt aus den Ergebnissen gebildet wird. Diese Vorgehensweise ist offensichtlich falsch.
+====
 
 Wir werden in diesem Kapitel eine Regel, die sogenannte *Produktregel* kennenlernen, mit deren Hilfe man die Ableitung von stem:[f(x)=x^2*x^3] direkt berechnen kann.
 
