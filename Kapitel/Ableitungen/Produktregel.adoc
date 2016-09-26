@@ -30,7 +30,7 @@ Wir leiten die Ableitungsregel für ein solches Produkt zweier Funktionen mit Hi
 {p(x+h)-p(x)}/h={f(x+h)*g(x+h)-f(x)*g(x)}/h
 ++++
 
-Nun verwendet man einen Trick, indem man eine _geschickte Null_ einfügt zum Zähler addiert, nämlich
+Nun verwendet man einen Trick, indem man eine _geschickte Null_ zum Zähler addiert, nämlich
 
 [stem]
 ++++
@@ -42,4 +42,25 @@ Fügt man diese "Null" in den Zähler ein, so ändert sich dieser vom Wert her n
 [stem]
 ++++
 {f(x+h)*g(x+h)-f(x)*g(x+h)+f(x)*g(x+h) -f(x)*g(x)}/h
+++++
+
+Den Bruch kann man nun auseinanderziehen zu
+
+[stem]
+++++
+{f(x+h)*g(x+h)-f(x)*g(x+h)}/h+{f(x)*g(x+h) -f(x)*g(x)}/h
+++++
+
+Im vorderen Teil kann man stem:[g(x+h)] ausklammern, im hinteren stem:[f(x)], also:
+
+[stem]
+++++
+g(x+h)*{f(x+h)-f(x)}/h + f(x) *{g(x+h)-g(x)}/h
+++++
+
+Lässt man nun h gegen 0 laufen, so erhält man den _Differentialquotient_, nämlich
+
+[stem]
+++++
+p'(x)=g(x)*f'(x)+g'(x)*f(x)
 ++++

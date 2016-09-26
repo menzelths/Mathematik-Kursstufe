@@ -500,7 +500,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph">
-<p>Nun verwendet man einen Trick, indem man eine <em>geschickte Null</em> einfügt zum Zähler addiert, nämlich</p>
+<p>Nun verwendet man einen Trick, indem man eine <em>geschickte Null</em> zum Zähler addiert, nämlich</p>
 </div>
 <div class="stemblock">
 <div class="content">
@@ -513,6 +513,30 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="stemblock">
 <div class="content">
 \${f(x+h)*g(x+h)-f(x)*g(x+h)+f(x)*g(x+h) -f(x)*g(x)}/h\$
+</div>
+</div>
+<div class="paragraph">
+<p>Den Bruch kann man nun auseinanderziehen zu</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\${f(x+h)*g(x+h)-f(x)*g(x+h)}/h+{f(x)*g(x+h) -f(x)*g(x)}/h\$
+</div>
+</div>
+<div class="paragraph">
+<p>Im vorderen Teil kann man \$g(x+h)\$ ausklammern, im hinteren \$f(x)\$, also:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\$g(x+h)*{f(x+h)-f(x)}/h + f(x) *{g(x+h)-g(x)}/h\$
+</div>
+</div>
+<div class="paragraph">
+<p>Lässt man nun h gegen 0 laufen, so erhält man den <em>Differentialquotient</em>, nämlich</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\$p'(x)=g(x)*f'(x)+g'(x)*f(x)\$
 </div>
 </div>
 </div>
