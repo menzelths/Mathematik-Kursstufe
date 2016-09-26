@@ -441,7 +441,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Beide Funktionen haben die gleich Ableitung \$f'(x)=g'(x)=5x^4\$, da \$f(x)=x^2*x^3=x^5=g(x)\$, wodurch auch deren Ableitungen identisch sein müssen.</p>
 </div>
 <div class="paragraph">
-<p>Ein häufiger Fehler ist, dass für \$f'(x)=2x * 3x ^2\$ berechnet wird, da die beiden Faktoren \$x^2\$ und \$x^3\$ einzeln abgeleitet werden und das Produkt aus den Ergebnissen gebildet wird.</p>
+<p>Ein häufiger Fehler ist, dass für \$f'(x)=2x * 3x ^2\$ berechnet wird, da die beiden Faktoren \$x^2\$ und \$x^3\$ einzeln abgeleitet werden und das Produkt aus den Ergebnissen gebildet wird. Diese Vorgehensweise ist offensichtlich falsch.</p>
 </div>
 <div class="paragraph">
 <p>Wir werden in diesem Kapitel eine Regel, die sogenannte <strong>Produktregel</strong> kennenlernen, mit deren Hilfe man die Ableitung von \$f(x)=x^2*x^3\$ direkt berechnen kann.</p>
@@ -451,13 +451,42 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_herleitung">Herleitung</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>Wir betrachten im folgenden eine Funktion \$p(x)=f(x)*g(x)\$, deren Ableitung \$p'(x)\$ bestimmt werden soll.</p>
+</div>
+<div class="paragraph">
+<p>Bezogen auf obiges Beispiel wäre \$f(x)=x^2\$ und \$g(x)=x^3\$.</p>
+</div>
+<div class="paragraph">
+<p>Wir leiten die Ableitungsregel für ein solches Produkt zweier Funktionen mit Hilfe des Differenzenquotienten her:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\${p(x+h)-p(x)}/h={f(x+h)*g(x+h)-f(x)*g(x)}/h\$
+</div>
+</div>
+<div class="paragraph">
+<p>Nun verwendet man einen Trick, indem man eine <em>geschickte Null</em> einfügt zum Zähler addiert, nämlich</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\$0=-f(x)*g(x+h)+f(x)*g(x+h)\$
+</div>
+</div>
+<div class="paragraph">
+<p>Fügt man diese "Null" in den Zähler ein, so ändert sich dieser vom Wert her nicht. Somit erhält man als Ausdruck:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\${f(x+h)*g(x+h)-f(x)*g(x+h)+f(x)*g(x+h) -f(x)*g(x)}/h\$
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-09-26 15:30:47 Mitteleuropõische Sommerzeit
+Last updated 2016-09-26 15:52:52 Mitteleuropõische Sommerzeit
 </div>
 </div>
 <script type="text/x-mathjax-config">

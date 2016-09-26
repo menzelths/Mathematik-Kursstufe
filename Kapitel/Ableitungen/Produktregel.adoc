@@ -13,9 +13,33 @@ Bilde die Ableitungen von stem:[f(x)=x^2 * x^3] und stem:[g(x)=x^5].
 
 Beide Funktionen haben die gleich Ableitung stem:[f'(x)=g'(x)=5x^4], da stem:[f(x)=x^2*x^3=x^5=g(x)], wodurch auch deren Ableitungen identisch sein müssen.
 
-Ein häufiger Fehler ist, dass für stem:[f'(x)=2x * 3x ^2] berechnet wird, da die beiden Faktoren stem:[x^2] und stem:[x^3] einzeln abgeleitet werden und das Produkt aus den Ergebnissen gebildet wird.
+Ein häufiger Fehler ist, dass für stem:[f'(x)=2x * 3x ^2] berechnet wird, da die beiden Faktoren stem:[x^2] und stem:[x^3] einzeln abgeleitet werden und das Produkt aus den Ergebnissen gebildet wird. Diese Vorgehensweise ist offensichtlich falsch.
 
 Wir werden in diesem Kapitel eine Regel, die sogenannte *Produktregel* kennenlernen, mit deren Hilfe man die Ableitung von stem:[f(x)=x^2*x^3] direkt berechnen kann.
 
 == Herleitung
 
+Wir betrachten im folgenden eine Funktion stem:[p(x)=f(x)*g(x)], deren Ableitung stem:[p'(x)] bestimmt werden soll.
+
+Bezogen auf obiges Beispiel wäre stem:[f(x)=x^2] und stem:[g(x)=x^3].
+
+Wir leiten die Ableitungsregel für ein solches Produkt zweier Funktionen mit Hilfe des Differenzenquotienten her:
+
+[stem]
+++++
+{p(x+h)-p(x)}/h={f(x+h)*g(x+h)-f(x)*g(x)}/h
+++++
+
+Nun verwendet man einen Trick, indem man eine _geschickte Null_ einfügt zum Zähler addiert, nämlich
+
+[stem]
+++++
+0=-f(x)*g(x+h)+f(x)*g(x+h)
+++++
+
+Fügt man diese "Null" in den Zähler ein, so ändert sich dieser vom Wert her nicht. Somit erhält man als Ausdruck:
+
+[stem]
+++++
+{f(x+h)*g(x+h)-f(x)*g(x+h)+f(x)*g(x+h) -f(x)*g(x)}/h
+++++
