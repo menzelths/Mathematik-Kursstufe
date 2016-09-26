@@ -1,7 +1,7 @@
 = Die Produktregel
 :stem:
 
-== Motivation
+== [[Motivation]] Motivation
 
 Die Notwendigkeit der Produktregel ergibt sich aus folgendem Beispiel:
 
@@ -51,16 +51,76 @@ Den Bruch kann man nun auseinanderziehen zu
 {f(x+h)*g(x+h)-f(x)*g(x+h)}/h+{f(x)*g(x+h) -f(x)*g(x)}/h
 ++++
 
-Im vorderen Teil kann man stem:[g(x+h)] ausklammern, im hinteren stem:[f(x)], also:
+Im vorderen Teil kann man stem:[g(x+h)] ausklammern, im hinteren Teil stem:[f(x)], also:
 
 [stem]
 ++++
 g(x+h)*{f(x+h)-f(x)}/h + f(x) *{g(x+h)-g(x)}/h
 ++++
 
-Lässt man nun h gegen 0 laufen, so erhält man den _Differentialquotient_, nämlich
+Lässt man nun h gegen 0 laufen, so erhält man den _Differentialquotienten_, der der Ableitung von stem:[p(x)] entspricht.
 
+[IMPORTANT]
+.Nicht vergessen:
+====
+stem:[lim_{h->0} {f(x+h)-f(x)}/h =f'(x)] und stem:[lim_{h->0} {g(x+h)-g(x)}/h=g'(x)]
+====
+
+Somit erhält man insgesamt die 
+
+====
+*Produktregel*:
 [stem]
 ++++
-p'(x)=g(x)*f'(x)+g'(x)*f(x)
+p'(x)=(f(x)*g(x))'=f(x)*g'(x)+f'(x)*g(x)
 ++++
+====
+
+== Beispiele
+[loweralpha]
+. Gehen wir zurück zu unserem Anfangsbeispiel: Dort war zunächst die Ableitung von stem:[x^2*x^3] zu berechnen.
++
+Zunächst benötigt man stem:[f(x)], stem:[g(x)] und die zugehörigen Ableitungen:
++
+|====
+|stem:[f(x)]|stem:[x^2]
+|stem:[g(x)]|stem:[x^3]
+|stem:[f'(x)]|stem:[2x]
+|stem:[g'(x)]|stem:[3x^2]
+|====
++
+Somit ergibt die Produktregel:
++
+[stem]
+++++
+(x^2*x^3)'=x^2*3x^2+2x*x^3=3x^4+2x^4=5x^4
+++++
++
+Der Vergleich mit <<Motivation,dem Einstiegsbeispiel>> zeigt, dass mit Hilfe der Produktregel nun tatächlich das Gleiche herauskommt, wie beim direkten Ableiten von stem:[x^5].
+
+. Ableitung von stem:[sin(x)*cos(x)]:
++
+[stem]
+++++
+(sin(x)*cos(x))'=
+++++
++
+[stem]
+++++
+(sin(x))'*cos(x)+sin(x)*(cos(x))'= 
+++++
++
+[stem]
+++++
+cos(x)*cos(x)+sin(x)*(-sin(x))=
+++++
++
+[stem]
+++++
+cos^2(x)-sin^2(x)  
+++++
+
+
+
+
+

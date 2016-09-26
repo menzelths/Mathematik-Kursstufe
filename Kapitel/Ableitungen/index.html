@@ -432,8 +432,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_die_produktregel">2. Die Produktregel</a>
 <ul class="sectlevel2">
-<li><a href="#_motivation">2.1. Motivation</a></li>
+<li><a href="#__a_id_motivation_a_motivation">2.1. <a id="Motivation"></a> Motivation</a></li>
 <li><a href="#_herleitung">2.2. Herleitung</a></li>
+<li><a href="#_beispiele">2.3. Beispiele</a></li>
 </ul>
 </li>
 </ul>
@@ -460,7 +461,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_die_produktregel">2. Die Produktregel</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_motivation">2.1. Motivation</h3>
+<h3 id="__a_id_motivation_a_motivation">2.1. <a id="Motivation"></a> Motivation</h3>
 <div class="paragraph">
 <p>Die Notwendigkeit der Produktregel ergibt sich aus folgendem Beispiel:</p>
 </div>
@@ -524,7 +525,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph">
-<p>Im vorderen Teil kann man \$g(x+h)\$ ausklammern, im hinteren \$f(x)\$, also:</p>
+<p>Im vorderen Teil kann man \$g(x+h)\$ ausklammern, im hinteren Teil \$f(x)\$, also:</p>
 </div>
 <div class="stemblock">
 <div class="content">
@@ -532,12 +533,108 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph">
-<p>Lässt man nun h gegen 0 laufen, so erhält man den <em>Differentialquotient</em>, nämlich</p>
+<p>Lässt man nun h gegen 0 laufen, so erhält man den <em>Differentialquotienten</em>, der der Ableitung von \$p(x)\$ entspricht.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">Nicht vergessen:</div>
+<div class="paragraph">
+<p>\$lim_{h-&gt;0} {f(x+h)-f(x)}/h =f'(x)\$ und \$lim_{h-&gt;0} {g(x+h)-g(x)}/h=g'(x)\$</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Somit erhält man insgesamt die</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Produktregel</strong>:</p>
 </div>
 <div class="stemblock">
 <div class="content">
-\$p'(x)=g(x)*f'(x)+g'(x)*f(x)\$
+\$p'(x)=(f(x)*g(x))'=f(x)*g'(x)+f'(x)*g(x)\$
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_beispiele">2.3. Beispiele</h3>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Gehen wir zurück zu unserem Anfangsbeispiel: Dort war zunächst die Ableitung von \$x^2*x^3\$ zu berechnen.</p>
+<div class="paragraph">
+<p>Zunächst benötigt man \$f(x)\$, \$g(x)\$ und die zugehörigen Ableitungen:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$f(x)\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$x^2\$</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$g(x)\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$x^3\$</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$f'(x)\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$2x\$</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$g'(x)\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$3x^2\$</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Somit ergibt die Produktregel:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\$(x^2*x^3)'=x^2*3x^2+2x*x^3=3x^4+2x^4=5x^4\$
+</div>
+</div>
+<div class="paragraph">
+<p>Der Vergleich mit <a href="#Motivation">dem Einstiegsbeispiel</a> zeigt, dass mit Hilfe der Produktregel nun tatächlich das Gleiche herauskommt, wie beim direkten Ableiten von \$x^5\$.</p>
+</div>
+</li>
+<li>
+<p>Ableitung von \$sin(x)*cos(x)\$:</p>
+<div class="stemblock">
+<div class="content">
+\$(sin(x)*cos(x))'=\$
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\$(sin(x))'*cos(x)+sin(x)*(cos(x))'=\$
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\$cos(x)*cos(x)+sin(x)*(-sin(x))=\$
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\$cos^2(x)-sin^2(x)\$
+</div>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
