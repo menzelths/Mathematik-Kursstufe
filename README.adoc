@@ -1,0 +1,3 @@
+= Mathematik-Kurs
+
+Skript für Mathematik in der Kursstufe in Baden-Württemberg.
