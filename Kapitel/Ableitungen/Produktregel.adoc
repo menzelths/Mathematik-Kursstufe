@@ -5,13 +5,15 @@
 
 Die Notwendigkeit der Produktregel ergibt sich aus folgendem Beispiel:
 
+====
 *Aufgabe:*
 
 Bilde die Ableitungen von stem:[f(x)=x^2 * x^3] und stem:[g(x)=x^5].
 
 *Lösung:*
 
-Beide Funktionen haben die gleich Ableitung stem:[f'(x)=g'(x)=5x^4], da stem:[f(x)=x^2*x^3=x^5=g(x)], wodurch auch deren Ableitungen identisch sein müssen.
+Beide Funktionen haben die gleiche Ableitung stem:[f'(x)=g'(x)=5x^4], da stem:[f(x)=x^2*x^3=x^5=g(x)], wodurch auch deren Ableitungen identisch sein müssen.
+====
 
 [WARNING]
 ====
