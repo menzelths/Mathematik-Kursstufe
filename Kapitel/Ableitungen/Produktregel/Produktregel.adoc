@@ -26,7 +26,11 @@ Wir werden in diesem Kapitel eine Regel, die sogenannte *Produktregel* kennenler
 
 Wir betrachten im folgenden eine Funktion stem:[p(x)=f(x)*g(x)], deren Ableitung stem:[p'(x)] bestimmt werden soll.
 
+
+[NOTE]
+====
 Bezogen auf obiges Beispiel wäre stem:[f(x)=x^2] und stem:[g(x)=x^3].
+====
 
 Wir leiten die Ableitungsregel für ein solches Produkt zweier Funktionen mit Hilfe des Differenzenquotienten her:
 

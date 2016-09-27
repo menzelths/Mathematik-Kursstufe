@@ -7,5 +7,5 @@
 :keywords: ableitung, produktregel, kettenregel, zweite ableitung
 
 
-include::Wiederholung.adoc[leveloffset=+1]
-include::Produktregel.adoc[leveloffset=+1]
+include::Wiederholung/Wiederholung.adoc[leveloffset=+1]
+include::Produktregel/Produktregel.adoc[leveloffset=+1]
