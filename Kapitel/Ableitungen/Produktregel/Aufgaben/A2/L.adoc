@@ -1,0 +1,3 @@
+:stem:
+[loweralpha]
+. Indem man die Quotienten mit Hilfe der Potenzschreibweise in ein Produkt umwandelt und dann die Produktregel anwendet.

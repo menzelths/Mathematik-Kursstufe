@@ -1,0 +1,3 @@
+:stem:
+
+. Beschreibe, wie man mit Hilfe der Produktregel einfache Quotienten ableiten kann.

@@ -1,0 +1,7 @@
+:stem:
+== Aufgabe
+include::A.adoc[]
+
+== Lösung
+
+include::L.adoc[]

@@ -5,6 +5,7 @@
 :sectnums:
 :icons: font
 :keywords: ableitung, produktregel, kettenregel, zweite ableitung
+:sourcedir: ../Ableitungen
 
 
 include::Wiederholung/Wiederholung.adoc[leveloffset=+1]

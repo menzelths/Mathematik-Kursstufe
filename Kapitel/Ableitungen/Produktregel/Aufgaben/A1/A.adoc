@@ -1,0 +1,6 @@
+:stem:
+
+. Berechne die Ableitungen der folgenden Funktionen:
+.. stem:[f(x)=x^3*sin(x)]
+.. stem:[f(x)=sin(x)/x^2]
+

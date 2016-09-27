@@ -1,6 +1,7 @@
 = Die Produktregel
 :stem:
 
+
 == Motivation [[Motivation]]
 
 Die Notwendigkeit der Produktregel ergibt sich aus folgendem Beispiel:
