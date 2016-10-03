@@ -8,5 +8,5 @@
 :sourcedir: ../Ableitungen
 
 
-include::Wiederholung/Wiederholung.adoc[leveloffset=+1]
+include::Bedingungen_Extremstellen/Extremstellen.adoc[leveloffset=+1]
 include::Produktregel/Produktregel.adoc[leveloffset=+1]
