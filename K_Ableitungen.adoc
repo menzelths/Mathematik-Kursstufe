@@ -5,8 +5,8 @@
 :sectnums:
 :icons: font
 :keywords: ableitung, produktregel, kettenregel, zweite ableitung
-:sourcedir: ../Ableitungen
 
 
-include::Bedingungen_Extremstellen/Extremstellen.adoc[leveloffset=+1]
-include::Produktregel/Produktregel.adoc[leveloffset=+1]
+
+include::Ableitungen_Extremstellen.adoc[leveloffset=+1]
+include::Ableitungen_Produktregel.adoc[leveloffset=+1]

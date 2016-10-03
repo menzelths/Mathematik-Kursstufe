@@ -13,6 +13,6 @@ Im folgenden betrachten wir zwei Möglichkeiten, Extremstellen zu finden, wobei 
 
 
 .Funktion und ihre Ableitung
-image::Waagrechte_Tangente.png[Tangente,float="right"]
+image::Bilder/Ableitungen/Waagrechte_Tangente.svg[Tangente]
 
-Das Besondere an Hoch- und Tiefpunkten <<Tangente>> ist _zum einen_, dass dort waagrechte Tangenten vorliegen.
+Das Besondere an Hoch- und Tiefpunkten ist _zum einen_, dass dort waagrechte Tangenten vorliegen.
