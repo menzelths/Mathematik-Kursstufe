@@ -74,6 +74,10 @@ Geht der Vorzeichenwechsel von - nach +, so handelt es sich um eine *Minimumstel
 Der zweite Teil der ersten hinreichenden Bedingung ist also nur notwendig, um die Extremstellen von den Sattelstellen zu unterscheiden.
 ====
 
+== Zweite hinreichende Bedingung
+
+TBD
+
 
 
 
