@@ -14,16 +14,33 @@ Im folgenden betrachten wir zwei Möglichkeiten, Extremstellen zu finden, wobei 
 Das Besondere an Hoch- und Tiefpunkten ist _zum einen_, dass dort waagrechte Tangenten vorliegen.
 
 .Funktion f mit waagrechter Tangente am Tiefpunkt A
-image::Bilder/Ableitungen/Waagrechte_Tangente.png[Tangente]
+image::Bilder/Ableitungen/Waagrechte_Tangente.png[]
 
 Somit ist die erste Ableitung der Funktion stem:[f] an dieser Stelle 0.
 
 .Funktion f mit waagrechter Tangente und der Ableitung f'
-image::Bilder/Ableitungen/Waagrechte_Tangente_Ableitung.png[Tangente]
+image::Bilder/Ableitungen/Waagrechte_Tangente_Ableitung.png[]
 
 [WARNING]
 ====
-Somit wäre es naheliegend, zu einer gegebenen Funktion stem:[f] ihre Ableitung stem:[f'] zu bestimmen und diese auf Nullstellen zu untersuchen. Dieses Vorgehen ist soweit richtig, lässt es aber nicht zu, daraus auf die Existenz einer Extremstelle zu schließen.
+Aber Vorsicht:
+
+Die Schlussfolgerung 
+
+[stem]
+++++
+f'(x_0)=0 => text(Extremstelle bei )  x_0 
+++++
+
+ist *falsch*!
+
+Ein einfaches Gegenbeispiel ist eine Funktion dritten Grades, die einen Sattelpunkt aufweist. In diesem Fall ist die erste Ableitung an dieser Stelle zwar 0, eine Extremstelle liegt hier aber nicht vor:
+
+image::Bilder/Ableitungen/Waagrechte_Tangente_Ableitung_Sattelpunkt.png[]
+
+Somit ist die Tatsache, dass stem:[f'(x_0)=0] sein muss zwar *notwendig*, aber *nicht hinreichend* für die Existenz einer Extremstelle von stem:[f] bei stem:[x_0].
 ====
+
+
 
 
