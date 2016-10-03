@@ -38,7 +38,7 @@ ist *falsch*!
 Ein einfaches Gegenbeispiel ist eine Funktion dritten Grades, die einen Sattelpunkt aufweist. In diesem Fall ist die erste Ableitung an dieser Stelle zwar 0, eine Extremstelle liegt hier aber nicht vor:
 
 .Eine Funktion mit einem Sattelpunkt A und ihrer ersten Ableitung
-image::Bilder/Ableitungen/Waagrechte_Tangente_Ableitung_Sattelpunkt.png[Sattelpunkt mit Ableitung,width="50%", align="center", float="left", link="Bilder/Ableitungen/Waagrechte_Tangente_Ableitung_Sattelpunkt.png"]
+image::Bilder/Ableitungen/Waagrechte_Tangente_Ableitung_Sattelpunkt.png[Sattelpunkt mit Ableitung,80%,align="center"]
 
 
 Somit ist die Tatsache, dass stem:[f'(x_0)=0] sein muss zwar *notwendig*, aber *nicht hinreichend* für die Existenz einer Extremstelle von stem:[f] bei stem:[x_0].
@@ -47,7 +47,7 @@ Vergleicht man die Schaubilder der _ersten Ableitung_ für den Fall der Extremst
 
 Im Fall des Sattelpunktes ist die erste Ableitung dort zwar 0, wechselt aber nicht ihr Vorzeichen.
 
-Somit können wir also auf die Existenz einer Extremstelle an einer Stelle stem:[x_0] schließen, wenn stem:[f'(x_0)=0] ist *und* der Graph von stem:[f'] bei stem:[x_0] einen Vorzeichenwechsel hat.
+Somit können wir also auf die Existenz einer Extremstelle an einer Stelle stem:[x_0] schließen, wenn stem:[f'(x_0)=0] ist *und* _zum anderen_ der Graph von stem:[f'] bei stem:[x_0] einen Vorzeichenwechsel hat.
 
 Somit formulieren wir die 
 
