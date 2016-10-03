@@ -14,12 +14,12 @@ Im folgenden betrachten wir zwei Möglichkeiten, Extremstellen zu finden, wobei 
 Das Besondere an Hoch- und Tiefpunkten ist _zum einen_, dass dort waagrechte Tangenten vorliegen.
 
 .Funktion f mit waagrechter Tangente am Tiefpunkt A
-image::Bilder/Ableitungen/Waagrechte_Tangente.png[Funktion mit Tangente, 400,align="center"]
+image::Bilder/Ableitungen/Waagrechte_Tangente.png[Funktion mit Tangente, 80%,align="center"]
 
 Somit ist die erste Ableitung der Funktion stem:[f] an dieser Stelle 0.
 
 .Funktion f mit waagrechter Tangente und der Ableitung f'
-image::Bilder/Ableitungen/Waagrechte_Tangente_Ableitung.png[f mit Ableitung,400,align="center"]
+image::Bilder/Ableitungen/Waagrechte_Tangente_Ableitung.png[f mit Ableitung,80%,align="center"]
 
 Aber Vorsicht:
 
@@ -38,7 +38,7 @@ ist *falsch*!
 Ein einfaches Gegenbeispiel ist eine Funktion dritten Grades, die einen Sattelpunkt aufweist. In diesem Fall ist die erste Ableitung an dieser Stelle zwar 0, eine Extremstelle liegt hier aber nicht vor:
 
 .Eine Funktion mit einem Sattelpunkt A und ihrer ersten Ableitung
-image::Bilder/Ableitungen/Waagrechte_Tangente_Ableitung_Sattelpunkt.png[Sattelpunkt mit Ableitung,400,align="center"]
+image::Bilder/Ableitungen/Waagrechte_Tangente_Ableitung_Sattelpunkt.png[Sattelpunkt mit Ableitung,80%,align="center"]
 
 
 Somit ist die Tatsache, dass stem:[f'(x_0)=0] sein muss zwar *notwendig*, aber *nicht hinreichend* für die Existenz einer Extremstelle von stem:[f] bei stem:[x_0].
@@ -73,6 +73,8 @@ Geht der Vorzeichenwechsel von - nach +, so handelt es sich um eine *Minimumstel
 ====
 Der zweite Teil der ersten hinreichenden Bedingung ist also nur notwendig, um die Extremstellen von den Sattelstellen zu unterscheiden.
 ====
+
+
 
 
 
