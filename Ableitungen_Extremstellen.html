@@ -442,20 +442,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>Das Besondere an Hoch- und Tiefpunkten ist <em>zum einen</em>, dass dort waagrechte Tangenten vorliegen.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="Bilder/Ableitungen/Waagrechte_Tangente.png" alt="Waagrechte Tangente">
+<img src="Bilder/Ableitungen/Waagrechte_Tangente.png" alt="Funktion mit Tangente" width="400">
 </div>
 <div class="title">Figure 1. Funktion f mit waagrechter Tangente am Tiefpunkt A</div>
 </div>
 <div class="paragraph">
 <p>Somit ist die erste Ableitung der Funktion \$f\$ an dieser Stelle 0.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="Bilder/Ableitungen/Waagrechte_Tangente_Ableitung.png" alt="Waagrechte Tangente Ableitung">
+<img src="Bilder/Ableitungen/Waagrechte_Tangente_Ableitung.png" alt="f mit Ableitung" width="400">
 </div>
 <div class="title">Figure 2. Funktion f mit waagrechter Tangente und der Ableitung f'</div>
+</div>
+<div class="paragraph">
+<p>Aber Vorsicht:</p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -464,9 +467,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Warning</div>
 </td>
 <td class="content">
-<div class="paragraph">
-<p>Aber Vorsicht:</p>
-</div>
 <div class="paragraph">
 <p>Die Schlussfolgerung</p>
 </div>
@@ -478,16 +478,71 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>ist <strong>falsch</strong>!</p>
 </div>
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>Ein einfaches Gegenbeispiel ist eine Funktion dritten Grades, die einen Sattelpunkt aufweist. In diesem Fall ist die erste Ableitung an dieser Stelle zwar 0, eine Extremstelle liegt hier aber nicht vor:</p>
 </div>
-<div class="imageblock">
+<div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="Bilder/Ableitungen/Waagrechte_Tangente_Ableitung_Sattelpunkt.png" alt="Waagrechte Tangente Ableitung Sattelpunkt">
+<img src="Bilder/Ableitungen/Waagrechte_Tangente_Ableitung_Sattelpunkt.png" alt="Sattelpunkt mit Ableitung" width="400">
 </div>
+<div class="title">Figure 3. Eine Funktion mit einem Sattelpunkt A und ihrer ersten Ableitung</div>
 </div>
 <div class="paragraph">
 <p>Somit ist die Tatsache, dass \$f'(x_0)=0\$ sein muss zwar <strong>notwendig</strong>, aber <strong>nicht hinreichend</strong> für die Existenz einer Extremstelle von \$f\$ bei \$x_0\$.</p>
+</div>
+<div class="paragraph">
+<p>Vergleicht man die Schaubilder der <em>ersten Ableitung</em> für den Fall der Extremstelle und für den  Sattelpunkt, so fällt auf, dass im Fall der Extremstelle die erste Ableitung dort 0 ist und einen Vorzeichenwechsel aufweist.</p>
+</div>
+<div class="paragraph">
+<p>Im Fall des Sattelpunktes ist die erste Ableitung dort zwar 0, wechselt aber nicht ihr Vorzeichen.</p>
+</div>
+<div class="paragraph">
+<p>Somit können wir also auf die Existenz einer Extremstelle an einer Stelle \$x_0\$ schließen, wenn \$f'(x_0)=0\$ ist <strong>und</strong> der Graph von \$f'\$ bei \$x_0\$ einen Vorzeichenwechsel hat.</p>
+</div>
+<div class="paragraph">
+<p>Somit formulieren wir die</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Erste hinreichende Bedingung für Extremstellen</strong></p>
+</div>
+<div class="paragraph">
+<p>Gilt für eine Funktion \$f\$, dass</p>
+</div>
+<div class="paragraph">
+<p>\$f'(x_0)=0\$</p>
+</div>
+<div class="paragraph">
+<p><strong>und</strong></p>
+</div>
+<div class="paragraph">
+<p>der Graph von \$f\$ bei \$x_0\$ einen Vorzeichenwechsel vorliegen hat,</p>
+</div>
+<div class="paragraph">
+<p><strong>dann gilt:</strong></p>
+</div>
+<div class="paragraph">
+<p>Bei \$x_0\$ liegt eine <strong>Extremstelle</strong> von \$f\$ vor.</p>
+</div>
+<div class="paragraph">
+<p>Geht der Vorzeichenwechsel von - nach +, so handelt es sich um eine <strong>Minimumstelle</strong>, bei einem Wechsel von + nach - um eine <strong>Maximumstelle</strong>.</p>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Der zweite Teil der ersten hinreichenden Bedingung ist also nur notwendig, um die Extremstellen von den Sattelstellen zu unterscheiden.</p>
 </div>
 </td>
 </tr>
@@ -498,7 +553,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-03 22:23:25 Mitteleuropõische Sommerzeit
+Last updated 2016-10-03 22:51:21 Mitteleuropõische Sommerzeit
 </div>
 </div>
 <script type="text/x-mathjax-config">

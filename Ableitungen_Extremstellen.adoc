@@ -14,17 +14,17 @@ Im folgenden betrachten wir zwei Möglichkeiten, Extremstellen zu finden, wobei 
 Das Besondere an Hoch- und Tiefpunkten ist _zum einen_, dass dort waagrechte Tangenten vorliegen.
 
 .Funktion f mit waagrechter Tangente am Tiefpunkt A
-image::Bilder/Ableitungen/Waagrechte_Tangente.png[]
+image::Bilder/Ableitungen/Waagrechte_Tangente.png[Funktion mit Tangente, 400,align="center"]
 
 Somit ist die erste Ableitung der Funktion stem:[f] an dieser Stelle 0.
 
 .Funktion f mit waagrechter Tangente und der Ableitung f'
-image::Bilder/Ableitungen/Waagrechte_Tangente_Ableitung.png[]
+image::Bilder/Ableitungen/Waagrechte_Tangente_Ableitung.png[f mit Ableitung,400,align="center"]
+
+Aber Vorsicht:
 
 [WARNING]
 ====
-Aber Vorsicht:
-
 Die Schlussfolgerung 
 
 [stem]
@@ -33,13 +33,49 @@ f'(x_0)=0 => text(Extremstelle bei )  x_0
 ++++
 
 ist *falsch*!
+====
 
 Ein einfaches Gegenbeispiel ist eine Funktion dritten Grades, die einen Sattelpunkt aufweist. In diesem Fall ist die erste Ableitung an dieser Stelle zwar 0, eine Extremstelle liegt hier aber nicht vor:
 
-image::Bilder/Ableitungen/Waagrechte_Tangente_Ableitung_Sattelpunkt.png[]
+.Eine Funktion mit einem Sattelpunkt A und ihrer ersten Ableitung
+image::Bilder/Ableitungen/Waagrechte_Tangente_Ableitung_Sattelpunkt.png[Sattelpunkt mit Ableitung,400,align="center"]
+
 
 Somit ist die Tatsache, dass stem:[f'(x_0)=0] sein muss zwar *notwendig*, aber *nicht hinreichend* für die Existenz einer Extremstelle von stem:[f] bei stem:[x_0].
+
+Vergleicht man die Schaubilder der _ersten Ableitung_ für den Fall der Extremstelle und für den  Sattelpunkt, so fällt auf, dass im Fall der Extremstelle die erste Ableitung dort 0 ist und einen Vorzeichenwechsel aufweist.
+
+Im Fall des Sattelpunktes ist die erste Ableitung dort zwar 0, wechselt aber nicht ihr Vorzeichen.
+
+Somit können wir also auf die Existenz einer Extremstelle an einer Stelle stem:[x_0] schließen, wenn stem:[f'(x_0)=0] ist *und* der Graph von stem:[f'] bei stem:[x_0] einen Vorzeichenwechsel hat.
+
+Somit formulieren wir die 
+
 ====
+*Erste hinreichende Bedingung für Extremstellen*
+
+Gilt für eine Funktion stem:[f], dass
+
+stem:[f'(x_0)=0]
+
+*und*
+
+der Graph von stem:[f] bei stem:[x_0] einen Vorzeichenwechsel vorliegen hat,
+
+*dann gilt:*
+
+Bei stem:[x_0] liegt eine *Extremstelle* von stem:[f] vor.
+
+Geht der Vorzeichenwechsel von - nach +, so handelt es sich um eine *Minimumstelle*, bei einem Wechsel von + nach - um eine *Maximumstelle*.
+====
+
+[NOTE]
+====
+Der zweite Teil der ersten hinreichenden Bedingung ist also nur notwendig, um die Extremstellen von den Sattelstellen zu unterscheiden.
+====
+
+
+
 
 
 
