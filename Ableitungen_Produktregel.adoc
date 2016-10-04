@@ -1,5 +1,10 @@
-= Die Produktregel
-:stem:
+= [[Produktregel]] Die Produktregel
+:stem: 
+:toc: left
+:toc-title: Inhaltsverzeichnis
+:sectnums:
+:icons: font
+:keywords: ableitung, produktregel, kettenregel, zweite ableitung
 
 
 == Motivation [[Motivation]]

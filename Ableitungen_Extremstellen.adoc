@@ -1,5 +1,10 @@
-= Extremstellen
-:stem:
+= [[Extremstellen]]Extremstellen
+:stem: 
+:toc: left
+:toc-title: Inhaltsverzeichnis
+:sectnums:
+:icons: font
+:keywords: ableitung, produktregel, kettenregel, zweite ableitung
 
 == Motivation
 
