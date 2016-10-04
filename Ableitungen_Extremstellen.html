@@ -437,23 +437,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_erste_hinreichende_bedingung">Erste hinreichende Bedingung</h2>
+<h2 id="_erste_hinreichende_bedingung_für_lokale_extremstellen">Erste hinreichende Bedingung für lokale Extremstellen</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Das Besondere an Hoch- und Tiefpunkten ist <em>zum einen</em>, dass dort waagrechte Tangenten vorliegen.</p>
 </div>
-<div class="imageblock" style="text-align: center">
+<div class="imageblock">
 <div class="content">
-<img src="Bilder/Ableitungen/Waagrechte_Tangente.png" alt="Funktion mit Tangente" width="80%">
+<img src="Bilder/Ableitungen/Waagrechte_Tangente.png" alt="Funktion mit Tangente">
 </div>
 <div class="title">Figure 1. Funktion f mit waagrechter Tangente am Tiefpunkt A</div>
 </div>
 <div class="paragraph">
 <p>Somit ist die erste Ableitung der Funktion \$f\$ an dieser Stelle 0.</p>
 </div>
-<div class="imageblock" style="text-align: center">
+<div class="imageblock">
 <div class="content">
-<img src="Bilder/Ableitungen/Waagrechte_Tangente_Ableitung.png" alt="f mit Ableitung" width="80%">
+<img src="Bilder/Ableitungen/Waagrechte_Tangente_Ableitung.png" alt="f mit Ableitung">
 </div>
 <div class="title">Figure 2. Funktion f mit waagrechter Tangente und der Ableitung f'</div>
 </div>
@@ -485,9 +485,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>Ein einfaches Gegenbeispiel ist eine Funktion dritten Grades, die einen Sattelpunkt aufweist. In diesem Fall ist die erste Ableitung an dieser Stelle zwar 0, eine Extremstelle liegt hier aber nicht vor:</p>
 </div>
-<div class="imageblock" style="text-align: center">
+<div class="imageblock">
 <div class="content">
-<img src="Bilder/Ableitungen/Waagrechte_Tangente_Ableitung_Sattelpunkt.png" alt="Sattelpunkt mit Ableitung" width="80%">
+<img src="Bilder/Ableitungen/Waagrechte_Tangente_Ableitung_Sattelpunkt.png" alt="Sattelpunkt mit Ableitung">
 </div>
 <div class="title">Figure 3. Eine Funktion mit einem Sattelpunkt A und ihrer ersten Ableitung</div>
 </div>
@@ -509,7 +509,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p><strong>Erste hinreichende Bedingung für Extremstellen</strong></p>
+<p><strong>Erste hinreichende Bedingung für lokale Extremstellen</strong></p>
 </div>
 <div class="paragraph">
 <p>Gilt für eine Funktion \$f\$, dass</p>
@@ -542,7 +542,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Der zweite Teil der ersten hinreichenden Bedingung ist also nur notwendig, um die Extremstellen von den Sattelstellen zu unterscheiden.</p>
+<p>Der zweite Teil der ersten hinreichenden Bedingung (Vorzeichenweckel) ist also nur notwendig, um die Extremstellen von den Sattelstellen zu unterscheiden.</p>
 </div>
 </td>
 </tr>
@@ -551,17 +551,149 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_zweite_hinreichende_bedingung">Zweite hinreichende Bedingung</h2>
+<h2 id="_zweite_hinreichende_bedingung_für_lokale_extremstellen">Zweite hinreichende Bedingung für lokale Extremstellen</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>TBD</p>
+<p>Durch die erste hinreichende Bedingung haben wir bereits ein Werkzeug, dass uns das Auffinden von Extremstellen vereinfacht. In diesem Abschnitt werden wir noch eine weitere Möglichkeit kennenlernen, diese rechnerisch zu bestimmen.</p>
+</div>
+<div class="paragraph">
+<p>Dazu betrachten wir die gleichen Beispiele wie im letzten Abschnitt, nur beziehen wir in unsere Betrachtung noch die zweite Ableitung mit ein.</p>
+</div>
+<div class="paragraph">
+<p>Zunächst untersuchen wir wieder die nach oben geöffnete Parabel:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="Bilder/Ableitungen/Zweite_Ableitung.png" alt="Minimum mit zweiter Ableitung">
+</div>
+<div class="title">Figure 4. Eine Funktion mit einem lokalen Minimum (blau) mit erster (grün) und zweiter Ableitung (orange)</div>
+</div>
+<div class="paragraph">
+<p>Da der Graph von \$f\$ im Bereich seines Minimums eine Linkskurve beschreibt, ist \$f''\$ in diesem Bereich positiv. Bei einem Maximum läge eine Rechtskurve vor, so dass \$f''\$ in diesem Bereich negativ wäre.</p>
+</div>
+<div class="paragraph">
+<p>Im Falle eines Sattelpunktes ergibt sich die folgende Situation:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="Bilder/Ableitungen/Zweite_Ableitung_Sattelpunkt.png" alt="Sattelpunkt mit zweiter Ableitung">
+</div>
+<div class="title">Figure 5. Eine Funktion mit einem Sattelpunkt</div>
+</div>
+<div class="paragraph">
+<p>Man sieht: da an dieser Stelle weder eine Links- noch eine Rechtskurve im Graphen von \$f\$ vorliegt, ist die zweite Ableitung an dieser Stelle 0.</p>
+</div>
+<div class="paragraph">
+<p>Somit formulieren wir</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Die zweite hinreichende Bedingung für lokale Extremstellen</strong></p>
+</div>
+<div class="paragraph">
+<p>Gilt für eine Funktion \$f\$, dass</p>
+</div>
+<div class="paragraph">
+<p>\$f'(x_0)=0\$</p>
+</div>
+<div class="paragraph">
+<p><strong>und</strong></p>
+</div>
+<div class="paragraph">
+<p>der \$f''(x_0)!=0\$ ,</p>
+</div>
+<div class="paragraph">
+<p><strong>dann gilt:</strong></p>
+</div>
+<div class="paragraph">
+<p>Bei \$x_0\$ liegt eine <strong>Extremstelle</strong> von \$f\$ vor.</p>
+</div>
+<div class="paragraph">
+<p>Für \$f''(x_0)&lt;0\$ (Rechtskurve) handelt es sich dabei um eine <strong>Maximumstelle</strong>, für \$f''(x_0)&gt;0\$ (Linkskurve) um eine <strong>Minimumstelle</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_unterschiede_zwischen_den_beiden_bedingungen">Unterschiede zwischen den beiden Bedingungen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In vielen Fällen scheint die zweite hinreichende Bedingung (mit der zweiten Ableitung) zunächst das einfachere Kriterium zu sein. Man beachte aber das folgende Beispiel:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\$f(x)=x^4\$
+</div>
+</div>
+<div class="paragraph">
+<p>Bestimmung der Extremstellen mit Hilfe der <strong>zweiten hinreichenden Bedingung</strong>:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\$f'(x)=4 x ^3\$
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\$f''(x)=12 x ^2\$
+</div>
+</div>
+<div class="paragraph">
+<p>Weiter gilt, dass \$f'(0)=0\$ und \$f''(0)=0\$. Somit ist nach der zweiten hinreichenden Bedingung zunächst keine Aussage möglich. Vielmehr liegt die Vermutung nahe, dass es sich hier um eine Sattelstelle handelt.</p>
+</div>
+<div class="paragraph">
+<p>Versucht man jedoch, die <strong>erste hinreichende Bedingung</strong> anzuwenden, so ergibt die Überprüfung auf einen Vorzeichenwechsel bei \$x_0=0\$</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$x\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$f'(x)\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Bei 0 liegt somit ein Vorzeichenwechsel von - nach + vor, so dass dort nach der ersten hinreichenden Bedingung eine Minimumstelle vorliegen muss.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Sollte die zweite hinreichende Bedingung an einer Stelle \$x_0\$ keine Aussage treffen können, so muss dort noch die erste hinreichende Bedingung überprüft werden.</p>
+</div>
+<div class="paragraph">
+<p>Hier zeigt sich nochmal: \$f''(x_0)=0\$ bedeutet <strong>nicht</strong>, dass bei \$x_0\$ eine Wendestelle vorliegt!</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-03 23:28:39 Mitteleuropõische Sommerzeit
+Last updated 2016-10-04 18:01:47 Mitteleuropõische Sommerzeit
 </div>
 </div>
 <script type="text/x-mathjax-config">
