@@ -1,4 +1,4 @@
-= [[Extremstellen]]Extremstellen
+= [[Extremstellen]]Lokale Extremstellen
 :stem: 
 :toc: left
 :toc-title: Inhaltsverzeichnis
@@ -12,7 +12,7 @@ Viele Aufgabenstellungen sind mit der Suche nach Hoch- und Tiefpunkten verbunden
 
 Dank der Ableitungen von Funktionen ist es auch möglich, die gesuchten Stellen zu finden, ohne den Graphen zeichnen zu müssen, verbunden mit der Tatsache, dass die gefundenen Werte exakter sind, da die Stellen nicht abgeschätzt werden, sondern berechnet werden können.
 
-Im folgenden betrachten wir zwei Möglichkeiten, Extremstellen zu finden, wobei die untersuchten Funktionen mehrfach *differenzierbar* sein sollen (also ableitbar und damit "ohne Knick") und jede Funktion und ihre Ableitungen *stetig*, also "in einem Zug zeichenbar".
+Im folgenden betrachten wir zwei Möglichkeiten, lokale Extremstellen zu finden, wobei die untersuchten Funktionen mehrfach *differenzierbar* sein sollen (also ableitbar und damit "ohne Knick") und jede Funktion und ihre Ableitungen *stetig*, also "in einem Zug zeichenbar".
 
 == Erste hinreichende Bedingung für lokale Extremstellen
 
@@ -161,6 +161,27 @@ Sollte die zweite hinreichende Bedingung an einer Stelle stem:[x_0] keine Aussag
 Hier zeigt sich nochmal: stem:[f''(x_0)=0] bedeutet *nicht*, dass bei stem:[x_0] eine Wendestelle vorliegt!
 ====
 
+== Sonderfall konstante Funktion
 
+Ein Sonderfall in Bezug auf lokale Extremstellen ist eine konstante Funktion der Form stem:[f(x)=c text( mit ) c in RR].
 
+Sie hat nach Definition unendlich viele lokale Maxima bzw. Minima. Das liegt daran, dass z. B. eine lokale Minimumstelle definiert ist als eine Stelle stem:[x_0], für die gilt stem:[f(x)>=f(x_0) text( für alle ) x in U(x_0)], wobei mit stem:[U(x_0)] die nähere Umgebung von stem:[x_0] gemeint ist. 
+
+Da ein Kleiner-Gleich-Symbol in der Definition vorliegt, erfüllt eine konstante Funktion an jeder Stelle diese Voraussetzung, besitzt also an jeder Stelle ein lokales Minimum.
+
+Analog dazu hat die Funktion auch an jeder Stelle ein lokales Maximum.
+
+Überprüfen wir diese Eigenschaft mit Hilfe der hinreichenden Bedingungen so erhält man für stem:[f(x)=c] als erste Ableitung stem:[f'(x)=0] und als zweite Ableitung ebenfalls stem:[f''(x)=0].
+
+Die _zweite_ hinreichende Bedingung ist nirgendwo auf dem Definitionsbereich erfüllt, da die zweite Ableitung nirgendwo ungleich 0 ist und somit keine Aussage getroffen werden kann.
+
+Die _erste_ hinreichende Bedingung kann für die erste Ableitung nirgendwo einen Vorzeichenwechsel vorfinden und somit auch keine Aussage über das Vorliegen von Extremstellen treffen.
+
+Dies ist also ein Beispiel, in dem weder die erste noch die zweite hinreichende Bedingung die Extremstellen auffinden kann.
+
+Somit gilt: 
+
+====
+Die Stellen, an denen stem:[f'(x)=0], sind als _Kandidaten_ für Extremstellen zu betrachten. Ist an diesen Stellen die erste oder zweite hinreichende Bedingung erfüllt, so liegen dort Extremstellen vor, wenn nicht, darf man nicht annehmen, dass dort keine Extremstellen vorliegen.
+====
 
