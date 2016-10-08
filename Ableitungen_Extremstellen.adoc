@@ -228,7 +228,7 @@ Zu b)
 
 stem:[f''(x_1)=f''(0)=-6 < 0 => text( Rechtskurve von ) f text(, also Maximum bei ) x_0=0]
 
-stem:[f''(x_2)=f''(2)=6 > 0 => text ( Linkskurve von ) f (, also Minimum bei ) x_1=2]
+stem:[f''(x_2)=f''(2)=6 > 0 => text ( Linkskurve von ) f text(, also Minimum bei ) x_1=2]
 
 Da in der Aufgabe nach den _Extrempunkten_ gefragt ist, muss man noch den jeweiligen y-Wert bestimmen:
 
