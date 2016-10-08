@@ -5,8 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<meta name="keywords" content="ableitung, produktregel, kettenregel, zweite ableitung">
-<title>Extremstellen</title>
+<meta name="keywords" content="ableitung,  zweite ableitung, hinreichende Bedingung, Extremstellen, Maximum, Minimum">
+<title>Lokale Extremstellen</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -421,7 +421,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1><a id="Extremstellen"></a>Extremstellen</h1>
+<h1><a id="Extremstellen"></a>Lokale Extremstellen</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Inhaltsverzeichnis</div>
 <ul class="sectlevel1">
@@ -429,6 +429,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_erste_hinreichende_bedingung_für_lokale_extremstellen">2. Erste hinreichende Bedingung für lokale Extremstellen</a></li>
 <li><a href="#_zweite_hinreichende_bedingung_für_lokale_extremstellen">3. Zweite hinreichende Bedingung für lokale Extremstellen</a></li>
 <li><a href="#_unterschiede_zwischen_den_beiden_bedingungen">4. Unterschiede zwischen den beiden Bedingungen</a></li>
+<li><a href="#_sonderfall_konstante_funktion">5. Sonderfall konstante Funktion</a></li>
+<li><a href="#_beispiel">6. Beispiel</a></li>
 </ul>
 </div>
 </div>
@@ -443,7 +445,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Dank der Ableitungen von Funktionen ist es auch möglich, die gesuchten Stellen zu finden, ohne den Graphen zeichnen zu müssen, verbunden mit der Tatsache, dass die gefundenen Werte exakter sind, da die Stellen nicht abgeschätzt werden, sondern berechnet werden können.</p>
 </div>
 <div class="paragraph">
-<p>Im folgenden betrachten wir zwei Möglichkeiten, Extremstellen zu finden, wobei die untersuchten Funktionen mehrfach <strong>differenzierbar</strong> sein sollen (also ableitbar und damit "ohne Knick") und jede Funktion und ihre Ableitungen <strong>stetig</strong>, also "in einem Zug zeichenbar".</p>
+<p>Im folgenden betrachten wir zwei Möglichkeiten, lokale Extremstellen zu finden, wobei die untersuchten Funktionen mehrfach <strong>differenzierbar</strong> sein sollen (also ableitbar und damit "ohne Knick") und jede Funktion und ihre Ableitungen <strong>stetig</strong>, also "in einem Zug zeichenbar".</p>
 </div>
 </div>
 </div>
@@ -532,7 +534,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><strong>und</strong></p>
 </div>
 <div class="paragraph">
-<p>der Graph von \$f\$ bei \$x_0\$ einen Vorzeichenwechsel vorliegen hat,</p>
+<p>der Graph von \$f'\$ bei \$x_0\$ einen Vorzeichenwechsel vorliegen hat,</p>
 </div>
 <div class="paragraph">
 <p><strong>dann gilt:</strong></p>
@@ -612,7 +614,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><strong>und</strong></p>
 </div>
 <div class="paragraph">
-<p>der \$f''(x_0)!=0\$ ,</p>
+<p>\$f''(x_0)!=0\$ ,</p>
 </div>
 <div class="paragraph">
 <p><strong>dann gilt:</strong></p>
@@ -701,10 +703,157 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_sonderfall_konstante_funktion">5. Sonderfall konstante Funktion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ein Sonderfall in Bezug auf lokale Extremstellen ist eine konstante Funktion der Form \$f(x)=c text( mit ) c in RR\$.</p>
+</div>
+<div class="paragraph">
+<p>Sie hat nach Definition unendlich viele lokale Maxima bzw. Minima. Das liegt daran, dass z. B. eine lokale Minimumstelle definiert ist als eine Stelle \$x_0\$, für die gilt \$f(x)&gt;=f(x_0) text( für alle ) x in U(x_0)\$, wobei mit \$U(x_0)\$ die nähere Umgebung von \$x_0\$ gemeint ist.</p>
+</div>
+<div class="paragraph">
+<p>Da ein Kleiner-Gleich-Symbol in der Definition vorliegt, erfüllt eine konstante Funktion an jeder Stelle diese Voraussetzung, besitzt also an jeder Stelle ein lokales Minimum.</p>
+</div>
+<div class="paragraph">
+<p>Analog dazu hat die Funktion auch an jeder Stelle ein lokales Maximum.</p>
+</div>
+<div class="paragraph">
+<p>Überprüfen wir diese Eigenschaft mit Hilfe der hinreichenden Bedingungen so erhält man für \$f(x)=c\$ als erste Ableitung \$f'(x)=0\$ und als zweite Ableitung ebenfalls \$f''(x)=0\$.</p>
+</div>
+<div class="paragraph">
+<p>Die <em>zweite</em> hinreichende Bedingung ist nirgendwo auf dem Definitionsbereich erfüllt, da die zweite Ableitung nirgendwo ungleich 0 ist und somit keine Aussage getroffen werden kann.</p>
+</div>
+<div class="paragraph">
+<p>Die <em>erste</em> hinreichende Bedingung kann für die erste Ableitung nirgendwo einen Vorzeichenwechsel vorfinden und somit auch keine Aussage über das Vorliegen von Extremstellen treffen.</p>
+</div>
+<div class="paragraph">
+<p>Dies ist also ein Beispiel, in dem weder die erste noch die zweite hinreichende Bedingung die Extremstellen auffinden kann.</p>
+</div>
+<div class="paragraph">
+<p>Somit gilt:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Die Stellen, an denen \$f'(x)=0\$, sind als <em>Kandidaten</em> für Extremstellen zu betrachten. Ist an diesen Stellen die erste oder zweite hinreichende Bedingung erfüllt, so liegen dort Extremstellen vor, wenn nicht, darf man nicht annehmen, dass dort keine Extremstellen vorliegen.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_beispiel">6. Beispiel</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Aufgabe:</strong></p>
+</div>
+<div class="paragraph">
+<p>Gegeben sei \$f(x)=x^{3} - 3  x^{2} + 4\$. Bestimme die Extrempunkte dieser Funktion a) mit der ersten hinreichenden Bedingung und b) mit der zweiten hinreichenden Bedingung.</p>
+</div>
+<div class="paragraph">
+<p><strong>Lösung:</strong></p>
+</div>
+<div class="paragraph">
+<p>Zunächst bestimmen wir für diese Aufgabe die nötigen Ableitungen:</p>
+</div>
+<div class="paragraph">
+<p>\$f'(x)=3x^2-6x\$ und \$f''(x)=6x-6\$.</p>
+</div>
+<div class="paragraph">
+<p>Für beide hinreichenden Bedinungen benötigen wir die Stellen, an denen \$f'(x)=0\$ ist, also setzen wir an:</p>
+</div>
+<div class="paragraph">
+<p>\$3x^2-6x=0\$</p>
+</div>
+<div class="paragraph">
+<p>Ausklammern von x liefert:</p>
+</div>
+<div class="paragraph">
+<p>\$x*(3x-6)=0\$</p>
+</div>
+<div class="paragraph">
+<p>Mit Hilfe des Satzes des Nullprodukts sieht man, dass eine Nullstelle von \$f\$ an der Stelle \$x_1=0\$ vorliegt. Die zweite Möglichkeit, dass die erste Ableitung 0 wird, liegt vor, wenn \$3x-6=0\$, also wenn \$x_2=2\$ ist.</p>
+</div>
+<div class="paragraph">
+<p>Somit sind \$x_1=0\$ und \$x_2=2\$ <em>Kandidaten</em> für Extremstellen von \$f\$.</p>
+</div>
+<div class="paragraph">
+<p>Nun überprüfen wir mit den hinreichenden Bedingungen, ob hier tatsächlich Extremstellen vorliegen:</p>
+</div>
+<div class="paragraph">
+<p>Zu a)</p>
+</div>
+<div class="paragraph">
+<p>Wir überprüfen die \$f'\$ auf Vorzeichenwechsel an den Stellen \$x_1\$=0 und \$x_2\$=2 mit Hilfe einer Tabelle:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$x\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$f'(x)\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Somit liegt bei \$x_1=0\$ ein Vorzeichenwechsel von + nach - vor, also weist f an dieser Stelle ein Maximum auf (links davon steigt der Graph, rechts davon fällt er).</p>
+</div>
+<div class="paragraph">
+<p>Bei \$x_2=2\$ liegt ein Vorzeichenwechsel von - nach + vor, also hat f an dieser Stelle ein Minimum.</p>
+</div>
+<div class="paragraph">
+<p>Zu b)</p>
+</div>
+<div class="paragraph">
+<p>\$f''(x_1)=f''(0)=-6 &lt; 0 =&gt; text( Rechtskurve von ) f text(, also Maximum bei ) x_0=0\$</p>
+</div>
+<div class="paragraph">
+<p>\$f''(x_2)=f''(2)=6 &gt; 0 =&gt; text ( Linkskurve von ) f (, also Minimum bei ) x_1=2\$</p>
+</div>
+<div class="paragraph">
+<p>Da in der Aufgabe nach den <em>Extrempunkten</em> gefragt ist, muss man noch den jeweiligen y-Wert bestimmen:</p>
+</div>
+<div class="paragraph">
+<p>\$f(x_1)=f(0)=4\$ und \$f(x_2)=f(2)=0\$.</p>
+</div>
+<div class="paragraph">
+<p>Somit liegen ein Hochpunkt H(0/4) und ein Tiefpunkt T(2/0) vor.</p>
+</div>
+<div class="paragraph">
+<p>Zur Kontrolle hier das Schaubild der Funktion und der ersten beiden Ableitungen:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="Bilder/Ableitungen/Aufgabe_Extremstellen.png" alt="Aufgabe Extremstellen">
+</div>
+<div class="title">Figure 6. Funktion f mit erster und zweiter Ableitung</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-04 20:47:01 Mitteleuropõische Sommerzeit
+Last updated 2016-10-08 11:01:06 Mitteleuropõische Sommerzeit
 </div>
 </div>
 <script type="text/x-mathjax-config">

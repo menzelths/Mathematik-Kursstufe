@@ -3,6 +3,9 @@
 
 == Ableitungen
 
-<<Ableitungen_Extremstellen.adoc#Extremstellen,Erste und zweite hinreichende Bedingung>>
+<<Ableitungen_Extremstellen.adoc#Extremstellen,Erste und zweite hinreichende Bedingung für lokale Extremstellen>>
+
+<<Ableitungen_Wendestellen.adoc#Wendestellen,Das Bestimmen von Wendestellen>>
 
 <<Ableitungen_Produktregel.adoc#Produktregel,Die Produktregel>>
+

@@ -4,7 +4,7 @@
 :toc-title: Inhaltsverzeichnis
 :sectnums:
 :icons: font
-:keywords: ableitung, produktregel, kettenregel, zweite ableitung
+:keywords: ableitung,  zweite ableitung, hinreichende Bedingung, Extremstellen, Maximum, Minimum
 
 == Motivation
 
@@ -65,7 +65,7 @@ stem:[f'(x_0)=0]
 
 *und*
 
-der Graph von stem:[f] bei stem:[x_0] einen Vorzeichenwechsel vorliegen hat,
+der Graph von stem:[f'] bei stem:[x_0] einen Vorzeichenwechsel vorliegen hat,
 
 *dann gilt:*
 
@@ -110,7 +110,7 @@ stem:[f'(x_0)=0]
 
 *und*
 
-der stem:[f''(x_0)!=0] ,
+stem:[f''(x_0)!=0] ,
 
 *dann gilt:*
 
@@ -184,4 +184,61 @@ Somit gilt:
 ====
 Die Stellen, an denen stem:[f'(x)=0], sind als _Kandidaten_ für Extremstellen zu betrachten. Ist an diesen Stellen die erste oder zweite hinreichende Bedingung erfüllt, so liegen dort Extremstellen vor, wenn nicht, darf man nicht annehmen, dass dort keine Extremstellen vorliegen.
 ====
+
+== Beispiel
+
+*Aufgabe:*
+
+Gegeben sei stem:[f(x)=x^{3} - 3  x^{2} + 4]. Bestimme die Extrempunkte dieser Funktion a) mit der ersten hinreichenden Bedingung und b) mit der zweiten hinreichenden Bedingung.
+
+*Lösung:*
+
+Zunächst bestimmen wir für diese Aufgabe die nötigen Ableitungen:
+
+stem:[f'(x)=3x^2-6x] und stem:[f''(x)=6x-6].
+
+Für beide hinreichenden Bedinungen benötigen wir die Stellen, an denen stem:[f'(x)=0] ist, also setzen wir an:
+
+stem:[3x^2-6x=0]
+
+Ausklammern von x liefert:
+
+stem:[x*(3x-6)=0]
+
+Mit Hilfe des Satzes des Nullprodukts sieht man, dass eine Nullstelle von stem:[f] an der Stelle stem:[x_1=0] vorliegt. Die zweite Möglichkeit, dass die erste Ableitung 0 wird, liegt vor, wenn stem:[3x-6=0], also wenn stem:[x_2=2] ist.
+
+Somit sind stem:[x_1=0] und stem:[x_2=2] _Kandidaten_ für Extremstellen von stem:[f].
+
+Nun überprüfen wir mit den hinreichenden Bedingungen, ob hier tatsächlich Extremstellen vorliegen:
+
+Zu a)
+
+Wir überprüfen die stem:[f'] auf Vorzeichenwechsel an den Stellen stem:[x_1]=0 und stem:[x_2]=2 mit Hilfe einer Tabelle:
+
+|===
+|stem:[x]|-1|0|1|2|3
+|stem:[f'(x)]|9|0|-3|0|9
+|===
+
+Somit liegt bei stem:[x_1=0] ein Vorzeichenwechsel von + nach - vor, also weist f an dieser Stelle ein Maximum auf (links davon steigt der Graph, rechts davon fällt er).
+
+Bei stem:[x_2=2] liegt ein Vorzeichenwechsel von - nach + vor, also hat f an dieser Stelle ein Minimum.
+
+Zu b)
+
+stem:[f''(x_1)=f''(0)=-6 < 0 => text( Rechtskurve von ) f text(, also Maximum bei ) x_0=0]
+
+stem:[f''(x_2)=f''(2)=6 > 0 => text ( Linkskurve von ) f (, also Minimum bei ) x_1=2]
+
+Da in der Aufgabe nach den _Extrempunkten_ gefragt ist, muss man noch den jeweiligen y-Wert bestimmen:
+
+stem:[f(x_1)=f(0)=4] und stem:[f(x_2)=f(2)=0].
+
+Somit liegen ein Hochpunkt H(0/4) und ein Tiefpunkt T(2/0) vor.
+
+Zur Kontrolle hier das Schaubild der Funktion und der ersten beiden Ableitungen:
+
+.Funktion f mit erster und zweiter Ableitung
+image::Bilder/Ableitungen/Aufgabe_Extremstellen.png[Aufgabe Extremstellen]
+
 
