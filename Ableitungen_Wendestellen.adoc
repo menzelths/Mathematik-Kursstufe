@@ -17,7 +17,7 @@ Diese Stellen werden als *Wendestellen* bezeichnet.
 
 Wir betrachten zunächst Stellen an denen eine Wendestelle vorliegt, die keine Sattelstelle ist. 
 
-Solche Wendestellen zeichnen sich dadurch aus, dass die Steigung der betrachteten Funktion stem:[f] dort maximal bzw. minimal ist. Dies wird deutlich, wenn maN neben dem Graphen der Funktion auch den Verlauf der ersten Ableitung einzeichnet:
+Solche Wendestellen zeichnen sich dadurch aus, dass die Steigung der betrachteten Funktion stem:[f] dort maximal bzw. minimal ist. Dies wird deutlich, wenn man neben dem Graphen der Funktion auch den Verlauf der ersten Ableitung einzeichnet:
 
 .Eine Funktion mit einem Wendepunkt W und ihre erste Ableitung
 image::Bilder/Ableitungen/Wendepunkt.png[Wendepunkt]
@@ -32,7 +32,7 @@ Man kann also sagen:
 Um die Wendestellen einer Funktion stem:[f] aufzufinden, kann man auch die Extremstellen von stem:[f'] bestimmen.
 ====
 
-Somit kann man die hinreichenden Bedingungen zum Auffinden von Extremstellen auf diesen Fall übertragen, wobei man nun aber nach den Extremstellen der ersten Ableitung sucht. Somit ersetzen wir in den hinreichenden Bedingungen jedes stem:[f'] mit stem:[f''] und jedes stem:[f''] mit stem:[f'''] und erhalten dadurch aus der ersten hinreichenden Bedingung:
+Somit kann man die hinreichenden Bedingungen zum Auffinden von Extremstellen auf diesen Fall übertragen, wobei man nun aber nach den Extremstellen der ersten Ableitung sucht. Somit ersetzen wir in den hinreichenden Bedingungen jedes stem:[f'] mit stem:[f''] und jedes stem:[f''] mit stem:[f'''] und erhalten dadurch aus der ersten hinreichenden Bedingung für lokale Extremstellen:
 
 ====
 *Erste hinreichende Bedingung für Wendestellen*
@@ -50,7 +50,7 @@ der Graph von stem:[f''] bei stem:[x_0] einen Vorzeichenwechsel vorliegen hat,
 Bei stem:[x_0] liegt eine *Wendestelle* von stem:[f] vor.
 ====
 
-Analog dazu geht aus der zweiten hinreichenden Bedingung dadurch hervor:
+Analog dazu geht aus der zweiten hinreichenden Bedingung für lokale Extremstellen dadurch hervor:
 
 ====
 *Die zweite hinreichende Bedingung für Wendestellen*
@@ -67,4 +67,5 @@ stem:[f'''(x_0)!=0] ,
 
 Bei stem:[x_0] liegt eine *Wendestelle* von stem:[f] vor.
 ====
+
 
