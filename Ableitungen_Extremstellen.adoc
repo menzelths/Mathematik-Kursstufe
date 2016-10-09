@@ -32,10 +32,7 @@ Aber Vorsicht:
 ====
 Die Schlussfolgerung 
 
-[stem]
-++++
-f'(x_0)=0 => text(Extremstelle bei )  x_0 
-++++
+stem:[f'(x_0)=0=>] Extremstelle bei stem:[x_0]
 
 ist *falsch*!
 ====
@@ -81,7 +78,7 @@ Der zweite Teil der ersten hinreichenden Bedingung (Vorzeichenweckel) ist also n
 
 == Zweite hinreichende Bedingung für lokale Extremstellen
 
-Durch die erste hinreichende Bedingung haben wir bereits ein Werkzeug, dass uns das Auffinden von Extremstellen vereinfacht. In diesem Abschnitt werden wir noch eine weitere Möglichkeit kennenlernen, diese rechnerisch zu bestimmen.
+Durch die erste hinreichende Bedingung haben wir bereits ein Werkzeug, das uns das Auffinden von Extremstellen vereinfacht. In diesem Abschnitt werden wir noch eine weitere Möglichkeit kennenlernen, diese rechnerisch zu bestimmen.
 
 Dazu betrachten wir die gleichen Beispiele wie im letzten Abschnitt, nur beziehen wir in unsere Betrachtung noch die zweite Ableitung mit ein.
 
@@ -163,9 +160,9 @@ Hier zeigt sich nochmal: stem:[f''(x_0)=0] bedeutet *nicht*, dass bei stem:[x_0]
 
 == Sonderfall konstante Funktion
 
-Ein Sonderfall in Bezug auf lokale Extremstellen ist eine konstante Funktion der Form stem:[f(x)=c text( mit ) c in RR].
+Ein Sonderfall in Bezug auf lokale Extremstellen ist eine konstante Funktion der Form stem:[f(x)=c] mit stem:[c in RR].
 
-Sie hat nach Definition unendlich viele lokale Maxima bzw. Minima. Das liegt daran, dass z. B. eine lokale Minimumstelle definiert ist als eine Stelle stem:[x_0], für die gilt stem:[f(x)>=f(x_0) text( für alle ) x in U(x_0)], wobei mit stem:[U(x_0)] die nähere Umgebung von stem:[x_0] gemeint ist. 
+Sie hat nach Definition unendlich viele lokale Maxima bzw. Minima. Das liegt daran, dass z. B. eine lokale Minimumstelle definiert ist als eine Stelle stem:[x_0], für die gilt stem:[f(x)>=f(x_0)] für alle stem:[x in U(x_0)], wobei mit stem:[U(x_0)] die nähere Umgebung von stem:[x_0] gemeint ist. 
 
 Da ein Kleiner-Gleich-Symbol in der Definition vorliegt, erfüllt eine konstante Funktion an jeder Stelle diese Voraussetzung, besitzt also an jeder Stelle ein lokales Minimum.
 
@@ -226,9 +223,9 @@ Bei stem:[x_2=2] liegt ein Vorzeichenwechsel von - nach + vor, also hat f an die
 
 Zu b)
 
-stem:[f''(x_1)=f''(0)=-6 < 0 => text( Rechtskurve von ) f text(, also Maximum bei ) x_0=0]
+stem:[f''(x_1)=f''(0)=-6 < 0 =>] Rechtskurve von stem:[f], also Maximum bei stem:[x_0=0]
 
-stem:[f''(x_2)=f''(2)=6 > 0 => text ( Linkskurve von ) f text(, also Minimum bei ) x_1=2]
+stem:[f''(x_2)=f''(2)=6 > 0 =>] Linkskurve von stem:[f], also Minimum bei stem:[ x_1=2]
 
 Da in der Aufgabe nach den _Extrempunkten_ gefragt ist, muss man noch den jeweiligen y-Wert bestimmen:
 
