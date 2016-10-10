@@ -70,4 +70,4 @@ Bei stem:[x_0] liegt eine *Wendestelle* von stem:[f] vor.
 
 == Übersicht über Extrem- und Wendestellen
 
-link:Material/Ableitungen/Übersicht_Extremstelle_Wendestelle.pdf[Übersicht als PDF]
+link:Material/Ableitungen/Übersicht_Extremstelle_Wendestelle.pdf[Hier] noch eine Übersicht über den Zusammenhang zwischen den Ableitungen für Extrem- und Wendestellen.
