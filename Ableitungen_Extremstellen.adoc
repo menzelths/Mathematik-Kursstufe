@@ -238,6 +238,4 @@ Zur Kontrolle hier das Schaubild der Funktion und der ersten beiden Ableitungen:
 .Funktion f mit erster und zweiter Ableitung
 image::Bilder/Ableitungen/Aufgabe_Extremstellen.png[Aufgabe Extremstellen]
 
-== Übersicht über Extrem- und Wendestellen
 
-link:Material/Ableitungen/Übersicht_Extremstelle_Wendestelle.pdf[Übersicht als PDF]

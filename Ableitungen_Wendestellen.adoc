@@ -68,4 +68,6 @@ stem:[f'''(x_0)!=0] ,
 Bei stem:[x_0] liegt eine *Wendestelle* von stem:[f] vor.
 ====
 
+== Übersicht über Extrem- und Wendestellen
 
+link:Material/Ableitungen/Übersicht_Extremstelle_Wendestelle.pdf[Übersicht als PDF]
