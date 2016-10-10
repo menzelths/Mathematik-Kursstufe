@@ -7,5 +7,5 @@
 
 <<Ableitungen_Wendestellen.adoc#Wendestellen,Das Bestimmen von Wendestellen>>
 
-///<<Ableitungen_Produktregel.adoc#Produktregel,Die Produktregel>>
+
 
