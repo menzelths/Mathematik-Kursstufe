@@ -430,7 +430,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_die_tangentengleichung">3. Die Tangentengleichung</a>
 <ul class="sectlevel2">
 <li><a href="#_herleitung">3.1. Herleitung</a></li>
-<li><a href="#_beispiele">3.2. Beispiele</a></li>
+<li><a href="#_beispiele_zur_tangentengleichung">3.2. Beispiele zur Tangentengleichung</a></li>
 </ul>
 </li>
 </ul>
@@ -491,18 +491,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_beispiele">3.2. Beispiele</h3>
+<h3 id="_beispiele_zur_tangentengleichung">3.2. Beispiele zur Tangentengleichung</h3>
+<div class="exampleblock">
+<div class="content">
 <div class="paragraph">
-<p><strong>Aufgabe 1:</strong></p>
+<p><strong>Aufgabe 1: Punkt auf dem Graphen gegeben</strong></p>
 </div>
 <div class="paragraph">
 <p>Gegeben sei \$f(x)=x^2\$. Bestimme die Gleichung der Tangente am Punkt \$P(3|f(3))\$.</p>
 </div>
-<div class="paragraph">
-<p><strong>Lösung</strong></p>
+</div>
 </div>
 <div class="paragraph">
-<p><em>Variante 1: Mit der Tangentengleichung</em></p>
+<p><strong>Lösung:</strong></p>
+</div>
+<div class="paragraph">
+<p><strong><em>Variante 1: Mit der Tangentengleichung</em></strong></p>
 </div>
 <div class="paragraph">
 <p>\$u=3\$, \$f(u)=f(3)=3^2=9\$.</p>
@@ -514,7 +518,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Einsetzen in die Tangentengleichung liefert: \$t(x)=6*(x-3)+9=6x-18+9=6x-9\$</p>
 </div>
 <div class="paragraph">
-<p><em>Variante 2: Mit der normalen Geradengleichung</em></p>
+<p><strong><em>Variante 2: Mit der normalen Geradengleichung</em></strong></p>
 </div>
 <div class="paragraph">
 <p>\$y=m*x+c\$ mit \$m=f'(3)=6\$ (s. oben). Da der Punkt \$P(3|f(3)=9)\$ auf der Tangente liegt, gilt die Gleichung</p>
@@ -525,13 +529,76 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>Somit gilt: \$c=9-18=-9\$, also erhält man als Tangentengleichung \$t(x)=6x-9\$.</p>
 </div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Aufgabe 2: Tangente von einem Punkt außerhalb des Graphen</strong></p>
+</div>
+<div class="paragraph">
+<p>Gegeben sei \$f(x)=x^2\$. Bestimme die Gleichung der Tangente an den Graph von \$f\$ durch den Punkt \$Q(3|1)\$ und die Punkte \$P\$, an denen die Tangente den Graph von \$f\$ berührt.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Lösung:</strong></p>
+</div>
+<div class="paragraph">
+<p>Der Punkt Q liegt <em>nicht</em> auf dem Graph von \$f\$, allerdings muss er natürlich auch die Tangentengleichung erfüllen, so dass man durch Einsetzen von \$t(x)=1\$ und \$x=3\$ die Gleichung</p>
+</div>
+<div class="paragraph">
+<p>\$1=f'(u)*(3-u)+f(u)\$</p>
+</div>
+<div class="paragraph">
+<p>erhält. Setzt man nun für \$f(u)=u^2\$ und für \$f'(u)=2u\$ ein, so gilt:</p>
+</div>
+<div class="paragraph">
+<p>\$1=2u*(3-u)+u^2\$.</p>
+</div>
+<div class="paragraph">
+<p>Diese Gleichung kann man nach kurzer Umformung mit Hilfe der Mitternachtsformel lösen:</p>
+</div>
+<div class="paragraph">
+<p>\$1=6u-2u^2+u^2=6u-u^2\$</p>
+</div>
+<div class="paragraph">
+<p>Standardform aufstellen, \$u^2-6u+1=0\$, und einsetzen:</p>
+</div>
+<div class="paragraph">
+<p>\$u_{1|2}={6+-sqrt{36-4*1*1}}/2={6+-4 sqrt{2}}/2\$</p>
+</div>
+<div class="paragraph">
+<p>ergibt \$u_1=3+2 sqrt(2)~~5,83\$ und \$u_2=3-2 sqrt(2)~~0,17\$.</p>
+</div>
+<div class="paragraph">
+<p>Somit gibt es zwei mögliche Punkte, an denen eine Tangente durch den Punkt \$Q\$ den Graph von \$f\$ berührt, nämlich \$P_1(5,83|33,99)\$ und \$P_2(0,17|0,029)\$.</p>
+</div>
+<div class="paragraph">
+<p>Somit lautet die Gleichung der einen Tangente</p>
+</div>
+<div class="paragraph">
+<p>\$t_1(x)~~2*5,83*(x-5,83)+33,99=11,66*x-67,98+33,99=11,66x-33,99\$</p>
+</div>
+<div class="paragraph">
+<p>und die der anderen analog dazu</p>
+</div>
+<div class="paragraph">
+<p>\$t_2(x)~~2*0,17*(x-0,17)+0,029=0,34x-0,0578+0,029=0,34x-0,0288\$.</p>
+</div>
+<div class="paragraph">
+<p>Im Schaubild sind die Lösungen nochmal visualisiert. Hier erkennt man auch, dass es tatsächlich <em>zwei</em> Tangenten geben muss.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="Bilder/Ableitungen/Aufgabe_Tangenten.png" alt="Lösung der Aufgabe">
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-13 17:53:12 Mitteleuropõische Sommerzeit
+Last updated 2016-10-13 18:52:26 Mitteleuropõische Sommerzeit
 </div>
 </div>
 <script type="text/x-mathjax-config">

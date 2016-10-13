@@ -37,14 +37,17 @@ Die Gleichung der Tangente in einem Punkt stem:[A(u|f(u))] lautet
 stem:[t(x)=f'(u)*(x-u)+f(u)].
 ====
 
-=== Beispiele
-*Aufgabe 1:*
+=== Beispiele zur Tangentengleichung
+
+====
+*Aufgabe 1: Punkt auf dem Graphen gegeben*
 
 Gegeben sei stem:[f(x)=x^2]. Bestimme die Gleichung der Tangente am Punkt stem:[P(3|f(3))].
+====
 
-*Lösung*
+*Lösung:*
 
-_Variante 1: Mit der Tangentengleichung_
+*_Variante 1: Mit der Tangentengleichung_*
 
 stem:[u=3], stem:[f(u)=f(3)=3^2=9].
 
@@ -52,7 +55,7 @@ stem:[f'(x)=2x], also ist stem:[f'(u)=f'(3)=2*3=6].
 
 Einsetzen in die Tangentengleichung liefert: stem:[t(x)=6*(x-3)+9=6x-18+9=6x-9]
 
-_Variante 2: Mit der normalen Geradengleichung_
+*_Variante 2: Mit der normalen Geradengleichung_*
 
 stem:[y=m*x+c] mit stem:[m=f'(3)=6] (s. oben). Da der Punkt stem:[P(3|f(3)=9)] auf der Tangente liegt, gilt die Gleichung
 
@@ -60,3 +63,42 @@ stem:[9=6*3+c].
 
 Somit gilt: stem:[c=9-18=-9], also erhält man als Tangentengleichung stem:[t(x)=6x-9].
 
+====
+*Aufgabe 2: Tangente von einem Punkt außerhalb des Graphen*
+
+Gegeben sei stem:[f(x)=x^2]. Bestimme die Gleichung der Tangente an den Graph von stem:[f] durch den Punkt stem:[Q(3|1)] und die Punkte stem:[P], an denen die Tangente den Graph von stem:[f] berührt.
+====
+
+*Lösung:*
+
+Der Punkt Q liegt _nicht_ auf dem Graph von stem:[f], allerdings muss er natürlich auch die Tangentengleichung erfüllen, so dass man durch Einsetzen von stem:[t(x)=1] und stem:[x=3] die Gleichung
+
+stem:[1=f'(u)*(3-u)+f(u)]
+
+erhält. Setzt man nun für stem:[f(u)=u^2] und für stem:[f'(u)=2u] ein, so gilt:
+
+stem:[1=2u*(3-u)+u^2].
+
+Diese Gleichung kann man nach kurzer Umformung mit Hilfe der Mitternachtsformel lösen:
+
+stem:[1=6u-2u^2+u^2=6u-u^2]
+
+Standardform aufstellen, stem:[u^2-6u+1=0], und einsetzen:
+
+stem:[u_{1|2}={6+-sqrt{36-4*1*1}}/2={6+-4 sqrt{2}}/2]
+
+ergibt stem:[u_1=3+2 sqrt(2)~~5,83] und stem:[u_2=3-2 sqrt(2)~~0,17].
+
+Somit gibt es zwei mögliche Punkte, an denen eine Tangente durch den Punkt stem:[Q] den Graph von stem:[f] berührt, nämlich stem:[P_1(5,83|33,99)] und stem:[P_2(0,17|0,029)].
+
+Somit lautet die Gleichung der einen Tangente 
+
+stem:[t_1(x)~~2*5,83*(x-5,83)+33,99=11,66*x-67,98+33,99=11,66x-33,99]
+
+und die der anderen analog dazu
+
+stem:[t_2(x)~~2*0,17*(x-0,17)+0,029=0,34x-0,0578+0,029=0,34x-0,0288].
+
+Im Schaubild sind die Lösungen nochmal visualisiert. Hier erkennt man auch, dass es tatsächlich _zwei_ Tangenten geben muss.
+
+image::Bilder/Ableitungen/Aufgabe_Tangenten.png[Lösung der Aufgabe]
