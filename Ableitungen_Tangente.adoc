@@ -25,9 +25,29 @@ Die Tangente ist die Gerade, die in einem Punkt A des Graphen von f die gleiche 
 
 Da es sich bei Tangente und Normale jeweils um Geraden handelt, können die zugehörigen Terme über die allgemeine Geradengleichung stem:[y=m * x+c] bestimmt werden.
 
-Im Fall der Tangente an einem Punkt stem:[A(u|f(u))] ist die Steigung stem:[m=f'(u)]. Somit kann man schreiben: stem:[y=f'(u)*x+c]. Zunächst scheinen drei Variablen, nämlich stem:[y],stem:[x] und stem:[c] unbekannt zu sein. Da man aber weiß, dass der Punkt A auf der Tangente liegt, muss dieser auch die Tangentengleichung erfüllen. Dadurch kann man für stem:[y=f(u)] schreiben und für stem:[x=u]. Man erhält durch dieses Einsetzen die Gleichung stem:[f(u)=f'(u)*u+c], wodurch ein Umformen nach stem:[c] den Ausdruck stem:[c=f(u)-f'(u)*u] liefert.
+Im Fall der Tangente an einem Punkt stem:[A(u|f(u))] ist die Steigung stem:[m=f'(u)]. Somit kann man schreiben: 
 
-Setzt man dieses stem:[c] und stem:[m=f'(u)] in die allgemeine Geradengleichung stem:[y=m * x+c] ein, so erhält man für den Funktionsterm der Tangente stem:[t(x)=f'(u)*x+f(u)-f'(u)*u] und kann diesen Ausdruck über das Ausklammern von stem:[f'(u)] umformen zu stem:[t(x)=f'(u)*(x-u)+f(u)]. Diese Gleichung heißt
+stem:[y=f'(u)*x+c]. 
+
+Zunächst scheinen drei Variablen, nämlich stem:[y], stem:[x] und stem:[c] unbekannt zu sein. Da man aber weiß, dass der Punkt A auf der Tangente liegt, muss dieser auch die Tangentengleichung erfüllen. Dadurch kann man für stem:[y=f(u)] schreiben und für stem:[x=u]. Man erhält durch dieses Einsetzen die Gleichung 
+
+stem:[f(u)=f'(u)*u+c], 
+
+wodurch ein Umformen nach stem:[c] den Ausdruck 
+
+stem:[c=f(u)-f'(u)*u] 
+
+liefert.
+
+Setzt man dieses stem:[c] und stem:[m=f'(u)] in die allgemeine Geradengleichung stem:[y=m * x+c] ein, so erhält man für den Funktionsterm der Tangente 
+
+stem:[t(x)=f'(u)*x+f(u)-f'(u)*u] 
+
+und kann diesen Ausdruck über das Ausklammern von stem:[f'(u)] umformen zu 
+
+stem:[t(x)=f'(u)*(x-u)+f(u)]. 
+
+Diese Gleichung heißt
 
 ====
 *Tangentengleichung:*
