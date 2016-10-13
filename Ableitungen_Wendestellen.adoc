@@ -13,6 +13,8 @@ Neben den Stellen, an denen bei einer Funktion ein Minimum oder Maximum vorliegt
 Diese Stellen werden als *Wendestellen* bezeichnet.
 
 
+
+
 == Hinreichende Bedingungen zum Auffinden von Wendestellen
 
 Wir betrachten zunächst Stellen an denen eine Wendestelle vorliegt, die keine Sattelstelle ist. 
@@ -67,6 +69,10 @@ stem:[f'''(x_0)!=0] ,
 
 Bei stem:[x_0] liegt eine *Wendestelle* von stem:[f] vor.
 ====
+
+Die zu den Wendestellen zugehörigen Punkte heißen *Wendepunkte*.
+
+Eine besonderer Wendepunkt ist der *Sattelpunkt*: Hierbei handelt es sich um einen Wendepunkt, an dem die Tangente die Steigung 0 hat, also waagrecht verläuft. Dies kann man überprüfen, indem man den x-Wert des Wendepunkts in die erste Ableitung stem:[f'] einsetzt: ist sie dort 0, so liegt ein Sattelpunkt vor. 
 
 == Übersicht über Extrem- und Wendestellen
 
