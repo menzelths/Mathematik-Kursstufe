@@ -17,7 +17,7 @@ Das folgende Schaubild zeigt die *Tangente* und die *Normale* an f in einem Punk
 .Funktion f mit Tangente und Normale in einem Punkt A
 image::Bilder/Ableitungen/Tangente_Normale.png[Tangente und Normale an einem Punkt A]
 
-Die Tangente ist die Gerade, die in einem Punkt A des Graphen von f die gleiche Steigung hat und durch den Punkt A verläuft, die Normale ist die Gerade durch A, die auf der Tangente senkrecht steht.
+Die Tangente ist die Gerade, die in einem Punkt A des Graphen von f die gleiche Steigung hat wie der Graph selbst und durch den Punkt A verläuft, die Normale ist die Gerade durch A, die auf der Tangente senkrecht steht.
 
 == Die Tangentengleichung
 
