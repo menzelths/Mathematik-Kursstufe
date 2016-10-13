@@ -5,7 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<title>Kapitelübersicht</title>
+<meta name="keywords" content="ableitung,  Tangente, Steigung">
+<title>Tangenten und Normalen</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -416,31 +417,138 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
-<body class="article">
+<body class="article toc2 toc-left">
 <div id="header">
-<h1>Kapitelübersicht</h1>
+<h1><a id="Tangenten"></a>Tangenten und Normalen</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Inhaltsverzeichnis</div>
+<ul class="sectlevel1">
+<li><a href="#_motivation">1. Motivation</a></li>
+<li><a href="#_begriffsklärung">2. Begriffsklärung</a></li>
+<li><a href="#_die_tangentengleichung">3. Die Tangentengleichung</a>
+<ul class="sectlevel2">
+<li><a href="#_herleitung">3.1. Herleitung</a></li>
+<li><a href="#_beispiele">3.2. Beispiele</a></li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_ableitungen">Ableitungen</h2>
+<h2 id="_motivation">1. Motivation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="Ableitungen_Extremstellen.html#Extremstellen">Erste und zweite hinreichende Bedingung für lokale Extremstellen</a></p>
+<p>Mit Hilfe der ersten Ableitung kann man an einem Punkt im Graph einer Funktion \$f\$ die Steigung der Tangente durch diesen Punkt berechnen. Möchte man jedoch die Gleichung der Tangente aufstellen, so muss man noch weitere Schritte unternehmen. Dieses Kapitel erklärt Vorgehensweisen, um die Gleichungen von Tangenten und Normalen durch Punkte eines Graphen zu bestimmen.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_begriffsklärung">2. Begriffsklärung</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Das folgende Schaubild zeigt die <strong>Tangente</strong> und die <strong>Normale</strong> an f in einem Punkt A:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="Bilder/Ableitungen/Tangente_Normale.png" alt="Tangente und Normale an einem Punkt A">
+</div>
+<div class="title">Figure 1. Funktion f mit Tangente und Normale in einem Punkt A</div>
 </div>
 <div class="paragraph">
-<p><a href="Ableitungen_Wendestellen.html#Wendestellen">Das Bestimmen von Wendestellen</a></p>
+<p>Die Tangente ist die Gerade, die in einem Punkt A des Graphen von f die gleiche Steigung hat und durch den Punkt A verläuft, die Normale ist die Gerade durch A, die auf der Tangente senkrecht steht.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_die_tangentengleichung">3. Die Tangentengleichung</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_herleitung">3.1. Herleitung</h3>
+<div class="paragraph">
+<p>Da es sich bei Tangente und Normale jeweils um Geraden handelt, können die zugehörigen Terme über die allgemeine Geradengleichung \$y=m * x+c\$ bestimmt werden.</p>
 </div>
 <div class="paragraph">
-<p><a href="Ableitungen_Tangente.html#Tangenten">Tangente und Normale</a></p>
+<p>Im Fall der Tangente an einem Punkt \$A(u|f(u))\$ ist die Steigung \$m=f'(u)\$. Somit kann man schreiben: \$y=f'(u)*x+c\$. Zunächst scheinen drei Variablen, nämlich \$y\$,\$x\$ und \$c\$ unbekannt zu sein. Da man aber weiß, dass der Punkt A auf der Tangente liegt, muss dieser auch die Tangentengleichung erfüllen. Dadurch kann man für \$y=f(u)\$ schreiben und für \$x=u\$. Man erhält durch dieses Einsetzen die Gleichung \$f(u)=f'(u)*u+c\$, wodurch ein Umformen nach \$c\$ den Ausdruck \$c=f(u)-f'(u)*u\$ liefert.</p>
+</div>
+<div class="paragraph">
+<p>Setzt man dieses \$c\$ und \$m=f'(u)\$ in die allgemeine Geradengleichung \$y=m * x+c\$ ein, so erhält man für den Funktionsterm der Tangente \$t(x)=f'(u)*x+f(u)-f'(u)*u\$ und kann diesen Ausdruck über das Ausklammern von \$f'(u)\$ umformen zu \$t(x)=f'(u)*(x-u)+f(u)\$. Diese Gleichung heißt</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Tangentengleichung:</strong></p>
+</div>
+<div class="paragraph">
+<p>Die Gleichung der Tangente in einem Punkt \$A(u|f(u))\$ lautet</p>
+</div>
+<div class="paragraph">
+<p>\$t(x)=f'(u)*(x-u)+f(u)\$.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_beispiele">3.2. Beispiele</h3>
+<div class="paragraph">
+<p><strong>Aufgabe 1:</strong></p>
+</div>
+<div class="paragraph">
+<p>Gegeben sei \$f(x)=x^2\$. Bestimme die Gleichung der Tangente am Punkt \$P(3|f(3))\$.</p>
+</div>
+<div class="paragraph">
+<p><strong>Lösung</strong></p>
+</div>
+<div class="paragraph">
+<p><em>Variante 1: Mit der Tangentengleichung</em></p>
+</div>
+<div class="paragraph">
+<p>\$u=3\$, \$f(u)=f(3)=3^2=9\$.</p>
+</div>
+<div class="paragraph">
+<p>\$f'(x)=2x\$, also ist \$f'(u)=f'(3)=2*3=6\$.</p>
+</div>
+<div class="paragraph">
+<p>Einsetzen in die Tangentengleichung liefert: \$t(x)=6*(x-3)+9=6x-18+9=6x-9\$</p>
+</div>
+<div class="paragraph">
+<p><em>Variante 2: Mit der normalen Geradengleichung</em></p>
+</div>
+<div class="paragraph">
+<p>\$y=m*x+c\$ mit \$m=f'(3)=6\$ (s. oben). Da der Punkt \$P(3|f(3)=9)\$ auf der Tangente liegt, gilt die Gleichung</p>
+</div>
+<div class="paragraph">
+<p>\$9=6*3+c\$.</p>
+</div>
+<div class="paragraph">
+<p>Somit gilt: \$c=9-18=-9\$, also erhält man als Tangentengleichung \$t(x)=6x-9\$.</p>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-13 17:54:24 Mitteleuropõische Sommerzeit
+Last updated 2016-10-13 17:53:12 Mitteleuropõische Sommerzeit
 </div>
 </div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
 </body>
 </html>

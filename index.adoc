@@ -7,5 +7,7 @@
 
 <<Ableitungen_Wendestellen.adoc#Wendestellen,Das Bestimmen von Wendestellen>>
 
+<<Ableitungen_Tangente.adoc#Tangenten,Tangente und Normale>>
+
 
 
