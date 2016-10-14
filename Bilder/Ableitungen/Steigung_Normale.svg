@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+
+<svg 
+     version="1.1"
+     baseProfile="full"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:ev="http://www.w3.org/2001/xml-events"
+     width="50.026428762064086cm"
+     height="56.90403926290433cm"
+     viewBox="0 0 610 694"
+     >
+<title>
+
+</title>
+<g stroke-linejoin="miter" stroke-dashoffset="0.0000" stroke-dasharray="none" stroke-width="1.0000" stroke-miterlimit="10.000" stroke-linecap="square">
+<clipPath id="clip1">
+  <path d="M 0.0000 0.0000 L 0.0000 695.00 L 611.00 695.00 L 611.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip1)">
+<image x="0" y="0" width="611" height="695" xlink:href="data:image/png;base64,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
+e+jzAAAAAElFTkSuQmCC"></image>
+</g> <!-- clip1 -->
+<g id="misc">
+</g><!-- misc -->
+<g id="layer0">
+<clipPath id="clip2">
+  <path d="M 0.0000 0.0000 L 0.0000 695.00 L 611.00 695.00 L 611.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip2)">
+<g stroke-linejoin="round" stroke-width="3.0000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#666666">
+  <path d="M 124.11 708.94 L 128.88 699.39 L 133.66 689.84 L 138.43 680.30 L 143.20 670.75 L 147.98 661.20 L 152.75 651.66 L 157.52 642.11 L 162.30 632.56 L 167.07 623.02 L 171.84 613.47 L 176.62 603.92 L 181.39 594.38 L 186.16 584.83 L 190.94 575.28 L 195.71 565.73 L 200.48 556.19 L 205.26 546.64 L 210.03 537.09 L 214.80 527.55 L 219.58 518.00 L 224.35 508.45 L 229.12 498.91 L 233.90 489.36 L 238.67 479.81 L 243.45 470.27 L 248.22 460.72 L 252.99 451.17 L 257.77 441.62 L 262.54 432.08 L 267.31 422.53 L 272.09 412.98 L 276.86 403.44 L 281.63 393.89 L 286.41 384.34 L 291.18 374.80 L 295.95 365.25 L 300.73 355.70 L 305.50 346.16 L 310.27 336.61 L 315.05 327.06 L 319.82 317.52 L 324.59 307.97 L 329.37 298.42 L 334.14 288.88 L 338.91 279.33 L 343.69 269.78 L 348.46 260.23 L 353.23 250.69 L 358.01 241.14 L 362.78 231.59 L 367.55 222.05 L 372.33 212.50 L 377.10 202.95 L 381.88 193.41 L 386.65 183.86 L 391.42 174.31 L 396.20 164.77 L 400.97 155.22 L 405.74 145.67 L 410.52 136.12 L 415.29 126.58 L 420.06 117.03 L 424.84 107.48 L 429.61 97.937 L 434.38 88.391 L 439.16 78.844 L 443.93 69.297 L 448.70 59.750 L 453.48 50.203 L 458.25 40.656 L 463.02 31.109 L 467.80 21.562 L 472.57 12.016 L 477.34 2.4687 L 482.12 -7.0781"/>
+<title>Funktion f</title>
+<desc>f(x) = 2 (x - 0.86) - 0.06</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip2 -->
+<clipPath id="clip3">
+  <path d="M 0.0000 0.0000 L 0.0000 695.00 L 611.00 695.00 L 611.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip3)">
+<g fill-opacity="1.0000" fill-rule="nonzero" stroke="none" fill="#666666">
+  <path d="M 145.09 690.00 L 145.09 679.19 L 143.22 679.19 L 143.22 677.55 L 145.09 677.55 L 145.09 676.23 Q 145.09 674.97 145.31 674.36 Q 145.61 673.55 146.38 673.04 Q 147.16 672.53 148.53 672.53 Q 149.42 672.53 150.50 672.73 L 150.19 674.58 Q 149.53 674.45 148.94 674.45 Q 147.98 674.45 147.59 674.87 Q 147.19 675.28 147.19 676.41 L 147.19 677.55 L 149.61 677.55 L 149.61 679.19 L 147.19 679.19 L 147.19 690.00 L 145.09 690.00 z"/>
+<title>Funktion f</title>
+<desc>f(x) = 2 (x - 0.86) - 0.06</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip3 -->
+<clipPath id="clip4">
+  <path d="M 0.0000 0.0000 L 0.0000 695.00 L 611.00 695.00 L 611.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip4)">
+<g stroke-linejoin="round" stroke-width="3.0000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#0000ff">
+  <path d="M 275.88 405.41 L 405.34 405.41"/>
+<title>Strecke h</title>
+<desc>Strecke h: Strecke [A, C]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip4 -->
+<clipPath id="clip5">
+  <path d="M 0.0000 0.0000 L 0.0000 695.00 L 611.00 695.00 L 611.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip5)">
+<g stroke-linejoin="round" stroke-width="3.0000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#0000ff">
+  <path d="M 346.11 405.41 L 340.61 411.91"/>
+<title>Strecke h</title>
+<desc>Strecke h: Strecke [A, C]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip5 -->
+<clipPath id="clip6">
+  <path d="M 0.0000 0.0000 L 0.0000 695.00 L 611.00 695.00 L 611.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip6)">
+<g stroke-linejoin="round" stroke-width="3.0000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#0000ff">
+  <path d="M 346.11 405.41 L 340.61 398.91"/>
+<title>Strecke h</title>
+<desc>Strecke h: Strecke [A, C]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip6 -->
+<clipPath id="clip7">
+  <path d="M 0.0000 0.0000 L 0.0000 695.00 L 611.00 695.00 L 611.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip7)">
+<g stroke-linejoin="round" stroke-width="3.0000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#ff0000">
+  <path d="M 405.34 405.41 L 405.34 146.48"/>
+<title>Strecke g</title>
+<desc>Strecke g: Strecke [C, B]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip7 -->
+<clipPath id="clip8">
+  <path d="M 0.0000 0.0000 L 0.0000 695.00 L 611.00 695.00 L 611.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip8)">
+<g stroke-linejoin="round" stroke-width="3.0000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#ff0000">
+  <path d="M 405.34 270.44 L 411.84 275.94"/>
+<title>Strecke g</title>
+<desc>Strecke g: Strecke [C, B]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip8 -->
+<clipPath id="clip9">
+  <path d="M 0.0000 0.0000 L 0.0000 695.00 L 611.00 695.00 L 611.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip9)">
+<g stroke-linejoin="round" stroke-width="3.0000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#ff0000">
+  <path d="M 405.34 270.44 L 398.84 275.94"/>
+<title>Strecke g</title>
+<desc>Strecke g: Strecke [C, B]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip9 -->
+<g transform="matrix(51.000, 0.0000, 0.0000, 51.000, 305.00, 478.85)">
+<clipPath id="clip10">
+  <path d="M -5.9804 -9.3892 L -5.9804 4.2382 L 6.0000 4.2382 L 6.0000 -9.3892 z"/>
+</clipPath>
+<g clip-path="url(#clip10)">
+<g fill-opacity="1.0000" fill-rule="nonzero" stroke="none" fill="#0000ff">
+  <path d="M .43750 -.70312 L .78125 -.015625 Q .78125 -.015625 .78125 -.015625 Q .78125 -0.0000 .76562 -0.0000 L .062500 -0.0000 Q .046875 -0.0000 .046875 -.015625 Q .046875 -.015625 .046875 -.015625 L .39062 -.70312 Q .39062 -.71875 .40625 -.71875 Q .40625 -.71875 .42188 -.71875 Q .43750 -.71875 .43750 -.70312 Q .43750 -.70312 .43750 -.70312 z M .39062 -.60938 L .10938 -.078125 L .65625 -.078125 L .39062 -.60938 z"/>
+<title> \Delta x</title>
+<desc>Text1 = &quot; \Delta x&quot;</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip10 -->
+</g> <!-- transform -->
+<g transform="matrix(51.000, 0.0000, 0.0000, 51.000, 347.50, 478.85)">
+<clipPath id="clip11">
+  <path d="M -6.8137 -9.3892 L -6.8137 4.2382 L 5.1667 4.2382 L 5.1667 -9.3892 z"/>
+</clipPath>
+<g clip-path="url(#clip11)">
+<g fill-opacity="1.0000" fill-rule="nonzero" stroke="none" fill="#0000ff">
+  <path d="M .32812 -.29688 L .29688 -.17188 Q .28125 -.093750 .28125 -.078125 Q .28125 -.031250 .31250 -.015625 Q .32812 -.015625 .34375 -.015625 Q .39062 -.015625 .42188 -.062500 Q .45312 -.093750 .46875 -.14062 Q .46875 -.15625 .48438 -.15625 Q .50000 -.15625 .50000 -.14062 Q .50000 -.12500 .46875 -.078125 Q .40625 .015625 .34375 .015625 Q .26562 .015625 .23438 -.046875 Q .23438 -.062500 .23438 -.062500 Q .20312 -.015625 .15625 -0.0000 Q .14062 .015625 .12500 .015625 Q .062500 .015625 .031250 -.031250 Q .031250 -.031250 .031250 -.062500 Q .031250 -.093750 .062500 -.10938 Q .078125 -.10938 .078125 -.10938 Q .10938 -.10938 .12500 -.093750 Q .12500 -.078125 .12500 -.078125 Q .12500 -.046875 .093750 -.031250 Q .078125 -.031250 .078125 -.031250 Q .093750 -.015625 .12500 -.015625 Q .17188 -.015625 .20312 -.078125 Q .21875 -.093750 .21875 -.10938 Q .26562 -.31250 .26562 -.35938 Q .26562 -.42188 .21875 -.42188 Q .17188 -.42188 .12500 -.35938 L .12500 -.35938 Q .12500 -.35938 .12500 -.35938 Q .10938 -.34375 .093750 -.31250 Q .093750 -.31250 .093750 -.29688 L .078125 -.28125 Q .078125 -.28125 .078125 -.28125 Q .062500 -.28125 .062500 -.28125 Q .062500 -.31250 .093750 -.35938 Q .14062 -.43750 .21875 -.43750 Q .29688 -.43750 .32812 -.35938 Q .35938 -.42188 .40625 -.43750 Q .42188 -.43750 .43750 -.43750 Q .50000 -.43750 .51562 -.40625 Q .53125 -.39062 .53125 -.37500 Q .53125 -.32812 .48438 -.32812 Q .48438 -.31250 .46875 -.31250 Q .43750 -.31250 .43750 -.34375 Q .43750 -.34375 .43750 -.35938 Q .43750 -.39062 .46875 -.40625 Q .46875 -.40625 .48438 -.40625 Q .46875 -.42188 .43750 -.42188 Q .35938 -.42188 .34375 -.31250 Q .32812 -.31250 .32812 -.29688 z"/>
+<title> \Delta x</title>
+<desc>Text1 = &quot; \Delta x&quot;</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip11 -->
+</g> <!-- transform -->
+<g transform="matrix(51.000, 0.0000, 0.0000, 51.000, 443.00, 312.85)">
+<clipPath id="clip12">
+  <path d="M -8.6863 -6.1343 L -8.6863 7.4931 L 3.2941 7.4931 L 3.2941 -6.1343 z"/>
+</clipPath>
+<g clip-path="url(#clip12)">
+<g fill-opacity="1.0000" fill-rule="nonzero" stroke="none" fill="#ff0000">
+  <path d="M .43750 -.70312 L .78125 -.015625 Q .78125 -.015625 .78125 -.015625 Q .78125 -0.0000 .76562 -0.0000 L .062500 -0.0000 Q .046875 -0.0000 .046875 -.015625 Q .046875 -.015625 .046875 -.015625 L .39062 -.70312 Q .39062 -.71875 .40625 -.71875 Q .40625 -.71875 .42188 -.71875 Q .43750 -.71875 .43750 -.70312 Q .43750 -.70312 .43750 -.70312 z M .39062 -.60938 L .10938 -.078125 L .65625 -.078125 L .39062 -.60938 z"/>
+<title>\Delta y</title>
+<desc>Text2 = &quot;\Delta y&quot;</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip12 -->
+</g> <!-- transform -->
+<g transform="matrix(51.000, 0.0000, 0.0000, 51.000, 485.50, 312.85)">
+<clipPath id="clip13">
+  <path d="M -9.5196 -6.1343 L -9.5196 7.4931 L 2.4608 7.4931 L 2.4608 -6.1343 z"/>
+</clipPath>
+<g clip-path="url(#clip13)">
+<g fill-opacity="1.0000" fill-rule="nonzero" stroke="none" fill="#ff0000">
+  <path d="M .48438 -.37500 L .39062 -0.0000 Q .35938 .093750 .28125 .15625 Q .21875 .20312 .15625 .20312 Q .093750 .20312 .062500 .15625 Q .046875 .14062 .046875 .12500 Q .046875 .062500 .093750 .062500 Q .093750 .046875 .10938 .046875 Q .14062 .046875 .14062 .078125 Q .14062 .078125 .14062 .093750 Q .14062 .10938 .12500 .12500 Q .10938 .14062 .078125 .14062 Q .093750 .18750 .15625 .18750 Q .21875 .18750 .26562 .12500 Q .31250 .062500 .32812 -.015625 Q .32812 -.031250 .32812 -.031250 Q .28125 .015625 .23438 .015625 Q .15625 .015625 .12500 -.046875 Q .10938 -.078125 .10938 -.10938 Q .10938 -.15625 .15625 -.31250 Q .15625 -.31250 .17188 -.31250 Q .18750 -.35938 .18750 -.39062 Q .18750 -.42188 .15625 -.42188 Q .10938 -.42188 .062500 -.32812 L .062500 -.32812 Q .062500 -.31250 .062500 -.29688 Q .046875 -.28125 .046875 -.28125 Q .031250 -.28125 .031250 -.28125 Q .031250 -.31250 .046875 -.34375 Q .093750 -.43750 .15625 -.43750 Q .21875 -.43750 .23438 -.39062 Q .25000 -.37500 .25000 -.35938 Q .25000 -.34375 .21875 -.28125 Q .17188 -.15625 .17188 -.093750 Q .17188 -.015625 .23438 -.015625 Q .29688 -.015625 .32812 -.078125 Q .34375 -.093750 .34375 -.093750 L .39062 -.28125 Q .40625 -.31250 .40625 -.35938 Q .42188 -.40625 .42188 -.40625 Q .43750 -.43750 .46875 -.43750 Q .48438 -.42188 .48438 -.40625 Q .48438 -.39062 .48438 -.37500 z"/>
+<title>\Delta y</title>
+<desc>Text2 = &quot;\Delta y&quot;</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip13 -->
+</g> <!-- transform -->
+</g><!-- layer0 -->
+</g> <!-- default stroke -->
+</svg> <!-- bounding box -->

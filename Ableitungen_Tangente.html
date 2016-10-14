@@ -433,6 +433,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_beispiele_zur_tangentengleichung">3.2. Beispiele zur Tangentengleichung</a></li>
 </ul>
 </li>
+<li><a href="#_die_normale">4. Die Normale</a>
+<ul class="sectlevel2">
+<li><a href="#_zusammenhang_tangente_und_normale">4.1. Zusammenhang Tangente und Normale</a></li>
+<li><a href="#_beispiel_zur_berechnung_der_normale">4.2. Beispiel zur Berechnung der Normale</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -506,13 +512,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>Diese Gleichung heißt</p>
 </div>
-<div class="exampleblock">
+<div id="Tangentengleichung" class="exampleblock">
 <div class="content">
 <div class="paragraph">
 <p><strong>Tangentengleichung:</strong></p>
 </div>
 <div class="paragraph">
-<p>Die Gleichung der Tangente in einem Punkt \$A(u|f(u))\$ lautet</p>
+<p>Die Gleichung der Tangente an den Graph von \$f\$ in einem Punkt \$A(u|f(u))\$ lautet</p>
 </div>
 <div class="paragraph">
 <p>\$t(x)=f'(u)*(x-u)+f(u)\$.</p>
@@ -522,7 +528,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect2">
 <h3 id="_beispiele_zur_tangentengleichung">3.2. Beispiele zur Tangentengleichung</h3>
-<div class="exampleblock">
+<div id="Tangentenaufgabe" class="exampleblock">
 <div class="content">
 <div class="paragraph">
 <p><strong>Aufgabe 1: Punkt auf dem Graphen gegeben</strong></p>
@@ -625,10 +631,126 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_die_normale">4. Die Normale</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_zusammenhang_tangente_und_normale">4.1. Zusammenhang Tangente und Normale</h3>
+<div class="paragraph">
+<p>Zeichnet man ein Steigungsdreieck an eine Gerade, so hat diese Gerade die Steigung \$m= {Delta y}/ {Delta x}\$, wobei \$Delta x\$ angibt, wie weit man nach rechts gehen muss, \$Delta y\$ hingegen, wie weit nach oben.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="Bilder/Ableitungen/Steigung_Normale.png" alt="Steigung Normale">
+</div>
+</div>
+<div class="paragraph">
+<p>Nun drehen wir das Bild um 90 Grad und erhalten dadurch die Gerade, die auf der vorherigen senkrecht steht:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="Bilder/Ableitungen/Steigung_Normale_90.png" alt="Steigung Normale 90 Grad gedreht">
+</div>
+</div>
+<div class="paragraph">
+<p>Die Steigung der neuen Gerade erhält man nun wieder über das Steigungsdreieck. Die neue Steigung ist nun allerdings</p>
+</div>
+<div class="paragraph">
+<p>\$m_{text(neu)}={-Delta x} / { Delta y}=-{Delta x} / {Delta y}=-1/({Delta y} / {Delta x})=-1/m\$,</p>
+</div>
+<div class="paragraph">
+<p>da man zunächst um \$Delta x\$ nach unten geht (also "um \$-Delta x\$ nach oben") und um \$Delta y\$ nach rechts.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Oder anders erklärt: Im Vergleich zur ersten Gerade mit der Steigung \$m= {Delta y} / {Delta x}\$ sind \$Delta x\$ und \$Delta y\$ vertauscht und da durch die Drehung aus einer positiven Steigung eine negative wird, muss man auch noch das Vorzeichen anpassen.</p>
+</div>
+<div class="paragraph">
+<p>Dadurch gilt \$m_{text(neu)}=-{Delta x} / {Delta y}\$.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Somit gilt allgemein:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Steigungen aufeinander senkrecht stehender Geraden:</strong></p>
+</div>
+<div class="paragraph">
+<p>Stehen zwei Geraden mit den Steigungen \$m_1\$ und \$m_2\$ aufeinander senkrecht, so gilt:</p>
+</div>
+<div class="paragraph">
+<p>\$m_2=- 1/m_1\$</p>
+</div>
+<div class="paragraph">
+<p>bzw.</p>
+</div>
+<div class="paragraph">
+<p>\$m_1 * m_2=-1\$</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Wendet man diese Erkenntnis auf die <a href="#Tangentengleichung">Tangentengleichung</a> an, so erhält man als</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Normalengleichung:</strong></p>
+</div>
+<div class="paragraph">
+<p>Die Gleichung der Normale an den Graph von \$f\$ in einem Punkt \$A(u|f(u))\$ lautet</p>
+</div>
+<div class="paragraph">
+<p>\$n(x)=- 1 / {f'(u)} *(x-u)+f(u)\$</p>
+</div>
+<div class="paragraph">
+<p>mit \$f'(u)!=0\$.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_beispiel_zur_berechnung_der_normale">4.2. Beispiel zur Berechnung der Normale</h3>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Aufgabe:</strong></p>
+</div>
+<div class="paragraph">
+<p>Berechne die Normale am Graph der Funktion \$f(x)=x^2\$ im Punkt \$P(3|f(3))\$.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Lösung:</strong></p>
+</div>
+<div class="paragraph">
+<p>Aus <a href="#Tangentenaufgabe">Aufgabe 1 zur Tangente</a> wissen wir bereits, dass \$f(3)=9\$ und \$f'(3)=6\$.</p>
+</div>
+<div class="paragraph">
+<p>Setzen wir dies in die Normalengleichung ein, so erhält man als Gleichung für die Normale den Term</p>
+</div>
+<div class="paragraph">
+<p>\$n(x)=- 1/6 *(x-3)+9=- 1/6 x +3/6 +9=- 1/6 x+9,5\$.</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-13 18:56:57 Mitteleuropõische Sommerzeit
+Last updated 2016-10-15 01:12:41 Mitteleuropõische Sommerzeit
 </div>
 </div>
 <script type="text/x-mathjax-config">

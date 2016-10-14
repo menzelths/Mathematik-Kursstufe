@@ -49,16 +49,19 @@ stem:[t(x)=f'(u)*(x-u)+f(u)].
 
 Diese Gleichung heißt
 
+[[Tangentengleichung]]
 ====
 *Tangentengleichung:*
 
-Die Gleichung der Tangente in einem Punkt stem:[A(u|f(u))] lautet
+Die Gleichung der Tangente an den Graph von stem:[f] in einem Punkt stem:[A(u|f(u))] lautet
 
 stem:[t(x)=f'(u)*(x-u)+f(u)].
 ====
 
+
 === Beispiele zur Tangentengleichung
 
+[[Tangentenaufgabe]]
 ====
 *Aufgabe 1: Punkt auf dem Graphen gegeben*
 
@@ -122,3 +125,71 @@ stem:[t_2(x)~~2*0,17*(x-0,17)+0,029=0,34x-0,0578+0,029=0,34x-0,0288].
 Im Schaubild sind die Lösungen nochmal visualisiert. Hier erkennt man auch, dass es tatsächlich _zwei_ Tangenten geben muss.
 
 image::Bilder/Ableitungen/Aufgabe_Tangenten.png[Lösung der Aufgabe]
+
+== Die Normale
+
+=== Zusammenhang Tangente und Normale
+Zeichnet man ein Steigungsdreieck an eine Gerade, so hat diese Gerade die Steigung stem:[m= {Delta y}/ {Delta x}], wobei stem:[Delta x] angibt, wie weit man nach rechts gehen muss, stem:[Delta y] hingegen, wie weit nach oben.
+
+image::Bilder/Ableitungen/Steigung_Normale.png[Steigung Normale]
+
+Nun drehen wir das Bild um 90 Grad und erhalten dadurch die Gerade, die auf der vorherigen senkrecht steht:
+
+image::Bilder/Ableitungen/Steigung_Normale_90.png[Steigung Normale 90 Grad gedreht]
+
+Die Steigung der neuen Gerade erhält man nun wieder über das Steigungsdreieck. Die neue Steigung ist nun allerdings 
+
+stem:[m_{text(neu)}={-Delta x} / { Delta y}=-{Delta x} / {Delta y}=-1/({Delta y} / {Delta x})=-1/m],
+
+da man zunächst um stem:[Delta x] nach unten geht (also "um stem:[-Delta x] nach oben") und um stem:[Delta y] nach rechts.
+
+[TIP]
+====
+Oder anders erklärt: Im Vergleich zur ersten Gerade mit der Steigung stem:[m= {Delta y} / {Delta x}] sind stem:[Delta x] und stem:[Delta y] vertauscht und da durch die Drehung aus einer positiven Steigung eine negative wird, muss man auch noch das Vorzeichen anpassen.
+
+Dadurch gilt stem:[m_{text(neu)}=-{Delta x} / {Delta y}].
+====
+
+Somit gilt allgemein:
+
+====
+*Steigungen aufeinander senkrecht stehender Geraden:*
+
+Stehen zwei Geraden mit den Steigungen stem:[m_1] und stem:[m_2] aufeinander senkrecht, so gilt:
+
+stem:[m_2=- 1/m_1] 
+
+bzw. 
+
+stem:[m_1 * m_2=-1]
+====
+
+Wendet man diese Erkenntnis auf die <<Tangentengleichung,Tangentengleichung>> an, so erhält man als
+
+====
+*Normalengleichung:*
+
+
+Die Gleichung der Normale an den Graph von stem:[f] in einem Punkt stem:[A(u|f(u))] lautet
+
+stem:[n(x)=- 1 / {f'(u)} *(x-u)+f(u)] 
+
+mit stem:[f'(u)!=0].
+
+====
+
+=== Beispiel zur Berechnung der Normale
+
+====
+*Aufgabe:*
+
+Berechne die Normale am Graph der Funktion stem:[f(x)=x^2] im Punkt stem:[P(3|f(3))].
+====
+
+*Lösung:*
+
+Aus <<Tangentenaufgabe,Aufgabe 1 zur Tangente>> wissen wir bereits, dass stem:[f(3)=9] und stem:[f'(3)=6].
+
+Setzen wir dies in die Normalengleichung ein, so erhält man als Gleichung für die Normale den Term
+
+stem:[n(x)=- 1/6 *(x-3)+9=- 1/6 x +3/6 +9=- 1/6 x+9,5].
