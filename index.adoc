@@ -9,5 +9,7 @@
 
 <<Ableitungen_Tangente.adoc#Tangenten,Tangente und Normale>>
 
+<<Ableitungen_Extremwertprobleme.adoc#Extremwertprobleme,Extremwertprobleme mit Nebenbedingungen>>
+
 
 

@@ -5,8 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<meta name="keywords" content="ableitung,  zweite ableitung, hinreichende Bedingung, Extremstellen, Maximum, Minimum, Wendepunkt, Wendestelle">
-<title>Wendestellen</title>
+<meta name="keywords" content="Extremwertprobleme, Nebenbedingungen, Extremwert">
+<title>Extremwertprobleme mit Nebenbedingungen</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -419,141 +419,335 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
-<body class="article toc2 toc-left">
+<body class="article">
 <div id="header">
-<h1><a id="Wendestellen"></a>Wendestellen</h1>
-<div id="toc" class="toc2">
-<div id="toctitle">Inhaltsverzeichnis</div>
-<ul class="sectlevel1">
-<li><a href="#_motivation">1. Motivation</a></li>
-<li><a href="#_hinreichende_bedingungen_zum_auffinden_von_wendestellen">2. Hinreichende Bedingungen zum Auffinden von Wendestellen</a></li>
-<li><a href="#_Übersicht_über_extrem_und_wendestellen">3. Übersicht über Extrem- und Wendestellen</a></li>
-</ul>
-</div>
+<h1><a id="Extremwertprobleme"></a>Extremwertprobleme mit Nebenbedingungen</h1>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="_motivation">1. Motivation</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>Neben den Stellen, an denen bei einer Funktion ein Minimum oder Maximum vorliegt, sind auch die Stellen von Interesse, an denen die Funktion das Krümmungsverhalten ändert, also z. B. im Graph der Übergang von einer Links- in eine Rechtskurve zu erkennen ist. Die Kenntnis über die Lage dieser Stellen ist hilfreich beim Zeichnen des Schaubilds.</p>
-</div>
-<div class="paragraph">
-<p>Diese Stellen werden als <strong>Wendestellen</strong> bezeichnet.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_hinreichende_bedingungen_zum_auffinden_von_wendestellen">2. Hinreichende Bedingungen zum Auffinden von Wendestellen</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Wir betrachten zunächst Stellen an denen eine Wendestelle vorliegt, die keine Sattelstelle ist.</p>
+<p>Bei einem Extremwertproblem mit Nebenbedingungen sind eine Größe G und einschränkende
+Bedingungen für die Objekte gegeben, auf die sich die Größe bezieht. Diese Bedingungen
+nennt man <strong>Nebenbedingungen</strong>.</p>
 </div>
 <div class="paragraph">
-<p>Solche Wendestellen zeichnen sich dadurch aus, dass die Steigung der betrachteten Funktion \$f\$ dort maximal bzw. minimal ist. Dies wird deutlich, wenn man neben dem Graphen der Funktion auch den Verlauf der ersten Ableitung einzeichnet:</p>
+<p>Aufgabe ist es, unter den Objekten, die durch die Nebenbedingungen eingeschränkt werden,
+das Objekt zu finden, bei dem die Größe G den größten oder kleinsten Wert annimmt.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Bsp. 1: <strong>Bestimmen Sie das Rechteck mit dem größten Flächeninhalt, dessen Umfang 50 LE beträgt.</strong></p>
+</div>
+<div class="paragraph">
+<p>Die Größe ist hier der Flächeninhalt eines Rechtecks. Die Objekte, auf die sie
+sich bezieht, sind alle Rechtecke. Die <strong>Nebenbedingung</strong> "dessen Umfang 50 LE beträgt"
+schränkt die Rechtecke ein, unter denen dasjenige gefunden werden soll, das den größten
+Flächeninhalt hat. Der Leser möge nun Abb. 1 betrachten und die Lösung der Aufgabe erahnen.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="Bilder/Ableitungen/Wendepunkt.png" alt="Wendepunkt">
+<img src="Bilder/Ableitungen/Rechtecke.png" alt="Rechtecke">
 </div>
-<div class="title">Figure 1. Eine Funktion mit einem Wendepunkt W und ihre erste Ableitung</div>
+<div class="title">Figure 1. Rechtecke mit einem Umfang von 50LE</div>
 </div>
-<div class="paragraph">
-<p>Links vom Wendepunkt W beschreibt der Graph in diesem Beispiel eine Rechtskurve, rechts davon eine Linkskurve. Umso mehr man sich der Wendestelle von links nähert, desto negativer wird in diesem Beispiel die Steigung. Ist man über diese Stelle hinweg, wird der Graph von \$f\$ wieder weniger steil, die Steigung also positiver. Diese Tatsache ist auch am Graph der ersten Ableitung abzulesen: an der Wendestelle des Graphen von \$f\$ liegt ein Minimum von \$f'\$ vor.</p>
 </div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Man kann also sagen:</p>
 </div>
 <div class="paragraph">
-<p>Um die Wendestellen einer Funktion \$f\$ aufzufinden, kann man auch die Extremstellen von \$f'\$ bestimmen.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Somit kann man die hinreichenden Bedingungen zum Auffinden von Extremstellen auf diesen Fall übertragen, wobei man nun aber nach den Extremstellen der ersten Ableitung sucht. Somit ersetzen wir in den hinreichenden Bedingungen jedes \$f'\$ mit \$f''\$ und jedes \$f''\$ mit \$f'''\$ und erhalten dadurch aus der ersten hinreichenden Bedingung für lokale Extremstellen:</p>
+<p>Die Größe G kann durch eine Formel beschrieben werden.
+Diese stellt Beziehungen zu Größen her, die sich auf die gleichen Objekte,
+wie die Größe G, beziehen.
+Die Nebenbedingungen liefern wiederum Formeln,
+die Beziehungen zwischen diesen Größen herstellen.</p>
 </div>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p><strong>Erste hinreichende Bedingung für Wendestellen</strong></p>
+<p>Bsp. 1 (Fortsetzung 1)</p>
 </div>
 <div class="paragraph">
-<p>Gilt für eine Funktion \$f\$, dass</p>
+<p>Die Größe "Flächeninhalt eines Rechtecks" A kann durch die Formel</p>
 </div>
 <div class="paragraph">
-<p>\$f''(x_0)=0\$</p>
+<p>A = x &sdot; y für 0 &le; x und 0 &le; y</p>
 </div>
 <div class="paragraph">
-<p><strong>und</strong></p>
+<p>beschrieben werden. Hier bezeichnet x die Größe "Länge der
+ersten Seite des Rechtecks" und y die Größe "Länge der zweiten Seite des Rechtecks".</p>
 </div>
 <div class="paragraph">
-<p>der Graph von \$f''\$ bei \$x_0\$ einen Vorzeichenwechsel vorliegen hat,</p>
+<p>Die Nebenbedingung "dessen Flächeninhalt 50 LE beträgt" liefert die Formel:</p>
 </div>
 <div class="paragraph">
-<p><strong>dann gilt:</strong></p>
-</div>
-<div class="paragraph">
-<p>Bei \$x_0\$ liegt eine <strong>Wendestelle</strong> von \$f\$ vor.</p>
+<p>50 = 2x + 2y</p>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>Analog dazu geht aus der zweiten hinreichenden Bedingung für lokale Extremstellen dadurch hervor:</p>
+<p>Die Nebenbedingungen bewirken nicht nur eine Einschränkung der Objekte, auf
+die sich die Größe G bezieht, sondern auch, dass jedes dieser Objekte durch
+die Angabe einer der Größen eindeutig festgelegt ist, die in der Formel zur
+Berechnung von G vorkommen.
+Deshalb findet man auch eine Formel, die die Größe G nur in
+Abhängigkeit dieser einzigen Größe beschreibt. Diese Formel nennt man
+<strong>Zielfunktion</strong>. Wie man die Zielfunktion rechnerisch erhält, lässt sich
+in Worten nur umständlich beschreiben und sollte am Beispiel klar werden.</p>
 </div>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p><strong>Die zweite hinreichende Bedingung für Wendestellen</strong></p>
+<p>Bsp. 1 (Fortsetzung 2)</p>
 </div>
 <div class="paragraph">
-<p>Gilt für eine Funktion \$f\$, dass</p>
+<p>Wählt man einen Wert für die Seitenlänge x, eines Rechtecks,
+das einen Umfang von 50 LE hat, so kann man die zweite Seitenlänge y
+mit Hilfe der Formel y = 25 - x, die sich aus der Formel 50 = 2x + 2y
+durch Umformen ergibt, berechnen.</p>
 </div>
 <div class="paragraph">
-<p>\$f''(x_0)=0\$</p>
+<p>Die Zielfunktion erhält man durch Einsetzen von y = 25 - x in
+die Formel A = x &sdot; y. Da die Formel nur für 0 &le; y definiert ist,
+muss x &le; 25 gelten. Hier ist die <strong>Zielfunktion</strong> also gegeben durch
+(s. auch Abb. 2).</p>
 </div>
 <div class="paragraph">
-<p><strong>und</strong></p>
+<p>A(x) = x &sdot; (25-x) für  0 &le; x &le; 25</p>
 </div>
-<div class="paragraph">
-<p>\$f'''(x_0)!=0\$ ,</p>
+<div class="imageblock">
+<div class="content">
+<img src="Bilder/Ableitungen/Rechtecke2.png" alt="A">
 </div>
-<div class="paragraph">
-<p><strong>dann gilt:</strong></p>
-</div>
-<div class="paragraph">
-<p>Bei \$x_0\$ liegt eine <strong>Wendestelle</strong> von \$f\$ vor.</p>
+<div class="title">Figure 2. Graph der Funktion A(x)= x &sdot; (25-x)</div>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>Die zu den Wendestellen zugehörigen Punkte heißen <strong>Wendepunkte</strong>.</p>
+<p>Findet man nun den Wert für die Variable, bei dem die Zielfunktion
+den größten oder kleinsten Wert annimmt, so hat man auch das Objekt
+gefunden, unter dem die Größe G den größten oder kleinsten Wert
+annimmt. Die Variable der Zielfunktion bezeichnet ja eine Größe, die
+die betrachteten Objekte eindeutig beschreibt.
+Um den Wert zu finden, bei dem die Zielfunktion den größten oder
+kleinsten Wert annimmt, setzt man die Kriterien zur Auffindung von
+Extremstellen ein. Allerdings ist zu beachten, dass nicht ein lokales,
+sondern das globale Extremum der Zielfunktion gesucht wird. Lokale
+Extremstellen müssen also noch untereinander und mit den Randwerten
+des Definitionsbereichs verglichen werden. Hat die Zielfunktion z.B.
+genau einen Hochpunkt und genau einen Tiefpunkt, so kann ohne weitere
+Untersuchung z.B. nicht gesagt werden, ob sie beim Tiefpunkt
+auch ihr globales Minimum annimmt.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Bsp. 1 (Fortsetzung 3)</p>
 </div>
 <div class="paragraph">
-<p>Eine besonderer Wendepunkt ist der <strong>Sattelpunkt</strong>: Hierbei handelt es sich um einen Wendepunkt, an dem die Tangente die Steigung 0 hat, also waagrecht verläuft. Dies kann man überprüfen, indem man den x-Wert des Wendepunkts in die erste Ableitung \$f'\$ einsetzt: ist sie dort 0, so liegt ein Sattelpunkt vor.</p>
+<p>Um Kandidaten für Extrema der Zielfunktion zu erhalten, setzt man
+das notwendige Kriterium ein:</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_Übersicht_über_extrem_und_wendestellen">3. Übersicht über Extrem- und Wendestellen</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p><a href="Material/Ableitungen/Übersicht_Extremstelle_Wendestelle.pdf">Hier</a> noch eine Übersicht über den Zusammenhang zwischen den Ableitungen für Extrem- und Wendestellen.</p>
+<p>A(x)   = x &sdot; (25 -x) = -x² + 25x</p>
+</div>
+<div class="paragraph">
+<p>A'(x)  = -2x + 25</p>
+</div>
+<div class="paragraph">
+<p>0 = A'(x) &hArr; 0 = -2x + 25 &hArr; 2x = 25 &hArr; x = 12,5</p>
+</div>
+<div class="paragraph">
+<p>Mit dem hinreichenden Kriterium sieht man, dass es sich um einen Hochpunkt handelt.
+Es gilt nämlich:</p>
+</div>
+<div class="paragraph">
+<p>A''(x)    = -2</p>
+</div>
+<div class="paragraph">
+<p>A''(12,5) = -2</p>
+</div>
+<div class="paragraph">
+<p>Da A genau eine lokale Extremstelle besitzt, nimmt A beim Hochpunkt auch
+das globale Maximum an.</p>
+</div>
+<div class="paragraph">
+<p>Das Rechteck mit einem Umfang von 50 LE und dem größten Flächeninhalt,
+hat also einen Flächeninhalt von 156,25 FE. Seine erste Seite ist 12,5 LE lang.
+Die Länge seiner zweiten Seite berechnet sich mit Hilfe der
+Gleichung y = 25 - x zu 12,5 LE. Wie der Leser bereits geahnt hat,
+handelt es sich um ein Quadrat.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Beispiel 1 legt folgende Strategie zum Lösen von Extremwertproblemen
+mit Nebenbedingungen nah:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Bestimmung der Zielfunktion.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Beschreibung der Größe die extremal werden soll, durch eine Formel mit mehreren Variablen.</p>
+</li>
+<li>
+<p>Aufsuchen von Nebenbedingungen, die Abhängigkeiten zwischen den Variablen
+enthalten.</p>
+</li>
+<li>
+<p>Mit Hilfe der Nebenbedingungen die Zielfunktion bestimmen, die nur noch von einer Variablen abhängt. Der Definitionsbereich der Zielfunktion ist dabei zu beachten.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Untersuchung der Zielfunktion auf <em>globale</em> Extremstellen.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Untersuchung der Zielfunktion auf <em>lokale</em> Extremstellen.</p>
+</li>
+<li>
+<p>Vergleich der Extremstellen mit den Werten, die die Zielfunktion auf en Rändern annimmt.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Formulierung des Ergebnisses.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Nicht bei jeder Aufgabe, kann der Lösungsstrategie streng gefolgt werden.
+Beispielsweise muss manchmal ein anderer Weg zur Bestimmung der Zielfunktion
+bestritten werden.</p>
+</div>
+<div class="paragraph">
+<p>Nun folgt ein weiteres Beispiel. Bei diesem wird der Lösungsstrategie streng gefolgt.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Bsp. 2 (Schachtel mit maximalem Volumen)</p>
+</div>
+<div class="paragraph">
+<p>Aus einem DIN A4 Blatt lässt sich eine nach oben geöffnete
+Schachtel bauen, indem man an jeder Ecke ein Quadrat
+gleichen Flächeninhalts abschneidet und die
+überstehenden Ränder nach oben klappt.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="Bilder/Ableitungen/Schachtel.png" alt="A">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Wie muss die Seitenlänge der Eckquadrate x gewählt werden, damit das Volumen
+der Schachtel maximal wird? Wie groß ist das Volumen dieser Schachtel?</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Bestimmung der Zielfunktion</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Das Volumen der Schachtel berechnet sich durch: V = x &sdot; y &sdot; z
+für 0 &le; x, y, z.</p>
+</li>
+<li>
+<p>Die Nebenbedingungen sind durch die Abmessungen des A4-Blatts gegeben:
+y = 210 - 2x, z = 297 - 2x.</p>
+</li>
+<li>
+<p>Einsetzen liefert die Zielfunktion (s. Abb.3): V(x) = x &sdot; (210 - 2x) &sdot; (297 - 2x)
+für 0 &le; x &le; 105. Die Zielfunktion beschreibt das Volumen der Schachtel, die man erhält,
+wenn man ein Quadrat der Seitenlänge x ausschneidet.</p>
+<div class="imageblock">
+<div class="content">
+<img src="Bilder/Ableitungen/Schachtel2.png" alt="A">
+</div>
+<div class="title">Figure 3. Graph der Funktion V(x) = x &sdot; (210 - 2x) &sdot; (297 - 2x)</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Untersuchung der Zielfunktion auf globale Extremstellen.<br></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Untersuchung der Zielfunktion auf lokale Extremstellen.</p>
+<div class="paragraph">
+<p>V(x) = x &sdot; (210 - 2x) &sdot; (297 - 2x) = 4x³ - 1014x² + 62370x</p>
+</div>
+<div class="paragraph">
+<p>V'(x) = 12x² - 2028x + 62370</p>
+</div>
+<div class="paragraph">
+<p>V''(x) = 24x - 2028</p>
+</div>
+<div class="paragraph">
+<p>Notwendiges Kriterium:</p>
+</div>
+<div class="paragraph">
+<p>V'(x) = 0</p>
+</div>
+<div class="paragraph">
+<p>&hArr; 12x² - 2028x + 62370 = 0</p>
+</div>
+<div class="paragraph">
+<p>&hArr; x² - 169x + 5197,5   = 0</p>
+</div>
+<div class="paragraph">
+<p>&hArr; x &asymp; 84,5 + 44,1 = 128,6</p>
+</div>
+<div class="paragraph">
+<p>&or; x &asymp; 84,5 - 44,1 = 40,4</p>
+</div>
+<div class="paragraph">
+<p>Da 128,6 nicht im Definitionsbereich der Zielfunktion liegt,
+wird V nur an der Stelle x = 40,4 weiter untersucht.</p>
+</div>
+<div class="paragraph">
+<p>Hinreichendes Kriterium:</p>
+</div>
+<div class="paragraph">
+<p>V''(40,4) = -1058,4 &lt; 0</p>
+</div>
+<div class="paragraph">
+<p>Die Zielfunktion V hat also bei x = 40,4 einen Hochpunkt.</p>
+</div>
+</li>
+<li>
+<p>Da V genau eine lokale Extremstelle besitzt, nimmt V beim Hochpunkt auch
+das globale Maximum an.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Formulierung des Ergebnisses.</p>
+<div class="paragraph">
+<p>Man erhält die Schachtel mit dem maximalen Volumen, wenn  man für die Seitenlänge
+der Eckquadrate x = 40,4 mm wählt. Die zugehörige Schachtel hat ein
+Volumen V = 1128495 mm³ = 1128,495 cm³ &approx; 1,13 l.</p>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-13 08:04:50 Mitteleuropõische Sommerzeit
+Last updated 2016-11-07 10:47:36 Mitteleuropõische Zeit
 </div>
 </div>
 <script type="text/x-mathjax-config">
