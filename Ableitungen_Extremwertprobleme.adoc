@@ -6,7 +6,7 @@
 :icons: font
 :keywords: Extremwertprobleme, Nebenbedingungen, Extremwert
 
-
+== Motivation
 
 Bei einem Extremwertproblem mit Nebenbedingungen sind eine Größe G und einschränkende
 Bedingungen für die Objekte gegeben, auf die sich die Größe bezieht. Diese Bedingungen
@@ -15,9 +15,14 @@ nennt man *Nebenbedingungen*.
 Aufgabe ist es, unter den Objekten, die durch die Nebenbedingungen eingeschränkt werden,
 das Objekt zu finden, bei dem die Größe G den größten oder kleinsten Wert annimmt.
 
+
+== Beispiel 1: "Rechteck mit größtem Flächeninhalt"
+
+=== Problemstellung
+
 ====
 
-Bsp. 1: *Bestimmen Sie das Rechteck mit dem größten Flächeninhalt, dessen Umfang 50 LE beträgt.*
+*Bestimmen Sie das Rechteck mit dem größten Flächeninhalt, dessen Umfang 50 LE beträgt.*
 
 Die Größe ist hier der Flächeninhalt eines Rechtecks. Die Objekte, auf die sie
 sich bezieht, sind alle Rechtecke. Die *Nebenbedingung* "dessen Umfang 50 LE beträgt"
@@ -28,14 +33,18 @@ Flächeninhalt hat. Der Leser möge nun Abb. 1 betrachten und die Lösung der Au
 .Rechtecke mit einem Umfang von 50LE
 image::Bilder/Ableitungen/Rechtecke.png[Rechtecke]
 ====
+
 Die Größe G kann durch eine Formel beschrieben werden.
 Diese stellt Beziehungen zu Größen her, die sich auf die gleichen Objekte,
 wie die Größe G, beziehen.
 Die Nebenbedingungen liefern wiederum Formeln,
 die Beziehungen zwischen diesen Größen herstellen.
 
+
+=== Nebenbedingung und Zielfunktion
+
 ====
-Bsp. 1 (Fortsetzung 1)
+
 
 Die Größe "Flächeninhalt eines Rechtecks" A kann durch die Formel
 
@@ -59,8 +68,11 @@ Abhängigkeit dieser einzigen Größe beschreibt. Diese Formel nennt man
 *Zielfunktion*. Wie man die Zielfunktion rechnerisch erhält, lässt sich
 in Worten nur umständlich beschreiben und sollte am Beispiel klar werden.
 
+=== Extremwert bestimmen
+
 ==============================================================
-Bsp. 1 (Fortsetzung 2)
+
+
 
 Wählt man einen Wert für die Seitenlänge x, eines Rechtecks,
 das einen Umfang von 50 LE hat, so kann man die zweite Seitenlänge y
@@ -94,7 +106,8 @@ genau einen Hochpunkt und genau einen Tiefpunkt, so kann ohne weitere
 Untersuchung z.B. nicht gesagt werden, ob sie beim Tiefpunkt
 auch ihr globales Minimum annimmt.
 ==============================================================
-Bsp. 1 (Fortsetzung 3)
+
+=== Beispiel 1 (Fortsetzung 3)
 
 Um Kandidaten für Extrema der Zielfunktion zu erhalten, setzt man
 das notwendige Kriterium ein:
@@ -122,6 +135,8 @@ Gleichung y = 25 - x zu 12,5 LE. Wie der Leser bereits geahnt hat,
 handelt es sich um ein Quadrat.
 
 ==============================================================
+
+== Strategie
 Beispiel 1 legt folgende Strategie zum Lösen von Extremwertproblemen
 mit Nebenbedingungen nah:
 ==============================================================
@@ -142,6 +157,8 @@ b. Vergleich der Extremstellen mit den Werten, die die Zielfunktion auf en Ränd
 
 3. Formulierung des Ergebnisses.
 ==============================================================
+
+== Beispiel 2: "Schachtel mit maximalem Volumen"
 Nicht bei jeder Aufgabe, kann der Lösungsstrategie streng gefolgt werden.
 Beispielsweise muss manchmal ein anderer Weg zur Bestimmung der Zielfunktion
 bestritten werden.
