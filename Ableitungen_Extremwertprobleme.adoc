@@ -152,11 +152,11 @@ Nun folgt ein weiteres Beispiel. Bei diesem wird der Lösungsstrategie streng ge
 Bsp. 2 (Schachtel mit maximalem Volumen)
 
 Aus einem DIN A4 Blatt lässt sich eine nach oben geöffnete
-Schachtel bauen, indem man an jeder Ecke ein Quadrat
+Schachtel bauen, indem man an jeder Ecke ein Quadrat der Seitenlänge x
 gleichen Flächeninhalts abschneidet und die
 überstehenden Ränder nach oben klappt.
 
-image::Bilder/Ableitungen/Schachtel.png[A]
+image::Bilder/Ableitungen/Schachtel_Netz.png[A]
 
 *Wie muss die Seitenlänge der Eckquadrate x gewählt werden, damit das Volumen
 der Schachtel maximal wird? Wie groß ist das Volumen dieser Schachtel?*
