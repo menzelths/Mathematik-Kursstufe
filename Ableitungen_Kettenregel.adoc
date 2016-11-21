@@ -1,0 +1,140 @@
+= [[Kettenregel]] Die Kettenregel
+:stem: 
+:toc: left
+:toc-title: Inhaltsverzeichnis
+:sectnums:
+:icons: font
+:keywords: ableitung, kettenregel
+
+== [[Motivation]]Motivation
+
+Betrachten wir zunächst zwei Aufgaben:
+
+====
+*Aufgaben:*
+
+. Bestimme die Ableitung von stem:[f(x)=sqrt(x^3)].
+. Bestimme die Ableitung von stem:[g(x)=sin(cos(x))].
+====
+
+*Lösung von Aufgabe 1:*
+
+Diese Aufgabe kann man relativ einfach lösen, indem man den Term mit Hilfe der Potenzgesetze umschreibt:
+
+stem:[f(x)=sqrt(x^3)=(x^3)^{1/2}=x^{3/2}]
+
+Den neuen Term kann man somit normal ableiten:
+
+stem:[f'(x)=3/2 * x^{1/2} = 3/2 *sqrt(x)]
+
+*Lösung von Aufgabe 2:*
+
+Hier ist vorerst nicht klar, wie vorzugehen ist. Dafür benötigen wir eine neue Ableitungsregel, die sogenannte *Kettenregel*.
+
+'''
+
+Auch Aufgabe 1 lässt sich mit der Kettenregel lösen, wie wir am Ende dieser Einheit sehen werden. 
+
+== Verkettung von Funktionen
+Die Terme beider Aufgaben haben aber gemeinsam, dass es jeweils eine *innere* und eine *äußere* Funktion gibt.
+
+In der Tabelle sieht man die 
+
+|====
+|*Term*|stem:[sqrt(x^3)]|stem:[g(x)=sin(cos(x))]
+|*Innere Funktion v(x)*|stem:[x^3]| stem:[cos(x)]
+|*Äußere Funktion u(x)*|stem:[sqrt(x)]|stem:[sin(x)]
+|====
+
+Im Prinzip kann man sich vorstellen, dass im Fall von stem:[sqrt(x ^3)] zuerst eine Funktion v(x) mit dem Term stem:[x^3] auf das x angewendet wird, wodurch man stem:[x^3] als Ergebnis erhält.
+
+Im nächsten Schritt wird auf das Ergebnis die Funktion u(x) mit stem:[u(x)=sqrt(x)] angewendet, wodurch man insgesamt den Ausdruck stem:[f(x)=u(v(x))=sqrt(v(x))=sqrt(x^3)] erhält.
+
+Insgesamt wendet man auf auf das x erst die Funktion v und dann die Funktion u an:
+
+stem:[x |-> x^3 |-> sqrt(x^3)]
+
+Oder mit Funktionsnamen:
+
+stem:[x |-> v(x) |-> u(v(x))]
+
+[NOTE]
+====
+Eine andere Schreibweise für stem:[u(v(x))] ist stem:[(u] &#x2218; stem:[v)(x)], was man als "u nach v von x" spricht.
+====
+
+== Herleitung der Kettenregel
+
+Wir wollen nun für eine Funktion stem:[f(x)=u(v(x))] eine Ableitungsregel bestimmen. Dazu setzen wir den Differenzialquotienten an:
+
+stem:[lim_{h->0} {f(x+h)-f(x)}/h=]
+
+stem:[lim_{h->0}{u(v(x+h))-u(v(x))}/h]
+
+An dieser Stelle benutzen wir einen Trick, indem wir den Term mit 1 multipilizieren, wodurch sich am Term selbst nichts ändert. Allerdings nehmen wir hier nicht die gewöhnliche Zahl 1, sondern stem:[1={v(x+h)-v(x)}/{v(x+h)-v(x)}], wodurch sich der folgende Ausdruck ergibt:
+
+stem:[lim_{h->0}{u(v(x+h))-u(v(x))}/h * {v(x+h)-v(x)}/{v(x+h)-v(x)}=]
+
+stem:[lim_{h->0}{u(v(x+h))-u(v(x))}/{v(x+h)-v(x)} * {v(x+h)-v(x)}/{h}=ox]
+
+Lässt man nun h gegen 0 laufen, so strebt der hintere Faktor gegen stem:[v'(x)]. 
+
+Beim vorderen Faktor kann man die folgende Überlegung anstellen:
+
+Vergleicht man stem:[lim_{h->0}{u(v(x+h))-u(v(x))}/{v(x+h)-v(x)}] mit stem:[u'(x)=lim_{h->0}{u(x+h)-u(x)}/{x+h-x}], so erkennt man, dass der erste Term stem:[u'(v(x))] entspricht.
+
+Damit gilt:
+
+stem:[ox=u'(v(x))*v'(x)].
+
+Somit gilt die 
+
+====
+*Kettenregel:*
+
+Eine Funktion der Form stem:[f(x)=u(v(x))] kann man ableiten zu
+
+stem:[f'(x)=u'(v(x))*v'(x)].
+
+Dabei müssen die Funktionen stem:[u] und stem:[v] auch jeweils differenzierbar, also ableitbar, sein.
+====
+
+== Anwendung auf die Beispiele vom Anfang
+
+Mit der Kettenregel leiten wir nun nochmals beide Aufgaben aus der <<Motivation, Motivation>> ab: 
+
+
+====
+*Aufgaben:*
+
+. Bestimme die Ableitung von stem:[f(x)=sqrt(x^3)].
+. Bestimme die Ableitung von stem:[g(x)=sin(cos(x))].
+====
+
+*Lösung von Aufgabe 1 mit der Kettenregel:*
+
+Hier ist stem:[u(x)=sqrt(x)=x^{1/2}] und stem:[v(x)=x^3].
+
+Somit ist stem:[u'(x)=1/2 * x^{-1/2}] und stem:[v'(x)=3x^2].
+
+Eingesetzt in die Kettenregel gilt:
+
+stem:[f'(x)=u'(v(x))*v'(x)=1/2 * (x^3)^{- 1/2}*3x^2].
+
+Dieser Ausdruck lässt sich mit Hilfe der Potenzgesetze vereinfachen zu 
+
+stem:[3/2 *x^{- 3/2}*x^2=3/2 *x^{- 3/2+2}=3/2 * x^{1/2}=3/2 sqrt(x)]
+
+in Übereinstimmung mit dem Ergebnis, das wir zu Beginn dieses Kapitels berechnet haben.
+
+*Lösung von Aufgabe 2 mit der Kettenregel:*
+
+Diese Aufgabe konnten wir zu Beginn des Kapitels noch nicht berechnen. Es gilt hier: stem:[u(x)=sin(x)] und stem:[v(x)=cos(x)].
+
+Für die Ableitungen von stem:[u] und stem:[v] gilt: stem:[u'(x)=cos(x)] und stem:[v'(x)=-sin(x)]. 
+
+Einsetzen in die Kettenregel liefert:
+
+stem:[g'(x)=u'(v(x))*v'(x)=cos(cos(x))*(-sin(x))]
+
+Das "-" kann man noch nach vorne ziehen und so erhält man als Ergebnis stem:[g'(x)=-cos(cos(x))*sin(x)].

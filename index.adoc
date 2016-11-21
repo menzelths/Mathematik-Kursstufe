@@ -11,5 +11,9 @@
 
 <<Ableitungen_Extremwertprobleme.adoc#Extremwertprobleme,Extremwertprobleme mit Nebenbedingungen>>
 
+<<Ableitungen_Kettenregel.adoc#Kettenregel,Die Kettenregel>>
+
+<<Ableitungen_Produktregel.adoc#Produktregel, Die Produktregel und die Quotientenregel>>
+
 
 

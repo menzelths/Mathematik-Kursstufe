@@ -5,8 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<meta name="keywords" content="ableitung, produktregel, kettenregel, zweite ableitung">
-<title>Ableitungen</title>
+<meta name="keywords" content="ableitung, kettenregel">
+<title>Die Kettenregel</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -421,683 +421,118 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1><a id="Ableitungen"></a>Ableitungen</h1>
+<h1><a id="Kettenregel"></a> Die Kettenregel</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Inhaltsverzeichnis</div>
 <ul class="sectlevel1">
-<li><a href="#__a_id_extremstellen_a_lokale_extremstellen">1. <a id="Extremstellen"></a>Lokale Extremstellen</a>
-<ul class="sectlevel2">
-<li><a href="#_motivation">1.1. Motivation</a></li>
-<li><a href="#_erste_hinreichende_bedingung_für_lokale_extremstellen">1.2. Erste hinreichende Bedingung für lokale Extremstellen</a></li>
-<li><a href="#_zweite_hinreichende_bedingung_für_lokale_extremstellen">1.3. Zweite hinreichende Bedingung für lokale Extremstellen</a></li>
-<li><a href="#_unterschiede_zwischen_den_beiden_bedingungen">1.4. Unterschiede zwischen den beiden Bedingungen</a></li>
-<li><a href="#_sonderfall_konstante_funktion">1.5. Sonderfall konstante Funktion</a></li>
-<li><a href="#_beispiel">1.6. Beispiel</a></li>
-</ul>
-</li>
-<li><a href="#__a_id_produktregel_a_die_produktregel_und_die_quotientenregel">2. <a id="Produktregel"></a> Die Produktregel und die Quotientenregel</a>
-<ul class="sectlevel2">
-<li><a href="#_die_produktregel">2.1. Die Produktregel</a></li>
-<li><a href="#_die_quotientenregel">2.2. Die Quotientenregel</a></li>
-</ul>
-</li>
+<li><a href="#__a_id_motivation_a_motivation">1. <a id="Motivation"></a>Motivation</a></li>
+<li><a href="#_verkettung_von_funktionen">2. Verkettung von Funktionen</a></li>
+<li><a href="#_herleitung_der_kettenregel">3. Herleitung der Kettenregel</a></li>
+<li><a href="#_anwendung_auf_die_beispiele_vom_anfang">4. Anwendung auf die Beispiele vom Anfang</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="__a_id_extremstellen_a_lokale_extremstellen">1. <a id="Extremstellen"></a>Lokale Extremstellen</h2>
+<h2 id="__a_id_motivation_a_motivation">1. <a id="Motivation"></a>Motivation</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_motivation">1.1. Motivation</h3>
 <div class="paragraph">
-<p>Viele Aufgabenstellungen sind mit der Suche nach Hoch- und Tiefpunkten verbunden. Graphisch fällt es ziemlich leicht, die gesuchten Punkte zu finden.</p>
-</div>
-<div class="paragraph">
-<p>Dank der Ableitungen von Funktionen ist es auch möglich, die gesuchten Stellen zu finden, ohne den Graphen zeichnen zu müssen, verbunden mit der Tatsache, dass die gefundenen Werte exakter sind, da die Stellen nicht abgeschätzt werden, sondern berechnet werden können.</p>
-</div>
-<div class="paragraph">
-<p>Im folgenden betrachten wir zwei Möglichkeiten, lokale Extremstellen zu finden, wobei die untersuchten Funktionen mehrfach <strong>differenzierbar</strong> sein sollen (also ableitbar und damit "ohne Knick") und jede Funktion und ihre Ableitungen <strong>stetig</strong>, also "in einem Zug zeichenbar".</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_erste_hinreichende_bedingung_für_lokale_extremstellen">1.2. Erste hinreichende Bedingung für lokale Extremstellen</h3>
-<div class="paragraph">
-<p>Das Besondere an Hoch- und Tiefpunkten ist <em>zum einen</em>, dass dort waagrechte Tangenten vorliegen.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="Bilder/Ableitungen/Waagrechte_Tangente.png" alt="Funktion mit Tangente">
-</div>
-<div class="title">Figure 1. Funktion f mit waagrechter Tangente am Tiefpunkt A</div>
-</div>
-<div class="paragraph">
-<p>Somit ist die erste Ableitung der Funktion \$f\$ an dieser Stelle 0.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="Bilder/Ableitungen/Waagrechte_Tangente_Ableitung.png" alt="f mit Ableitung">
-</div>
-<div class="title">Figure 2. Funktion f mit waagrechter Tangente und der Ableitung f'</div>
-</div>
-<div class="paragraph">
-<p>Aber Vorsicht:</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Die Schlussfolgerung</p>
-</div>
-<div class="paragraph">
-<p>\$f'(x_0)=0=&gt;\$ Extremstelle bei \$x_0\$</p>
-</div>
-<div class="paragraph">
-<p>ist <strong>falsch</strong>!</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Ein einfaches Gegenbeispiel ist eine Funktion dritten Grades, die einen Sattelpunkt aufweist. In diesem Fall ist die erste Ableitung an dieser Stelle zwar 0, eine Extremstelle liegt hier aber nicht vor:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="Bilder/Ableitungen/Waagrechte_Tangente_Ableitung_Sattelpunkt.png" alt="Sattelpunkt mit Ableitung">
-</div>
-<div class="title">Figure 3. Eine Funktion mit einem Sattelpunkt A und ihrer ersten Ableitung</div>
-</div>
-<div class="paragraph">
-<p>Somit ist die Tatsache, dass \$f'(x_0)=0\$ sein muss zwar <strong>notwendig</strong>, aber <strong>nicht hinreichend</strong> für die Existenz einer Extremstelle von \$f\$ bei \$x_0\$.</p>
-</div>
-<div class="paragraph">
-<p>Vergleicht man die Schaubilder der <em>ersten Ableitung</em> für den Fall der Extremstelle und für den  Sattelpunkt, so fällt auf, dass im Fall der Extremstelle die erste Ableitung dort 0 ist und einen Vorzeichenwechsel aufweist.</p>
-</div>
-<div class="paragraph">
-<p>Im Fall des Sattelpunktes ist die erste Ableitung dort zwar 0, wechselt aber nicht ihr Vorzeichen.</p>
-</div>
-<div class="paragraph">
-<p>Somit können wir also auf die Existenz einer Extremstelle an einer Stelle \$x_0\$ schließen, wenn \$f'(x_0)=0\$ ist <strong>und</strong> <em>zum anderen</em> der Graph von \$f'\$ bei \$x_0\$ einen Vorzeichenwechsel hat.</p>
-</div>
-<div class="paragraph">
-<p>Somit formulieren wir die</p>
+<p>Betrachten wir zunächst zwei Aufgaben:</p>
 </div>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p><strong>Erste hinreichende Bedingung für lokale Extremstellen</strong></p>
+<p><strong>Aufgaben:</strong></p>
 </div>
-<div class="paragraph">
-<p>Gilt für eine Funktion \$f\$, dass</p>
-</div>
-<div class="paragraph">
-<p>\$f'(x_0)=0\$</p>
-</div>
-<div class="paragraph">
-<p><strong>und</strong></p>
-</div>
-<div class="paragraph">
-<p>der Graph von \$f'\$ bei \$x_0\$ einen Vorzeichenwechsel vorliegen hat,</p>
-</div>
-<div class="paragraph">
-<p><strong>dann gilt:</strong></p>
-</div>
-<div class="paragraph">
-<p>Bei \$x_0\$ liegt eine <strong>Extremstelle</strong> von \$f\$ vor.</p>
-</div>
-<div class="paragraph">
-<p>Geht der Vorzeichenwechsel von - nach +, so handelt es sich um eine <strong>Minimumstelle</strong>, bei einem Wechsel von + nach - um eine <strong>Maximumstelle</strong>.</p>
-</div>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Der zweite Teil der ersten hinreichenden Bedingung (Vorzeichenweckel) ist also nur notwendig, um die Extremstellen von den Sattelstellen zu unterscheiden.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_zweite_hinreichende_bedingung_für_lokale_extremstellen">1.3. Zweite hinreichende Bedingung für lokale Extremstellen</h3>
-<div class="paragraph">
-<p>Durch die erste hinreichende Bedingung haben wir bereits ein Werkzeug, das uns das Auffinden von Extremstellen vereinfacht. In diesem Abschnitt werden wir noch eine weitere Möglichkeit kennenlernen, diese rechnerisch zu bestimmen.</p>
-</div>
-<div class="paragraph">
-<p>Dazu betrachten wir die gleichen Beispiele wie im letzten Abschnitt, nur beziehen wir in unsere Betrachtung noch die zweite Ableitung mit ein.</p>
-</div>
-<div class="paragraph">
-<p>Zunächst untersuchen wir wieder die nach oben geöffnete Parabel:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="Bilder/Ableitungen/Zweite_Ableitung.png" alt="Minimum mit zweiter Ableitung">
-</div>
-<div class="title">Figure 4. Eine Funktion mit einem lokalen Minimum (blau) mit erster (grün) und zweiter Ableitung (orange)</div>
-</div>
-<div class="paragraph">
-<p>Da der Graph von \$f\$ im Bereich seines Minimums eine Linkskurve beschreibt, ist \$f''\$ in diesem Bereich positiv. Bei einem Maximum läge eine Rechtskurve vor, so dass \$f''\$ in diesem Bereich negativ wäre.</p>
-</div>
-<div class="paragraph">
-<p>Im Falle eines Sattelpunktes ergibt sich die folgende Situation:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="Bilder/Ableitungen/Zweite_Ableitung_Sattelpunkt.png" alt="Sattelpunkt mit zweiter Ableitung">
-</div>
-<div class="title">Figure 5. Eine Funktion mit einem Sattelpunkt</div>
-</div>
-<div class="paragraph">
-<p>Man sieht: da an dieser Stelle weder eine Links- noch eine Rechtskurve im Graphen von \$f\$ vorliegt, ist die zweite Ableitung an dieser Stelle 0.</p>
-</div>
-<div class="paragraph">
-<p>Somit formulieren wir</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Die zweite hinreichende Bedingung für lokale Extremstellen</strong></p>
-</div>
-<div class="paragraph">
-<p>Gilt für eine Funktion \$f\$, dass</p>
-</div>
-<div class="paragraph">
-<p>\$f'(x_0)=0\$</p>
-</div>
-<div class="paragraph">
-<p><strong>und</strong></p>
-</div>
-<div class="paragraph">
-<p>\$f''(x_0)!=0\$ ,</p>
-</div>
-<div class="paragraph">
-<p><strong>dann gilt:</strong></p>
-</div>
-<div class="paragraph">
-<p>Bei \$x_0\$ liegt eine <strong>Extremstelle</strong> von \$f\$ vor.</p>
-</div>
-<div class="paragraph">
-<p>Für \$f''(x_0)&lt;0\$ (Rechtskurve) handelt es sich dabei um eine <strong>Maximumstelle</strong>, für \$f''(x_0)&gt;0\$ (Linkskurve) um eine <strong>Minimumstelle</strong>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_unterschiede_zwischen_den_beiden_bedingungen">1.4. Unterschiede zwischen den beiden Bedingungen</h3>
-<div class="paragraph">
-<p>In vielen Fällen scheint die zweite hinreichende Bedingung (mit der zweiten Ableitung) zunächst das einfachere Kriterium zu sein. Man beachte aber das folgende Beispiel:</p>
-</div>
-<div class="stemblock">
-<div class="content">
-\$f(x)=x^4\$
-</div>
-</div>
-<div class="paragraph">
-<p>Bestimmung der Extremstellen mit Hilfe der <strong>zweiten hinreichenden Bedingung</strong>:</p>
-</div>
-<div class="stemblock">
-<div class="content">
-\$f'(x)=4 x ^3\$
-</div>
-</div>
-<div class="stemblock">
-<div class="content">
-\$f''(x)=12 x ^2\$
-</div>
-</div>
-<div class="paragraph">
-<p>Weiter gilt, dass \$f'(0)=0\$ und \$f''(0)=0\$. Somit ist nach der zweiten hinreichenden Bedingung zunächst keine Aussage möglich. Vielmehr liegt die Vermutung nahe, dass es sich hier um eine Sattelstelle handelt.</p>
-</div>
-<div class="paragraph">
-<p>Versucht man jedoch, die <strong>erste hinreichende Bedingung</strong> anzuwenden, so ergibt die Überprüfung auf einen Vorzeichenwechsel bei \$x_0=0\$</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$x\$</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$f'(x)\$</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-4</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Bei 0 liegt somit ein Vorzeichenwechsel von - nach + vor, so dass dort nach der ersten hinreichenden Bedingung eine Minimumstelle vorliegen muss.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Sollte die zweite hinreichende Bedingung an einer Stelle \$x_0\$ keine Aussage treffen können, so muss dort noch die erste hinreichende Bedingung überprüft werden.</p>
-</div>
-<div class="paragraph">
-<p>Hier zeigt sich nochmal: \$f''(x_0)=0\$ bedeutet <strong>nicht</strong>, dass bei \$x_0\$ eine Wendestelle vorliegt!</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_sonderfall_konstante_funktion">1.5. Sonderfall konstante Funktion</h3>
-<div class="paragraph">
-<p>Ein Sonderfall in Bezug auf lokale Extremstellen ist eine konstante Funktion der Form \$f(x)=c\$ mit \$c in RR\$.</p>
-</div>
-<div class="paragraph">
-<p>Sie hat nach Definition unendlich viele lokale Maxima bzw. Minima. Das liegt daran, dass z. B. eine lokale Minimumstelle definiert ist als eine Stelle \$x_0\$, für die gilt \$f(x)&gt;=f(x_0)\$ für alle \$x in U(x_0)\$, wobei mit \$U(x_0)\$ die nähere Umgebung von \$x_0\$ gemeint ist.</p>
-</div>
-<div class="paragraph">
-<p>Da ein Kleiner-Gleich-Symbol in der Definition vorliegt, erfüllt eine konstante Funktion an jeder Stelle diese Voraussetzung, besitzt also an jeder Stelle ein lokales Minimum.</p>
-</div>
-<div class="paragraph">
-<p>Analog dazu hat die Funktion auch an jeder Stelle ein lokales Maximum.</p>
-</div>
-<div class="paragraph">
-<p>Überprüfen wir diese Eigenschaft mit Hilfe der hinreichenden Bedingungen so erhält man für \$f(x)=c\$ als erste Ableitung \$f'(x)=0\$ und als zweite Ableitung ebenfalls \$f''(x)=0\$.</p>
-</div>
-<div class="paragraph">
-<p>Die <em>zweite</em> hinreichende Bedingung ist nirgendwo auf dem Definitionsbereich erfüllt, da die zweite Ableitung nirgendwo ungleich 0 ist und somit keine Aussage getroffen werden kann.</p>
-</div>
-<div class="paragraph">
-<p>Die <em>erste</em> hinreichende Bedingung kann für die erste Ableitung nirgendwo einen Vorzeichenwechsel vorfinden und somit auch keine Aussage über das Vorliegen von Extremstellen treffen.</p>
-</div>
-<div class="paragraph">
-<p>Dies ist also ein Beispiel, in dem weder die erste noch die zweite hinreichende Bedingung die Extremstellen auffinden kann.</p>
-</div>
-<div class="paragraph">
-<p>Somit gilt:</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p>Die Stellen, an denen \$f'(x)=0\$, sind als <em>Kandidaten</em> für Extremstellen zu betrachten. Ist an diesen Stellen die erste oder zweite hinreichende Bedingung erfüllt, so liegen dort Extremstellen vor, wenn nicht, darf man nicht annehmen, dass dort keine Extremstellen vorliegen.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_beispiel">1.6. Beispiel</h3>
-<div class="paragraph">
-<p><strong>Aufgabe:</strong></p>
-</div>
-<div class="paragraph">
-<p>Gegeben sei \$f(x)=x^{3} - 3  x^{2} + 4\$. Bestimme die Extrempunkte dieser Funktion a) mit der ersten hinreichenden Bedingung und b) mit der zweiten hinreichenden Bedingung.</p>
-</div>
-<div class="paragraph">
-<p><strong>Lösung:</strong></p>
-</div>
-<div class="paragraph">
-<p>Zunächst bestimmen wir für diese Aufgabe die nötigen Ableitungen:</p>
-</div>
-<div class="paragraph">
-<p>\$f'(x)=3x^2-6x\$ und \$f''(x)=6x-6\$.</p>
-</div>
-<div class="paragraph">
-<p>Für beide hinreichenden Bedinungen benötigen wir die Stellen, an denen \$f'(x)=0\$ ist, also setzen wir an:</p>
-</div>
-<div class="paragraph">
-<p>\$3x^2-6x=0\$</p>
-</div>
-<div class="paragraph">
-<p>Ausklammern von x liefert:</p>
-</div>
-<div class="paragraph">
-<p>\$x*(3x-6)=0\$</p>
-</div>
-<div class="paragraph">
-<p>Mit Hilfe des Satzes des Nullprodukts sieht man, dass eine Nullstelle von \$f\$ an der Stelle \$x_1=0\$ vorliegt. Die zweite Möglichkeit, dass die erste Ableitung 0 wird, liegt vor, wenn \$3x-6=0\$, also wenn \$x_2=2\$ ist.</p>
-</div>
-<div class="paragraph">
-<p>Somit sind \$x_1=0\$ und \$x_2=2\$ <em>Kandidaten</em> für Extremstellen von \$f\$.</p>
-</div>
-<div class="paragraph">
-<p>Nun überprüfen wir mit den hinreichenden Bedingungen, ob hier tatsächlich Extremstellen vorliegen:</p>
-</div>
-<div class="paragraph">
-<p>Zu a)</p>
-</div>
-<div class="paragraph">
-<p>Wir überprüfen die \$f'\$ auf Vorzeichenwechsel an den Stellen \$x_1\$=0 und \$x_2\$=2 mit Hilfe einer Tabelle:</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 16.6666%;">
-<col style="width: 16.6666%;">
-<col style="width: 16.6666%;">
-<col style="width: 16.6666%;">
-<col style="width: 16.667%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$x\$</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$f'(x)\$</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Somit liegt bei \$x_1=0\$ ein Vorzeichenwechsel von + nach - vor, also weist f an dieser Stelle ein Maximum auf (links davon steigt der Graph, rechts davon fällt er).</p>
-</div>
-<div class="paragraph">
-<p>Bei \$x_2=2\$ liegt ein Vorzeichenwechsel von - nach + vor, also hat f an dieser Stelle ein Minimum.</p>
-</div>
-<div class="paragraph">
-<p>Zu b)</p>
-</div>
-<div class="paragraph">
-<p>\$f''(x_1)=f''(0)=-6 &lt; 0 =&gt;\$ Rechtskurve von \$f\$, also Maximum bei \$x_0=0\$</p>
-</div>
-<div class="paragraph">
-<p>\$f''(x_2)=f''(2)=6 &gt; 0 =&gt;\$ Linkskurve von \$f\$, also Minimum bei \$ x_1=2\$</p>
-</div>
-<div class="paragraph">
-<p>Da in der Aufgabe nach den <em>Extrempunkten</em> gefragt ist, muss man noch den jeweiligen y-Wert bestimmen:</p>
-</div>
-<div class="paragraph">
-<p>\$f(x_1)=f(0)=4\$ und \$f(x_2)=f(2)=0\$.</p>
-</div>
-<div class="paragraph">
-<p>Somit liegen ein Hochpunkt H(0/4) und ein Tiefpunkt T(2/0) vor.</p>
-</div>
-<div class="paragraph">
-<p>Zur Kontrolle hier das Schaubild der Funktion und der ersten beiden Ableitungen:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="Bilder/Ableitungen/Aufgabe_Extremstellen.png" alt="Aufgabe Extremstellen">
-</div>
-<div class="title">Figure 6. Funktion f mit erster und zweiter Ableitung</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="__a_id_produktregel_a_die_produktregel_und_die_quotientenregel">2. <a id="Produktregel"></a> Die Produktregel und die Quotientenregel</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_die_produktregel">2.1. Die Produktregel</h3>
-<div class="sect3">
-<h4 id="Motivation">2.1.1. Motivation</h4>
-<div class="paragraph">
-<p>Die Notwendigkeit der Produktregel ergibt sich aus folgendem Beispiel:</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Aufgabe:</strong></p>
-</div>
-<div class="paragraph">
-<p>Bilde die Ableitungen von \$f(x)=x^2 * x^3\$ und \$g(x)=x^5\$.</p>
-</div>
-<div class="paragraph">
-<p><strong>Lösung:</strong></p>
-</div>
-<div class="paragraph">
-<p>Beide Funktionen haben die gleiche Ableitung \$f'(x)=g'(x)=5x^4\$, da \$f(x)=x^2*x^3=x^5=g(x)\$, wodurch auch deren Ableitungen identisch sein müssen.</p>
-</div>
-</div>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Ein häufiger Fehler ist, dass für \$f'(x)=2x * 3x ^2\$ berechnet wird, da die beiden Faktoren \$x^2\$ und \$x^3\$ einzeln abgeleitet werden und das Produkt aus den Ergebnissen gebildet wird. Diese Vorgehensweise ist offensichtlich falsch.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Wir werden in diesem Kapitel eine Regel, die sogenannte <strong>Produktregel</strong> kennenlernen, mit deren Hilfe man die Ableitung von \$f(x)=x^2*x^3\$ direkt berechnen kann.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_herleitung">2.1.2. Herleitung</h4>
-<div class="paragraph">
-<p>Wir betrachten im folgenden eine Funktion \$p(x)=f(x)*g(x)\$, deren Ableitung \$p'(x)\$ bestimmt werden soll.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Bezogen auf obiges Beispiel wäre \$f(x)=x^2\$ und \$g(x)=x^3\$.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Wir leiten die Ableitungsregel für ein solches Produkt zweier Funktionen mit Hilfe des Differenzenquotienten her:</p>
-</div>
-<div class="stemblock">
-<div class="content">
-\${p(x+h)-p(x)}/h={f(x+h)*g(x+h)-f(x)*g(x)}/h\$
-</div>
-</div>
-<div class="paragraph">
-<p>Nun verwendet man einen Trick, indem man eine <em>geschickte Null</em> zum Zähler addiert, nämlich</p>
-</div>
-<div class="stemblock">
-<div class="content">
-\$0=-f(x)*g(x+h)+f(x)*g(x+h)\$
-</div>
-</div>
-<div class="paragraph">
-<p>Fügt man diese "Null" in den Zähler ein, so ändert sich dieser vom Wert her nicht. Somit erhält man als Ausdruck:</p>
-</div>
-<div class="stemblock">
-<div class="content">
-\${f(x+h)*g(x+h)-f(x)*g(x+h)+f(x)*g(x+h) -f(x)*g(x)}/h\$
-</div>
-</div>
-<div class="paragraph">
-<p>Den Bruch kann man nun auseinanderziehen zu</p>
-</div>
-<div class="stemblock">
-<div class="content">
-\${f(x+h)*g(x+h)-f(x)*g(x+h)}/h+{f(x)*g(x+h) -f(x)*g(x)}/h\$
-</div>
-</div>
-<div class="paragraph">
-<p>Im vorderen Teil kann man \$g(x+h)\$ ausklammern, im hinteren Teil \$f(x)\$, also:</p>
-</div>
-<div class="stemblock">
-<div class="content">
-\$g(x+h)*{f(x+h)-f(x)}/h + f(x) *{g(x+h)-g(x)}/h\$
-</div>
-</div>
-<div class="paragraph">
-<p>Lässt man nun h gegen 0 laufen, so erhält man den <em>Differentialquotienten</em>, der der Ableitung von \$p(x)\$ entspricht.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="title">Nicht vergessen:</div>
-<div class="paragraph">
-<p>\$lim_{h-&gt;0} {f(x+h)-f(x)}/h =f'(x)\$ und \$lim_{h-&gt;0} {g(x+h)-g(x)}/h=g'(x)\$</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Somit erhält man insgesamt die</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Produktregel</strong>:</p>
-</div>
-<div class="stemblock">
-<div class="content">
-\$p'(x)=(f(x)*g(x))'=f(x)*g'(x)+f'(x)*g(x)\$
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_beispiele">2.1.3. Beispiele</h4>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>Gehen wir zurück zu unserem Anfangsbeispiel: Dort war zunächst die Ableitung von \$x^2*x^3\$ zu berechnen.</p>
-<div class="paragraph">
-<p>Zunächst benötigt man \$f(x)\$, \$g(x)\$ und die zugehörigen Ableitungen:</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$f(x)\$</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$x^2\$</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$g(x)\$</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$x^3\$</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$f'(x)\$</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$2x\$</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$g'(x)\$</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$3x^2\$</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Somit ergibt die Produktregel:</p>
-</div>
-<div class="stemblock">
-<div class="content">
-\$(x^2*x^3)'=x^2*3x^2+2x*x^3=3x^4+2x^4=5x^4\$
-</div>
-</div>
-<div class="paragraph">
-<p>Der Vergleich mit <a href="#Motivation">dem Einstiegsbeispiel</a> zeigt, dass mit Hilfe der Produktregel nun tatächlich das Gleiche herauskommt, wie beim direkten Ableiten von \$x^5\$.</p>
-</div>
+<p>Bestimme die Ableitung von \$f(x)=sqrt(x^3)\$.</p>
 </li>
 <li>
-<p>Ableitung von \$sin(x)*cos(x)\$:</p>
-<div class="stemblock">
-<div class="content">
-\$(sin(x)*cos(x))'=\$
-</div>
-</div>
-<div class="stemblock">
-<div class="content">
-\$(sin(x))'*cos(x)+sin(x)*(cos(x))'=\$
-</div>
-</div>
-<div class="stemblock">
-<div class="content">
-\$cos(x)*cos(x)+sin(x)*(-sin(x))=\$
-</div>
-</div>
-<div class="stemblock">
-<div class="content">
-\$cos^2(x)-sin^2(x)\$
-</div>
-</div>
+<p>Bestimme die Ableitung von \$g(x)=sin(cos(x))\$.</p>
 </li>
 </ol>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_die_quotientenregel">2.2. Die Quotientenregel</h3>
-<div class="sect3">
-<h4 id="_herleitung_2">2.2.1. Herleitung</h4>
 <div class="paragraph">
-<p>Mit Hilfe der Produktregel lassen sich auch Quotienten zweier Funktionen ableiten, also Funktionen der Form \$f(x)={u(x)}/{v(x)}\$.</p>
+<p><strong>Lösung von Aufgabe 1:</strong></p>
 </div>
 <div class="paragraph">
-<p>Eine einfache Herleitung gelingt mit Hilfe von Produkt- und Kettenregel: Zunächst schreiben wir \$f(x)\$ mit Hilfe der Potenzgesetze um zu \$f(x)=u(x) * (v(x))^{-1}\$.</p>
+<p>Diese Aufgabe kann man relativ einfach lösen, indem man den Term mit Hilfe der Potenzgesetze umschreibt:</p>
 </div>
 <div class="paragraph">
-<p>Wendet man nun die Produktregel in Verbindung mit der Kettenregel an, so erhält man</p>
+<p>\$f(x)=sqrt(x^3)=(x^3)^{1/2}=x^{3/2}\$</p>
 </div>
 <div class="paragraph">
-<p>\$f'(x)=u'(x)*(v(x))^{-1}+u(x)*(-1)*(v(x))^{-2}*v'(x)\$</p>
+<p>Den neuen Term kann man somit normal ableiten:</p>
 </div>
 <div class="paragraph">
-<p>Im letzten Teil muss man gemäß der Kettenregel noch mit \$v'(x)\$ <strong>nachdifferenzieren</strong>, da dies der Ableitung der inneren Funktion entspricht.
-Wechselt man von der Potenzschreibweise wieder in die normale Bruchschreibweise, so entspricht dies dem Ausdruck</p>
+<p>\$f'(x)=3/2 * x^{1/2} = 3/2 *sqrt(x)\$</p>
 </div>
 <div class="paragraph">
-<p>\$f'(x)={u'(x)}/{v(x)}-{u(x)*v'(x)}/{(v(x))^2}\$</p>
+<p><strong>Lösung von Aufgabe 2:</strong></p>
 </div>
 <div class="paragraph">
-<p>Bringt man den linken Bruch auch auf den Nenner \$(v(x))^2\$ so lässt sich das Ergebnis zusammenfassen zur</p>
+<p>Hier ist vorerst nicht klar, wie vorzugehen ist. Dafür benötigen wir eine neue Ableitungsregel, die sogenannte <strong>Kettenregel</strong>.</p>
 </div>
-<div class="exampleblock">
-<div class="content">
+<hr>
 <div class="paragraph">
-<p><strong>Quotientenregel:</strong></p>
+<p>Auch Aufgabe 1 lässt sich mit der Kettenregel lösen, wie wir am Ende dieser Einheit sehen werden.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_verkettung_von_funktionen">2. Verkettung von Funktionen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Die Terme beider Aufgaben haben aber gemeinsam, dass es jeweils eine <strong>innere</strong> und eine <strong>äußere</strong> Funktion gibt.</p>
 </div>
 <div class="paragraph">
-<p>Ist \$f(x)={u(x)}/{v(x)}\$ mit \$u\$ und \$v\$ differenzierbar, so ist die Ableitung</p>
+<p>In der Tabelle sieht man die</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$sqrt(x^3)\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$g(x)=sin(cos(x))\$</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Innere Funktion v(x)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$x^3\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$cos(x)\$</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Äußere Funktion u(x)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$sqrt(x)\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$sin(x)\$</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Im Prinzip kann man sich vorstellen, dass im Fall von \$sqrt(x ^3)\$ zuerst eine Funktion v(x) mit dem Term \$x^3\$ auf das x angewendet wird, wodurch man \$x^3\$ als Ergebnis erhält.</p>
 </div>
 <div class="paragraph">
-<p>\$f'(x)={u'(x)*v(x)-u(x)*v'(x)}/{(v(x))^2}\$</p>
+<p>Im nächsten Schritt wird auf das Ergebnis die Funktion u(x) mit \$u(x)=sqrt(x)\$ angewendet, wodurch man insgesamt den Ausdruck \$f(x)=u(v(x))=sqrt(v(x))=sqrt(x^3)\$ erhält.</p>
 </div>
+<div class="paragraph">
+<p>Insgesamt wendet man auf auf das x erst die Funktion v und dann die Funktion u an:</p>
 </div>
+<div class="paragraph">
+<p>\$x |-&gt; x^3 |-&gt; sqrt(x^3)\$</p>
+</div>
+<div class="paragraph">
+<p>Oder mit Funktionsnamen:</p>
+</div>
+<div class="paragraph">
+<p>\$x |-&gt; v(x) |-&gt; u(v(x))\$</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1107,74 +542,142 @@ Wechselt man von der Potenzschreibweise wieder in die normale Bruchschreibweise,
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Als <strong>Merkregel</strong> kann hier auch die Formel dienen:</p>
-</div>
-<div class="paragraph">
-<p>\${NAZ-ZAN}/{N^2}\$</p>
-</div>
-<div class="paragraph">
-<p>Sie steht für "Nenner [mal] Ableitung Zähler minus Zähler [mal] Ableitung Nenner. Und alles durch den Nenner im Quadrat dividiert.</p>
+<p>Eine andere Schreibweise für \$u(v(x))\$ ist \$(u\$ &#x2218; \$v)(x)\$, was man als "u nach v von x" spricht.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_beispiel_2">2.2.2. Beispiel</h4>
+</div>
+<div class="sect1">
+<h2 id="_herleitung_der_kettenregel">3. Herleitung der Kettenregel</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Wir wollen nun für eine Funktion \$f(x)=u(v(x))\$ eine Ableitungsregel bestimmen. Dazu setzen wir den Differenzialquotienten an:</p>
+</div>
+<div class="paragraph">
+<p>\$lim_{h-&gt;0} {f(x+h)-f(x)}/h=\$</p>
+</div>
+<div class="paragraph">
+<p>\$lim_{h-&gt;0}{u(v(x+h))-u(v(x))}/h\$</p>
+</div>
+<div class="paragraph">
+<p>An dieser Stelle benutzen wir einen Trick, indem wir den Term mit 1 multipilizieren, wodurch sich am Term selbst nichts ändert. Allerdings nehmen wir hier nicht die gewöhnliche Zahl 1, sondern \$1={v(x+h)-v(x)}/{v(x+h)-v(x)}\$, wodurch sich der folgende Ausdruck ergibt:</p>
+</div>
+<div class="paragraph">
+<p>\$lim_{h-&gt;0}{u(v(x+h))-u(v(x))}/h * {v(x+h)-v(x)}/{v(x+h)-v(x)}=\$</p>
+</div>
+<div class="paragraph">
+<p>\$lim_{h-&gt;0}{u(v(x+h))-u(v(x))}/{v(x+h)-v(x)} * {v(x+h)-v(x)}/{h}=ox\$</p>
+</div>
+<div class="paragraph">
+<p>Lässt man nun h gegen 0 laufen, so strebt der hintere Faktor gegen \$v'(x)\$.</p>
+</div>
+<div class="paragraph">
+<p>Beim vorderen Faktor kann man die folgende Überlegung anstellen:</p>
+</div>
+<div class="paragraph">
+<p>Vergleicht man \$lim_{h-&gt;0}{u(v(x+h))-u(v(x))}/{v(x+h)-v(x)}\$ mit \$u'(x)=lim_{h-&gt;0}{u(x+h)-u(x)}/{x+h-x}\$, so erkennt man, dass der erste Term \$u'(v(x))\$ entspricht.</p>
+</div>
+<div class="paragraph">
+<p>Damit gilt:</p>
+</div>
+<div class="paragraph">
+<p>\$ox=u'(v(x))*v'(x)\$.</p>
+</div>
+<div class="paragraph">
+<p>Somit gilt die</p>
+</div>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p><strong>Aufgabe:</strong></p>
+<p><strong>Kettenregel:</strong></p>
 </div>
 <div class="paragraph">
-<p>Bilde die Ableitung von \$f(x)={sin(x)}/{cos(x)}\$.</p>
+<p>Eine Funktion der Form \$f(x)=u(v(x))\$ kann man ableiten zu</p>
+</div>
+<div class="paragraph">
+<p>\$f'(x)=u'(v(x))*v'(x)\$.</p>
+</div>
+<div class="paragraph">
+<p>Dabei müssen die Funktionen \$u\$ und \$v\$ auch jeweils differenzierbar, also ableitbar, sein.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_anwendung_auf_die_beispiele_vom_anfang">4. Anwendung auf die Beispiele vom Anfang</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Mit der Kettenregel leiten wir nun nochmals beide Aufgaben aus der <a href="#Motivation">Motivation</a> ab:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Aufgaben:</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Bestimme die Ableitung von \$f(x)=sqrt(x^3)\$.</p>
+</li>
+<li>
+<p>Bestimme die Ableitung von \$g(x)=sin(cos(x))\$.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p><strong>Lösung:</strong></p>
+<p><strong>Lösung von Aufgabe 1 mit der Kettenregel:</strong></p>
 </div>
 <div class="paragraph">
-<p>\$u(x)=sin(x)\$, \$u'(x)=cos(x)\$, \$v(x)=cos(x)\$ und \$v'(x)=-sin(x)\$.</p>
+<p>Hier ist \$u(x)=sqrt(x)=x^{1/2}\$ und \$v(x)=x^3\$.</p>
 </div>
 <div class="paragraph">
-<p>Eingesetzt in die Formel der Quotientenregel erhält man</p>
+<p>Somit ist \$u'(x)=1/2 * x^{-1/2}\$ und \$v'(x)=3x^2\$.</p>
 </div>
 <div class="paragraph">
-<p>\$f'(x)={cos(x)*cos(x)-sin(x)*(-sin(x))}/{(cos(x))^2}=\$</p>
+<p>Eingesetzt in die Kettenregel gilt:</p>
 </div>
 <div class="paragraph">
-<p>\${(cos(x))^2+(sin(x))^2}/{(cos(x))^2}\$</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>\${sin(x)}/{cos(x)}\$ ist die Definition des Tangens von x, also \$tan(x)={sin(x)}/{cos(x)}\$.</p>
+<p>\$f'(x)=u'(v(x))*v'(x)=1/2 * (x^3)^{- 1/2}*3x^2\$.</p>
 </div>
 <div class="paragraph">
-<p>Außerdem gilt: \$(sin(x))^2+(cos(x))^2=1\$, so dass sich das Ergebnis der Aufgabe vereinfachen lässt zu:</p>
+<p>Dieser Ausdruck lässt sich mit Hilfe der Potenzgesetze vereinfachen zu</p>
 </div>
 <div class="paragraph">
-<p>\$(tan(x))' = 1/ {(cos(x))^2}\$</p>
+<p>\$3/2 *x^{- 3/2}*x^2=3/2 *x^{- 3/2+2}=3/2 * x^{1/2}=3/2 sqrt(x)\$</p>
 </div>
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>in Übereinstimmung mit dem Ergebnis, das wir zu Beginn dieses Kapitels berechnet haben.</p>
 </div>
+<div class="paragraph">
+<p><strong>Lösung von Aufgabe 2 mit der Kettenregel:</strong></p>
 </div>
+<div class="paragraph">
+<p>Diese Aufgabe konnten wir zu Beginn des Kapitels noch nicht berechnen. Es gilt hier: \$u(x)=sin(x)\$ und \$v(x)=cos(x)\$.</p>
+</div>
+<div class="paragraph">
+<p>Für die Ableitungen von \$u\$ und \$v\$ gilt: \$u'(x)=cos(x)\$ und \$v'(x)=-sin(x)\$.</p>
+</div>
+<div class="paragraph">
+<p>Einsetzen in die Kettenregel liefert:</p>
+</div>
+<div class="paragraph">
+<p>\$g'(x)=u'(v(x))*v'(x)=cos(cos(x))*(-sin(x))\$</p>
+</div>
+<div class="paragraph">
+<p>Das "-" kann man noch nach vorne ziehen und so erhält man als Ergebnis \$g'(x)=-cos(cos(x))*sin(x)\$.</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-03 20:49:37 Mitteleuropõische Sommerzeit
+Last updated 2016-11-21 15:11:17 Mitteleuropõische Zeit
 </div>
 </div>
 <script type="text/x-mathjax-config">
