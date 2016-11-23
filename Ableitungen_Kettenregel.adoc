@@ -60,7 +60,7 @@ stem:[x |-> v(x) |-> u(v(x))]
 
 [NOTE]
 ====
-Eine andere Schreibweise für stem:[u(v(x))] ist stem:[(u] &#x2218; stem:[v)(x)], was man als "u nach v von x" spricht.
+Eine andere Schreibweise für stem:[u(v(x))] ist stem:[(u@v)(x)], was man als "u nach v von x" spricht.
 ====
 
 == Herleitung der Kettenregel

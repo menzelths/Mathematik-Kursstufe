@@ -1,0 +1,132 @@
+= [[Efunktion]] Die e-Funktion und ihre Ableitung
+:stem: 
+:toc: left
+:toc-title: Inhaltsverzeichnis
+:sectnums:
+:icons: font
+:keywords: ableitung, Exponentialfunktion
+
+== [[Motivation]]Motivation
+
+====
+*Aufgabe:*
+
+Leite die beiden Funktionen stem:[f(x)=x^2] und stem:[g(x)=2^x] ab.
+====
+
+*Lösung:*
+
+stem:[f'(x)=2x], aber für stem:[g(x)] haben wir _noch keine Regel_.
+
+[WARNING]
+====
+Die "Ableitung" stem:[g'(x)=x * 2^{x-1}] ist _falsch_! 
+====
+
+In diesem Kapitel werden wir die korrekte Ableitungsregel für eine spezielle Exponentialfunktion, die sogenannte e-Funktion, kennenlernen und im nächsten Kapitel schließlich einen Weg, eine beliebige Exponentialfunktion abzuleiten.
+
+== Grundbegriffe und Herleitung
+Bei der *Exponentialfunktion*
+
+stem:[f(x)=a^x, a>0]
+
+wird stem:[a] als *Basis* und stem:[x] als *Exponent* bezeichnet. 
+
+Diese ist nicht mit der *Potenzfunktion* zu verwechseln, die die Form stem:[f(x)=x^n] hat, für welche wir bereits die Ableitungsregel stem:[f'(x)=n * x^{n-1}] kennen.
+
+Um eine Ableitungsregel für eine Exponentialfunktion der Form stem:[f(x)=a^x] zu finden, gehen wir wie üblich vor: wir stellen den Differenzialquotienten auf und versuchen damit eine Regel zu erkennen:
+
+stem:[f'(x)=lim_{h->0} {f(x+h)-f(x)}/h=]
+
+stem:[lim_{h->0} {a^{x+h}-a^x}/h=lim_{h->0} {a^x*a^h-a^x}/h]
+
+Hier haben wir eines der Potenzgesetze verwendet, das uns erlaubt stem:[a^{x+h}] als stem:[a^x * a^h] zu schreiben. Somit können wir nun stem:[a^x] ausklammern und, da es nicht von stem:[h] abhängt, vor den Limes ziehen, so dass man den Ausdruck
+
+stem:[a^x*lim_{h->0} {a^h-1}/h]
+
+erhält. Nun verwenden wir einen kleinen "Trick": Wenn wir die Zahl stem:[1] durch stem:[a^0] ersetzen, bleibt der Ausdruck
+
+stem:[a^x*lim_{h->0} {a^h-a^0}/h]
+
+übrig, wobei stem:[lim_{h->0} {a^h-a^0}/h] nach der Definition der Ableitung nichts anderes ist, als die Ableitung von stem:[f(x)=a^x] an der Stelle 0, also stem:[f'(0)]. 
+
+Insgesamt haben wir als Ableitung von stem:[f(x)=a^x] den Ausdruck
+
+stem:[f'(x)=a^x * f'(0)=f(x)*f'(0)]. stem:[ox]
+
+Dieses Ergebnis ist nicht wirklich zufriedenstellend: da benötigt man für die Ableitung an der Stelle x die Ableitung der Funktion an der Stelle 0! Und genau diese Ableitung haben wir noch nicht!
+
+Deshalb sind wir hier noch nicht fertig und suchen einen anderen Weg: in der Herleitung kam gerade der Ausdruck stem:[lim_{h->0} {a^h-a^0}/h] vor; können wir vielleicht eine Basis a so wählen, dass dieser Limes die Zahl 1 ergibt? Dazu folgender Ansatz:
+
+stem:[lim_{h->0} {a^h-a^0}/h=lim_{n->oo} {a^{1/n}-1}/{1/n}]
+
+Anstatt stem:[h] gegen 0 gehen zu lassen, kann man ebenso gut das stem:[h] durch stem:[1/n] ersetzen, wenn man das stem:[n] gegen stem:[oo] laufen lässt. Und wegen stem:[a^0=1] haben wir wieder die 1 statt des stem:[a^0] im Term stehen.
+
+Und dieser Grenzwert soll gleich 1 sein:
+
+stem:[lim_{n->oo} {a^{1/n}-1}/{1/n}=1]
+
+Für die folgende prinzipielle Herleitung lassen wir den Limes hier weg und lösen den Term nach a auf:
+
+stem:[{a^{1/n}-1}/{1/n}=1 | *(1/n)]
+
+stem:[a^{1/n}-1=1/n | +1]
+
+stem:[a^{1/n}=root(n)(a)=1+1/n ]
+
+[NOTE]
+====
+stem:[sqrt(3)=3^{1/2}] in Potenzschreibweise, analog dazu stem:[root(3)(4)=4^{1/3}], also kann man allgemein schreiben, dass stem:[root(n)(a)=a^{1/n}]. Das haben wir soeben verwendet.
+====
+
+Potenziert man die Gleichung nun auf beiden Seiten mit stem:[n], so erhält man
+
+stem:[a=(1+1/n)^{n}]
+
+Setzt man für stem:[n] nun immer größere Werte ein, so wird man überrascht feststellen, dass dieser Ausdruck gegen einen bestimmten Wert zu streben scheint:
+
+|===
+|n | stem:[(1+1/n)^{n}]
+|100 | 2.7048138294215285
+|1000 | 2.7169239322355936
+|10000 | 2.7181459268249255
+|100000 | 2.7182682371922975
+|1000000 | 2.7182804690957534
+|10000000 | 2.7182816941320818
+|100000000 | 2.7182817983473577
+|1000000000 | 2.7182820520115603
+|===
+
+Diese besondere Zahl wird als *Eulersche Zahl* bezeichnet und mit dem Buchstaben stem:[e] bezeichnet.
+
+====
+Die *Eulersche Zahl* hat den Wert stem:[e=2,718282] ... und die Funktion stem:[e^x] wird als *e-Funktion* oder *natürliche Exponentialfunktion* bezeichnet.
+====
+
+Somit haben wir die besondere Basis stem:[e] gefunden, für die gilt, dass die Ableitung von stem:[e^x] an der Stelle 0 gleich 1 ist.
+In Verbindung mit der Gleichung stem:[ox text( )] von oben erhält man für stem:[f(x)=e^x] die Ableitung stem:[f'(x)=e^x *1=e^x=f(x)].
+
+Dadurch gilt natürlich auch: stem:[f''(x)=e^x] und stem:[f'''(x)=e^x], usw.
+
+Mit stem:[e^x] liegt also eine Funktion vor, die die besondere Eigenschaft hat, dass sie mit all ihren Ableitungen identisch ist!
+
+====
+*Ableitung der e-Funktion:*
+
+Für die e-Funktion stem:[f(x)=e^x] mit stem:[e] als Eulersche Zahl gilt:
+
+stem:[f'(x)=e^x=f(x)]
+====
+
+== Beispiel
+
+====
+*Aufgabe*
+
+Leite stem:[f(x)=e^{2x}] ab.
+====
+*Lösung:*
+
+stem:[f'(x)=e^{2x} * 2]
+
+Die Multiplikation mit der 2 kommt durch die Anwendung der _Kettenregel_ zustande. Hier ist stem:[e^x] die _äußere Funktion_ und stem:[2x] die _innere Funktion_, so dass die Kettenregel hier zur Anwendung kommt und man mit der Ableitung von stem:[2x] nachdifferenzieren muss.

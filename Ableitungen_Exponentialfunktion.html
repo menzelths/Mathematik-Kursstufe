@@ -5,8 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<meta name="keywords" content="ableitung, kettenregel">
-<title>Die Kettenregel</title>
+<meta name="keywords" content="ableitung, Exponentialfunktion">
+<title>Die Exponentialfunktion und ihre Ableitung</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -421,14 +421,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1><a id="Kettenregel"></a> Die Kettenregel</h1>
+<h1><a id="Exponentialfunktion"></a> Die Exponentialfunktion und ihre Ableitung</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Inhaltsverzeichnis</div>
 <ul class="sectlevel1">
 <li><a href="#__a_id_motivation_a_motivation">1. <a id="Motivation"></a>Motivation</a></li>
-<li><a href="#_verkettung_von_funktionen">2. Verkettung von Funktionen</a></li>
-<li><a href="#_herleitung_der_kettenregel">3. Herleitung der Kettenregel</a></li>
-<li><a href="#_anwendung_auf_die_beispiele_vom_anfang">4. Anwendung auf die Beispiele vom Anfang</a></li>
+<li><a href="#_grundbegriffe_und_herleitung">2. Grundbegriffe und Herleitung</a></li>
 </ul>
 </div>
 </div>
@@ -436,103 +434,115 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="__a_id_motivation_a_motivation">1. <a id="Motivation"></a>Motivation</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Betrachten wir zunächst zwei Aufgaben:</p>
-</div>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p><strong>Aufgaben:</strong></p>
+<p><strong>Aufgabe:</strong></p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Bestimme die Ableitung von \$f(x)=sqrt(x^3)\$.</p>
-</li>
-<li>
-<p>Bestimme die Ableitung von \$g(x)=sin(cos(x))\$.</p>
-</li>
-</ol>
+<div class="paragraph">
+<p>Leite die beiden Funktionen \$f(x)=x^2\$ und \$g(x)=2^x\$ ab.</p>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p><strong>Lösung von Aufgabe 1:</strong></p>
+<p><strong>Lösung:</strong></p>
 </div>
 <div class="paragraph">
-<p>Diese Aufgabe kann man relativ einfach lösen, indem man den Term mit Hilfe der Potenzgesetze umschreibt:</p>
+<p>\$f'(x)=2x\$, aber für \$g(x)\$ haben wir <em>noch keine Regel</em>.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Die "Ableitung" \$g'(x)=x * 2^{x-1}\$ ist <em>falsch</em>!</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>\$f(x)=sqrt(x^3)=(x^3)^{1/2}=x^{3/2}\$</p>
-</div>
-<div class="paragraph">
-<p>Den neuen Term kann man somit normal ableiten:</p>
-</div>
-<div class="paragraph">
-<p>\$f'(x)=3/2 * x^{1/2} = 3/2 *sqrt(x)\$</p>
-</div>
-<div class="paragraph">
-<p><strong>Lösung von Aufgabe 2:</strong></p>
-</div>
-<div class="paragraph">
-<p>Hier ist vorerst nicht klar, wie vorzugehen ist. Dafür benötigen wir eine neue Ableitungsregel, die sogenannte <strong>Kettenregel</strong>.</p>
-</div>
-<hr>
-<div class="paragraph">
-<p>Auch Aufgabe 1 lässt sich mit der Kettenregel lösen, wie wir am Ende dieser Einheit sehen werden.</p>
+<p>In diesem Kapitel werden wir die korrekte Ableitungsregel für eine solche Exponentialfunktion, wie es \$f(x)\$ ist, kennenlernen.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_verkettung_von_funktionen">2. Verkettung von Funktionen</h2>
+<h2 id="_grundbegriffe_und_herleitung">2. Grundbegriffe und Herleitung</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Die Terme beider Aufgaben haben aber gemeinsam, dass es jeweils eine <strong>innere</strong> und eine <strong>äußere</strong> Funktion gibt.</p>
+<p>Bei der <strong>Exponentialfunktion</strong></p>
 </div>
 <div class="paragraph">
-<p>In der Tabelle sieht man die</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Term</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$sqrt(x^3)\$</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$g(x)=sin(cos(x))\$</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Innere Funktion v(x)</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$x^3\$</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$cos(x)\$</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Äußere Funktion u(x)</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$sqrt(x)\$</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$sin(x)\$</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Im Prinzip kann man sich vorstellen, dass im Fall von \$sqrt(x ^3)\$ zuerst eine Funktion v(x) mit dem Term \$x^3\$ auf das x angewendet wird, wodurch man \$x^3\$ als Ergebnis erhält.</p>
+<p>\$f(x)=a^x, a&gt;0\$</p>
 </div>
 <div class="paragraph">
-<p>Im nächsten Schritt wird auf das Ergebnis die Funktion u(x) mit \$u(x)=sqrt(x)\$ angewendet, wodurch man insgesamt den Ausdruck \$f(x)=u(v(x))=sqrt(v(x))=sqrt(x^3)\$ erhält.</p>
+<p>wird \$a\$ als <strong>Basis</strong> und \$x\$ als <strong>Exponent</strong> bezeichnet.</p>
 </div>
 <div class="paragraph">
-<p>Insgesamt wendet man auf auf das x erst die Funktion v und dann die Funktion u an:</p>
+<p>Diese ist nicht mit der <strong>Potenzfunktion</strong> zu verwechseln, die die Form \$f(x)=x^n\$ hat, für welche wir bereits die Ableitungsregel \$f'(x)=n * x^{n-1}\$ kennen.</p>
 </div>
 <div class="paragraph">
-<p>\$x |-&gt; x^3 |-&gt; sqrt(x^3)\$</p>
+<p>Um eine Ableitungsregel für eine Exponentialfunktion der Form \$f(x)=a^x\$ zu finden, gehen wir wie üblich vor: wir stellen den Differenzialquotienten auf und versuchen damit eine Regel zu erkennen:</p>
 </div>
 <div class="paragraph">
-<p>Oder mit Funktionsnamen:</p>
+<p>\$f'(x)=lim_{h-&gt;0} {f(x+h)-f(x)}/h=\$</p>
 </div>
 <div class="paragraph">
-<p>\$x |-&gt; v(x) |-&gt; u(v(x))\$</p>
+<p>\$lim_{h-&gt;0} {a^{x+h}-a^x}/h=lim_{h-&gt;0} {a^x*a^h-a^x}/h\$</p>
+</div>
+<div class="paragraph">
+<p>Hier haben wir eines der Potenzgesetze verwendet, das uns erlaubt \$a^{x+h}\$ als \$a^x * a^h\$ zu schreiben. Somit können wir nun \$a^x\$ ausklammern und, da es nicht von \$h\$ abhängt, vor den Limes ziehen, so dass man den Ausdruck</p>
+</div>
+<div class="paragraph">
+<p>\$a^x*lim_{h-&gt;0} {a^h-1}/h\$</p>
+</div>
+<div class="paragraph">
+<p>erhält. Nun verwenden wir einen kleinen "Trick": Wenn wir die Zahl \$1\$ durch \$a^0\$ ersetzen, bleibt der Ausdruck</p>
+</div>
+<div class="paragraph">
+<p>\$a^x*lim_{h-&gt;0} {a^h-a^0}/h\$</p>
+</div>
+<div class="paragraph">
+<p>übrig, wobei \$lim_{h-&gt;0} {a^h-a^0}/h\$ nach der Definition der Ableitung nichts anderes ist, als die Ableitung von \$a^x\$ an der Stelle 0.</p>
+</div>
+<div class="paragraph">
+<p>Insgesamt haben wir als Ableitung von \$f(x)=a^x\$ den Ausdruck</p>
+</div>
+<div class="paragraph">
+<p>\$f'(x)=a^x * f'(0)=f(x)*f'(0)\$. \$ox\$</p>
+</div>
+<div class="paragraph">
+<p>Dieses Ergebnis ist nicht wirklich zufriedenstellend: da benötigt man für die Ableitung an der Stelle x die Ableitung der Funktion an der Stelle 0! Und genau diese Ableitung haben wir noch nicht!</p>
+</div>
+<div class="paragraph">
+<p>Deshalb sind wir hier noch nicht fertig und suchen einen anderen Weg: in der Herleitung kam gerade der Ausdruck \$lim_{h-&gt;0} {a^h-a^0}/h\$ vor; können wir vielleicht eine Basis a so wählen, dass dieser Limes die Zahl 1 ergibt? Dazu folgender Ansatz:</p>
+</div>
+<div class="paragraph">
+<p>\$lim_{h-&gt;0} {a^h-a^0}/h=lim_{n-&gt;oo} {a^{1/n}-1}/{1/n}\$</p>
+</div>
+<div class="paragraph">
+<p>Anstatt \$h\$ gegen 0 gehen zu lassen, kann man ebenso gut das \$h\$ durch \$1/n\$ ersetzen, wenn man das \$n\$ gegen \$oo\$ laufen lässt. Und wegen \$a^0=1\$ haben wir wieder die 1 statt des \$a^0\$ im Term stehen.</p>
+</div>
+<div class="paragraph">
+<p>Und dieser Grenzwert soll gleich 1 sein:</p>
+</div>
+<div class="paragraph">
+<p>\$lim_{n-&gt;oo} {a^{1/n}-1}/{1/n}=1\$</p>
+</div>
+<div class="paragraph">
+<p>Für die folgende prinzipielle Herleitung lassen wir den Limes hier weg und lösen den Term nach a auf:</p>
+</div>
+<div class="paragraph">
+<p>\${a^{1/n}-1}/{1/n}=1 | *(1/n)\$</p>
+</div>
+<div class="paragraph">
+<p>\$a^{1/n}-1=1/n | +1\$</p>
+</div>
+<div class="paragraph">
+<p>\$a^{1/n}=root(n)(a)=1+1/n \$</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -542,142 +552,98 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Eine andere Schreibweise für \$u(v(x))\$ ist \$(u@v)(x)\$, was man als "u nach v von x" spricht.</p>
+<p>\$sqrt(3)=3^{1/2}\$ in Potenzschreibweise, analog dazu \$root(3)(4)=4^{1/3}\$, also kann man allgemein schreiben, dass \$root(n)(a)=a^{1/n}\$. Das haben wir soeben verwendet.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_herleitung_der_kettenregel">3. Herleitung der Kettenregel</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>Wir wollen nun für eine Funktion \$f(x)=u(v(x))\$ eine Ableitungsregel bestimmen. Dazu setzen wir den Differenzialquotienten an:</p>
+<p>Potenziert man die Gleichung nun auf beiden Seiten mit \$n\$, so erhält man</p>
 </div>
 <div class="paragraph">
-<p>\$lim_{h-&gt;0} {f(x+h)-f(x)}/h=\$</p>
+<p>\$a=(1+1/n)^{n}\$</p>
 </div>
 <div class="paragraph">
-<p>\$lim_{h-&gt;0}{u(v(x+h))-u(v(x))}/h\$</p>
+<p>Setzt man für \$n\$ nun immer größere Werte ein, so wird man überrascht feststellen, dass dieser Ausdruck gegen einen Wert zu streben scheint:</p>
 </div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">n</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$(1+1/n)^{n}\$</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.7048138294215285</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.7169239322355936</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.7181459268249255</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.7182682371922975</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1000000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.7182804690957534</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10000000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.7182816941320818</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100000000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.7182817983473577</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1000000000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.7182820520115603</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
-<p>An dieser Stelle benutzen wir einen Trick, indem wir den Term mit 1 multipilizieren, wodurch sich am Term selbst nichts ändert. Allerdings nehmen wir hier nicht die gewöhnliche Zahl 1, sondern \$1={v(x+h)-v(x)}/{v(x+h)-v(x)}\$, wodurch sich der folgende Ausdruck ergibt:</p>
-</div>
-<div class="paragraph">
-<p>\$lim_{h-&gt;0}{u(v(x+h))-u(v(x))}/h * {v(x+h)-v(x)}/{v(x+h)-v(x)}=\$</p>
-</div>
-<div class="paragraph">
-<p>\$lim_{h-&gt;0}{u(v(x+h))-u(v(x))}/{v(x+h)-v(x)} * {v(x+h)-v(x)}/{h}=ox\$</p>
-</div>
-<div class="paragraph">
-<p>Lässt man nun h gegen 0 laufen, so strebt der hintere Faktor gegen \$v'(x)\$.</p>
-</div>
-<div class="paragraph">
-<p>Beim vorderen Faktor kann man die folgende Überlegung anstellen:</p>
-</div>
-<div class="paragraph">
-<p>Vergleicht man \$lim_{h-&gt;0}{u(v(x+h))-u(v(x))}/{v(x+h)-v(x)}\$ mit \$u'(x)=lim_{h-&gt;0}{u(x+h)-u(x)}/{x+h-x}\$, so erkennt man, dass der erste Term \$u'(v(x))\$ entspricht.</p>
-</div>
-<div class="paragraph">
-<p>Damit gilt:</p>
-</div>
-<div class="paragraph">
-<p>\$ox=u'(v(x))*v'(x)\$.</p>
-</div>
-<div class="paragraph">
-<p>Somit gilt die</p>
+<p>Diese besondere Zahl wird als <strong>Eulersche Zahl</strong> bezeichnet und mit dem Buchstaben \$e\$ bezeichnet.</p>
 </div>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p><strong>Kettenregel:</strong></p>
+<p>Die <strong>Eulersche Zahl</strong> hat den Wert \$e=2,718282\$ &#8230;&#8203; und die Funktion \$e^x\$ wird als <strong>e-Funktion</strong> bezeichnet.</p>
+</div>
+</div>
 </div>
 <div class="paragraph">
-<p>Eine Funktion der Form \$f(x)=u(v(x))\$ kann man ableiten zu</p>
-</div>
-<div class="paragraph">
-<p>\$f'(x)=u'(v(x))*v'(x)\$.</p>
-</div>
-<div class="paragraph">
-<p>Dabei müssen die Funktionen \$u\$ und \$v\$ auch jeweils differenzierbar, also ableitbar, sein.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_anwendung_auf_die_beispiele_vom_anfang">4. Anwendung auf die Beispiele vom Anfang</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Mit der Kettenregel leiten wir nun nochmals beide Aufgaben aus der <a href="#Motivation">Motivation</a> ab:</p>
+<p>Somit haben wir die besondere Basis \$e\$ gefunden, für die gilt, dass die Ableitung von \$e^x\$ an der Stelle 0 gleich 1 ist.
+In Verbindung mit der Gleichung \$ox text( )\$ von oben erhält man für \$f(x)=e^x\$ die Ableitung \$f'(x)=e^x *1=e^x=f(x)\$!</p>
 </div>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p><strong>Aufgaben:</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Bestimme die Ableitung von \$f(x)=sqrt(x^3)\$.</p>
-</li>
-<li>
-<p>Bestimme die Ableitung von \$g(x)=sin(cos(x))\$.</p>
-</li>
-</ol>
-</div>
-</div>
+<p><strong>Ableitung der e-Funktion:</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Lösung von Aufgabe 1 mit der Kettenregel:</strong></p>
+<p>Für die e-Funktion \$f(x)=e^x\$ mit \$e\$ als Eulersche Zahl gilt:</p>
 </div>
 <div class="paragraph">
-<p>Hier ist \$u(x)=sqrt(x)=x^{1/2}\$ und \$v(x)=x^3\$.</p>
+<p>\$f'(x)=e^x=f(x)\$</p>
 </div>
-<div class="paragraph">
-<p>Somit ist \$u'(x)=1/2 * x^{-1/2}\$ und \$v'(x)=3x^2\$.</p>
 </div>
-<div class="paragraph">
-<p>Eingesetzt in die Kettenregel gilt:</p>
-</div>
-<div class="paragraph">
-<p>\$f'(x)=u'(v(x))*v'(x)=1/2 * (x^3)^{- 1/2}*3x^2\$.</p>
-</div>
-<div class="paragraph">
-<p>Dieser Ausdruck lässt sich mit Hilfe der Potenzgesetze vereinfachen zu</p>
-</div>
-<div class="paragraph">
-<p>\$3/2 *x^{- 3/2}*x^2=3/2 *x^{- 3/2+2}=3/2 * x^{1/2}=3/2 sqrt(x)\$</p>
-</div>
-<div class="paragraph">
-<p>in Übereinstimmung mit dem Ergebnis, das wir zu Beginn dieses Kapitels berechnet haben.</p>
-</div>
-<div class="paragraph">
-<p><strong>Lösung von Aufgabe 2 mit der Kettenregel:</strong></p>
-</div>
-<div class="paragraph">
-<p>Diese Aufgabe konnten wir zu Beginn des Kapitels noch nicht berechnen. Es gilt hier: \$u(x)=sin(x)\$ und \$v(x)=cos(x)\$.</p>
-</div>
-<div class="paragraph">
-<p>Für die Ableitungen von \$u\$ und \$v\$ gilt: \$u'(x)=cos(x)\$ und \$v'(x)=-sin(x)\$.</p>
-</div>
-<div class="paragraph">
-<p>Einsetzen in die Kettenregel liefert:</p>
-</div>
-<div class="paragraph">
-<p>\$g'(x)=u'(v(x))*v'(x)=cos(cos(x))*(-sin(x))\$</p>
-</div>
-<div class="paragraph">
-<p>Das "-" kann man noch nach vorne ziehen und so erhält man als Ergebnis \$g'(x)=-cos(cos(x))*sin(x)\$.</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-11-23 21:09:29 Mitteleuropõische Zeit
+Last updated 2016-11-23 21:42:07 Mitteleuropõische Zeit
 </div>
 </div>
 <script type="text/x-mathjax-config">
