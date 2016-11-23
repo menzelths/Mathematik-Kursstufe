@@ -15,7 +15,7 @@
 
 <<Ableitungen_Produktregel.adoc#Produktregel, Die Produktregel und die Quotientenregel>>
 
-<<Ableitungen_Exfunktion.adoc#Efunktion, Die e-Funktion und ihre Ableitung>>
+<<Ableitungen_Efunktion.adoc#Efunktion, Die e-Funktion und ihre Ableitung>>
 
 
 
