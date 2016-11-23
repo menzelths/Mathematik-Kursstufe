@@ -6,7 +6,7 @@
 :icons: font
 :keywords: ableitung, kettenregel
 
-== [[Motivation]]Motivation
+== Motivation [[Motivation]]
 
 Betrachten wir zunächst zwei Aufgaben:
 
