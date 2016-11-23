@@ -38,7 +38,7 @@ Auch Aufgabe 1 lässt sich mit der Kettenregel lösen, wie wir am Ende dieser Ei
 == Verkettung von Funktionen
 Die Terme beider Aufgaben haben aber gemeinsam, dass es jeweils eine *innere* und eine *äußere* Funktion gibt.
 
-In der Tabelle sieht man die 
+In der Tabelle sieht man für die beiden Terme diese innere und äußere Funktion:
 
 |====
 |*Term*|stem:[sqrt(x^3)]|stem:[g(x)=sin(cos(x))]
