@@ -6,7 +6,7 @@
 :icons: font
 :keywords: ableitung, Exponentialfunktion
 
-== [[Motivation]]Motivation
+== Motivation
 
 ====
 *Aufgabe:*
@@ -52,7 +52,7 @@ stem:[a^x*lim_{h->0} {a^h-a^0}/h]
 
 Insgesamt haben wir als Ableitung von stem:[f(x)=a^x] den Ausdruck
 
-stem:[f'(x)=a^x * f'(0)=f(x)*f'(0)]. stem:[ox]
+stem:[f'(x)=a^x * f'(0)=f(x)*f'(0)]. [[Gleichung_e]]stem:[ox]
 
 Dieses Ergebnis ist nicht wirklich zufriedenstellend: da benötigt man für die Ableitung an der Stelle x die Ableitung der Funktion an der Stelle 0! Und genau diese Ableitung haben wir noch nicht!
 
@@ -104,7 +104,7 @@ Die *Eulersche Zahl* hat den Wert stem:[e=2,718282] ... und die Funktion stem:[e
 ====
 
 Somit haben wir die besondere Basis stem:[e] gefunden, für die gilt, dass die Ableitung von stem:[e^x] an der Stelle 0 gleich 1 ist.
-In Verbindung mit der Gleichung stem:[ox text( )] von oben erhält man für stem:[f(x)=e^x] die Ableitung stem:[f'(x)=e^x *1=e^x=f(x)].
+In Verbindung mit der <<Gleichung_e,Gleichung stem:[ox text( )]>> von oben erhält man für stem:[f(x)=e^x] die Ableitung stem:[f'(x)=e^x *1=e^x=f(x)].
 
 Dadurch gilt natürlich auch: stem:[f''(x)=e^x] und stem:[f'''(x)=e^x], usw.
 
