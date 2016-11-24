@@ -118,7 +118,7 @@ Für die e-Funktion stem:[f(x)=e^x] mit stem:[e] als Eulersche Zahl gilt:
 stem:[f'(x)=e^x=f(x)]
 ====
 
-== Beispiel
+== Beispiel zur Ableitung der e-Funktion
 
 ====
 *Aufgabe*
@@ -130,3 +130,14 @@ Leite stem:[f(x)=e^{2x}] ab.
 stem:[f'(x)=e^{2x} * 2]
 
 Die Multiplikation mit der 2 kommt durch die Anwendung der _Kettenregel_ zustande. Hier ist stem:[e^x] die _äußere Funktion_ und stem:[2x] die _innere Funktion_, so dass die Kettenregel hier zur Anwendung kommt und man mit der Ableitung von stem:[2x] nachdifferenzieren muss.
+
+== Graph der e-Funktion
+
+Der Graph von stem:[e^x] geht bei 1 durch stem:[e=2,71828] und bei 0 durch stem:[e^0=1].
+
+Zusätzlich sind noch die Graphen von stem:[e^{-x}] (Spiegelung von stem:[e^x] an der y-Achse) und stem:[-e^x] (Spiegelung von stem:[e^x] an der x-Achse) eingezeichnet.
+
+Beachte, dass sich der Graph der normalen e-Funktion im negativen Bereich der x-Achse beliebig annähert, diese aber nie berührt, denn stem:[e^x>0] für alle stem:[x in RR].
+
+image::Bilder/Ableitungen/e_funktion.png[e-Funktion]
+
