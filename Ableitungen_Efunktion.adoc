@@ -118,6 +118,28 @@ Für die e-Funktion stem:[f(x)=e^x] mit stem:[e] als Eulersche Zahl gilt:
 stem:[f'(x)=e^x=f(x)]
 ====
 
+[[Vertiefung]]
+====
+*Vertiefung:*
+
+Wir haben gesehen, dass stem:[lim_{n->oo} (1+1/n)^{n}] gegen stem:[e] strebt. Man kann etwas allgemeiner auch zeigen, dass stem:[lim_{n->oo} (1+a/n)^{n}] gegen stem:[e^a] läuft. Um dies nachvollziehbar zu machen, wiederholen wir die numerische Näherung mit stem:[n_0=1 000 000 000] für verschiedene Werte von a und notieren daneben stem:[e^a]:
+
+|===
+|a | stem:[(1+a/n_0)^{n_0}] |stem:[e^a]
+|0,5 |   1,648721 |   1,648721
+|1 |   2,718282 |   2,718282
+|2 |   7,389056 |   7,389056
+|4 |  54,598146 |  54,598150
+|8 | 2980,957021 | 2980,957987
+|===
+
+Die Werte zeigen, dass diese Aussage zu stimmen scheint.
+
+Die Tatsache, dass stem:[lim_{n->oo} (1+a/n)^{n}=e^a] ist, werden wir für die Herleitung der Ableitung der natürlichen  Logarithmusfunktion verwenden.
+
+
+====
+
 == Beispiel zur Ableitung der e-Funktion
 
 ====

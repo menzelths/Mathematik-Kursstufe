@@ -1,0 +1,56 @@
+= [[Zusammenfassung]] Zusammenfassung der Ableitungsregeln
+:stem: 
+:toc: left
+:toc-title: Inhaltsverzeichnis
+:sectnums:
+:icons: font
+:keywords: ableitung, Herleitung
+
+== Motivation
+
+In den vorangegangenen Kapiteln haben wir immer wieder Ableitungsregeln hergeleitet und dabei stets den gleichen Ansatz verwendet, nämlich
+
+stem:[f'(x)=lim_{h->0} {f(x+h)-f(x)}/h].
+
+Um dies nochmals zu verdeutlichen, werden hier die Ansätze der einzelnen Herleitungen nochmals gezeigt:
+
+|====
+|*Regel*|*f(x)*|*Ansatz*
+|Kettenregel|stem:[u(v(x))]|stem:[lim_{h->0}{u(v(x+h))-u(v(x))}/h]
+|Produktregel|stem:[u(x)*v(x)]|stem:[lim_{h->0} {u(x+h)*v(x+h)-u(x)*v(x)}/h]
+|Exponentialfunktion|stem:[a^x]|stem:[lim_{h->0} {a^{x+h}-a^x}/h]
+|Logarithmusfunktion|stem:[ln(x)]|stem:[lim_{h->0} {ln(x+h)-ln(x)}/h]
+|====
+
+Insgesamt kennen wir nun viele Ableitungsregeln, die im folgenden nochmals tabellarisch aufgelistet werden, ebenso wie die Potenz- und Logarithmusgesetze, die man immer wieder brauchen kann.
+
+== Ableitungsregeln
+
+|====
+|*f(x)*|*f'(x)*|*Anmerkung*
+|stem:[x^n]|stem:[n*x^{n-1}]|Potenzregel
+|stem:[sin(x)]|stem:[cos(x)]|
+|stem:[cos(x)]|stem:[-sin(x)]|
+|stem:[e^x]|stem:[e^x]|
+|stem:[a^x]|stem:[a^x *ln(a)]|
+|stem:[ln(x)]|stem:[1/x]|
+|stem:[a*f(x)]|stem:[a*f'(x)]|Faktorregel
+|stem:[f(x)+g(x)]|stem:[f'(x)+g'(x)]|Summenregel
+|stem:[u(v(x))]|stem:[u'(v(x))*v'(x)]|Kettenregel
+|stem:[u(x)*v(x)]|stem:[u(x)*v'(x)+u'(x)*v(x)]|Produktregel
+|stem:[{u(x)}/{v(x)}]|stem:[{u'(x)*v(x)-u(x)*v'(x)}/{(v(x))^2}]|Quotientenregel
+|====
+
+== Potenzgesetze
+. stem:[a^b*a^c=a^{b+c}]
+. stem:[a^b : a^c=a^{b-c}]
+. stem:[(a^b)^c=a^{b*c}]
+
+== Logarithmusgesetze
+. stem:[ln(a*b)=ln(a)+ln(b)]
+. stem:[ln(a/b)=ln(a)-ln(b)]
+. stem:[ln(a^b)=b*ln(a)] ("Hut-ab-Regel")
+
+Gut zu wissen: stem:[log_a(b)={log(b)}/{log(a)}].
+
+Auch richtig mit dem ln: stem:[log_a(b)={ln(b)}/{ln(a)}].
