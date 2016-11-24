@@ -1,0 +1,78 @@
+= [[Logarithmus]] Der natürliche Logarithmus
+:stem: 
+:toc: left
+:toc-title: Inhaltsverzeichnis
+:sectnums:
+:icons: font
+:keywords: ableitung, Exponentialfunktion, ln, natürlicher Logarithmus
+
+== Motivation
+
+====
+*Aufgabe:*
+
+Die von Bakterien in einer Petri-Schale bedeckte Fläche kann durch die Funktion stem:[f(x)=e^x] beschrieben werden (stem:[x] in Stunden, stem:[f(x)] in stem:[cm^2]).
+
+. Berechne, welche Fläche nach 2 Stunden bedeckt ist.
+. Gib an, wann genau 5 stem:[cm^2] von den Bakterien bedeckt sind.
+====
+
+*Lösung:*
+
+Um zu berechnen, welche Fläche nach 2 Stunden bedeckt ist, muss stem:[f(2)=e^2~~7,39] stem:[cm^2] berechnet werden.
+
+Der umgekehrte Fall ist etwas kniffliger, denn zu lösen ist nun die Gleichung stem:[f(x)=5], also stem:[e^x=5].
+
+Zeichnet man die Situation in ein Schaubild, so kann man die Aufgabe graphisch lösen:
+
+image::Bilder/Ableitungen/Logarithmus_Aufgabe.png[Aufgabe zum Logarithmus]
+
+Schwarz gestrichelt kann man den ersten Teil der Aufgabe erkennen: man startet bei der 2 auf der _x-Achse_ und erhält über den Graphen von f den y-Wert 7,39, wie oben berechnet.
+
+Rot gestrichelt sieht man die Lösung zum zweiten Teil: nun starten wir bei 5 auf der _y-Achse_ und erhalten als x-Wert in etwas 1,6. Die Probe ergibt stem:[e^{1,6}~~4,953]. Wir sind also schon ziemlich nah dran, aber perfekt ist es noch nicht.
+
+== Der natürliche Logarithmus
+
+====
+*Der natürliche Logarithmus*
+
+Man nennt die Zahl, mit der man stem:[e] potenzieren muss, um a zu erhalten, den *natürlichen Logarithmus von a*, kurz stem:[ln(a)] (kleines L und kleines N).
+
+Diese Zahl ist auch die Lösung der Gleichung stem:[e^x=a] mit stem:[a>0], also stem:[e^{ln(a)}=a].
+====
+
+Der Logarithmus ist bereits von früher bekannt und von daher auch die Logarithmus-Gesetze:
+
+====
+*Logarithmus-Gesetze:*
+
+. stem:[ln(a*b)=ln(a)+ln(b)]
+. stem:[ln(a/b)=ln(a)-ln(b)]
+. stem:[ln(a^b)=b*ln(a)] ("Hut-ab-Regel")
+====
+
+Mit Hilfe des natürlichen Logarithmus und dieser Gesetze können wir die Aufgabe von oben nun endlich exakt lösen:
+
+stem:[e^x=5 | ln]
+
+stem:[ln(e^x)=ln(5)]
+
+Mit dem 3. Logarithmus-Gesetz erhält man
+
+stem:[x*ln(e)=ln(5)]
+
+Nach der Definition des natürlichen Logarithmus ist stem:[ln(e)] die Zahl, mit der man stem:[e] potenzieren muss um stem:[e] zu erhalten. Das ist natürlich die 1, d. h. stem:[ln(e)=1]. Somit wird unsere Gleichung zu
+
+stem:[x*1=x=ln(5)~~1,609]
+
+Ein weiterer spezieller Wert des Logarithmus ist übrigens stem:[ln(1)], nämlich die Zahl, mit der man stem:[e] potenzieren muss, um 1 zu erhalten. Das ist die 0, denn stem:[e^0=1]. Somit gilt auch stem:[ln(1)=0].
+
+====
+*Einige besondere Werte des natürlichen Logarithmus:*
+
+* stem:[ln(e)=1]
+* stem:[ln(1)=0]
+* stem:[ln(e^2)=2*ln(e)=2*1=2]
+* stem:[ln(e^3)=3]
+====
+
