@@ -100,7 +100,7 @@ Setzt man für stem:[n] nun immer größere Werte ein, so wird man überrascht f
 Diese besondere Zahl wird als *Eulersche Zahl* bezeichnet und mit dem Buchstaben stem:[e] bezeichnet.
 
 ====
-Die *Eulersche Zahl* hat den Wert stem:[e=2,718282] ... und die Funktion stem:[e^x] wird als *e-Funktion* oder *natürliche Exponentialfunktion* bezeichnet.
+Die *Eulersche Zahl* hat näherungsweise den Wert stem:[e=2,71828] und die Funktion stem:[e^x] wird als *e-Funktion* oder *natürliche Exponentialfunktion* bezeichnet.
 ====
 
 Somit haben wir die besondere Basis stem:[e] gefunden, für die gilt, dass die Ableitung von stem:[e^x] an der Stelle 0 gleich 1 ist.
