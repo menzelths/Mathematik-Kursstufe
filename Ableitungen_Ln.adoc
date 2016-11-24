@@ -43,10 +43,9 @@ Diese Zahl ist auch die Lösung der Gleichung stem:[e^x=a] mit stem:[a>0], also 
 ====
 Eine alternative Bezeichnungsweise für den natürlichen Logarithmus ist der *Logarithmus zur Basis stem:[e]*, was auch als stem:[log_e(a)] bezeichnet werden könnte (sprich: "Logarithmus von a zur Basis e").
 
-Graphisch gesehen ist der stem:[ln(a)] nichts anderes als der x-Wert, der in die e-Funktion eingesetzt den y-Wert a ergibt.
 
 === Logarithmus-Gesetze mit Beispielen
-Der Logarithmus ist bereits von früher bekannt und von daher auch die Logarithmus-Gesetze:
+Der Logarithmus ist bereits von früher bekannt und von daher auch die Logarithmus-Gesetze, die unverändert auch für den natürlichen Logarithmus gelten:
 
 ====
 *Logarithmus-Gesetze:*
@@ -64,7 +63,7 @@ Dazu einige Beispiele:
 
 === Lösung der Eingangsaufgabe
 
-Mit Hilfe des natürlichen Logarithmus und dieser Gesetze können wir die Aufgabe von oben nun  exakt lösen:
+Mit Hilfe des natürlichen Logarithmus und seiner Gesetze können wir die Aufgabe von oben nun exakt lösen:
 
 stem:[e^x=5 | ln]
 
@@ -74,7 +73,7 @@ Mit dem 3. Logarithmus-Gesetz erhält man
 
 stem:[x*ln(e)=ln(5)]
 
-Nach der Definition des natürlichen Logarithmus ist stem:[ln(e)] die Zahl, mit der man stem:[e] potenzieren muss um stem:[e] zu erhalten. Das ist natürlich die 1, d. h. stem:[ln(e)=1]. Somit wird unsere Gleichung zu
+Nach der Definition des natürlichen Logarithmus ist stem:[ln(e)] die Zahl, mit der man stem:[e] potenzieren muss um stem:[e] zu erhalten. Das ist hier natürlich die 1, d. h. stem:[ln(e)=1]. Somit wird unsere Gleichung zu
 
 stem:[x*1=x=ln(5)~~1,609]
 
@@ -125,7 +124,8 @@ stem:[a^x=b]
 
 mit stem:[a, b>0] hat die Lösung
 
-stem:[x={ln(b)}/{ln(a)}]
+stem:[x={ln(b)}/{ln(a)}].
+
 ====
 
 === Graph der natürlichen Logarithmusfunktion
