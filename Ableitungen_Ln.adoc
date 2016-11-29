@@ -179,6 +179,25 @@ Um beispielsweise die Ableitung von stem:[f(x)=ln(x^2)] zu bestimmen, könnte ma
 stem:[f'(x)=1/{x^2} *2x={2x}/{x^2}=2/x]
 
 
+====
+*Alternative Herleitung _ohne_ Differenzialquotient:*
+
+stem:[e^{ln(x)}=x] (Definition des ln)
+
+Ableiten beider Seiten unter Anwendung der Kettenregel:
+
+stem:[e^{ln(x)} * (ln(x))'=1]
+
+Jetzt stem:[e^{ln(x)}] wieder durch stem:[x] ersetzen:
+
+stem:[x * (ln(x))'=1]
+
+und nach (ln(x))' auflösen:
+
+stem:[(ln(x))'=1/x]
+====
+
+
 == Ableitung der allgemeinen Exponentialfunktion
 
 Im <<Ableitungen_Efunktion#EFunktion,Kapitel über die e-Funktion>> war als Eingangsaufgabe die Ableitung von stem:[g(x)=2^x] zu bilden. Mit den Erkenntnissen aus diesem Kapitel ist es nun auch möglich, diese Aufgabe zu lösen. Zunächst formen wir den Term so um, dass die e-Funktion ins Spiel kommt:

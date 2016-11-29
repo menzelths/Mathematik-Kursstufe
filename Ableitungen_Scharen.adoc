@@ -1,0 +1,51 @@
+= [[Funktionenscharen]] Funktionenscharen
+:stem: 
+:toc: left
+:toc-title: Inhaltsverzeichnis
+:sectnums:
+:icons: font
+:keywords: ableitung, scharen
+
+== Motivation
+
+Will man den Verlauf eines Küstenabschnitts modellieren, so kann dies mit Hilfe einer Funktion stem:[f(x)] erfolgen. Da sich eine Küste durch Wind und Wasser in ständigem Wandel befindet, wird man zu verschiedenen Zeitpunkten auch unterschiedliche Küstenverläufe vorfinden. In einem solchen Fall ist es sinnvoll, einen Parameter t einzuführen, der den Verlauf des Schaubilds so ändert, dass für jedes t die korrekte Küstenlinie dargestellt wird. Nun erhält man eine Menge von Funktionen stem:[f_t(x)] mit dem Parameter stem:[t].
+
+Eine solche Menge von Funktionen, die sich nur in einen gemeinsamen Parameter t unterscheiden, nennt man *Funktionenschar*.
+
+In diesem Kapitel betrachten wir die Ableitung einer solchen Funktion, was es mit Ortskurven auf sich hat und wie man gemeinsame Punkte bestimmen kann.
+
+== Ableitung einer Funktionenschar
+
+Als Beispiel für dieses Kapitel wählen wir die Funktion 
+
+stem:[f_t(x)=x^3-t*x^2+3t*x]. 
+
+Hierbei ist stem:[t] der *Parameter* der Funktionenschar.
+
+Da keine weitere Angaben gemacht werden, soll stem:[t in RR] sein.
+
+Leitet man diesen Ausdruck ab, so erhält man
+
+stem:[f'_t(x)=3*x^2-2*t*x+3*t].
+
+Da nach stem:[x] abgeleitet wurde und nicht nach t, behandelt man das t bei der Ableitung wie eine normale Zahl.
+
+== Ortskurve
+
+Unter einer *Ortskurve der Extrempunkte* versteht man den Graph der Funktion auf der sich alle Extremkurve der Funkionenschar befinden. Genauso gibt es eine Ortskurve der Wendepunkte usw.
+
+In unserem Beispiel bestimmen wir zunächst die Extremstellen:
+
+stem:[f'_t(x)=0]
+
+stem:[3*x^2-2*t*x+3*t=0]
+
+Mitternachtsformel anwenden:
+
+stem:[x_{1;2}={2+-sqrt{4-4*3*3*t)}/6={2+-sqrt{4-36*t)}/6]
+
+Aus der Wurzel kann man die 4 ziehen, so dass letzten Endes der Ausdruck
+
+stem:[{1+-sqrt{1-9t}}/3]
+
+übrig bleibt.

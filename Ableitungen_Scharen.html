@@ -5,8 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<meta name="keywords" content="ableitung, Exponentialfunktion, ln, natürlicher Logarithmus">
-<title>Der natürliche Logarithmus und die Ableitung der allgemeinen Exponentialfunktion</title>
+<meta name="keywords" content="ableitung, scharen">
+<title>Funktionenscharen</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -421,23 +421,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1><a id="Logarithmus"></a> Der natürliche Logarithmus und die Ableitung der allgemeinen Exponentialfunktion</h1>
+<h1><a id="Funktionenscharen"></a> Funktionenscharen</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Inhaltsverzeichnis</div>
 <ul class="sectlevel1">
 <li><a href="#_motivation">1. Motivation</a></li>
-<li><a href="#_der_natürliche_logarithmus">2. Der natürliche Logarithmus</a>
-<ul class="sectlevel2">
-<li><a href="#_definition">2.1. Definition</a></li>
-<li><a href="#_logarithmus_gesetze_mit_beispielen">2.2. Logarithmus-Gesetze mit Beispielen</a></li>
-<li><a href="#_lösung_der_eingangsaufgabe">2.3. Lösung der Eingangsaufgabe</a></li>
-<li><a href="#_spezielle_werte_des_ln">2.4. Spezielle Werte des ln</a></li>
-<li><a href="#_exponentialgleichungen_mit_anderer_basis_als_e">2.5. Exponentialgleichungen mit anderer Basis als e</a></li>
-<li><a href="#_graph_der_natürlichen_logarithmusfunktion">2.6. Graph der natürlichen Logarithmusfunktion</a></li>
-<li><a href="#_die_ableitung_der_logarithmusfunktion">2.7. Die Ableitung der Logarithmusfunktion</a></li>
-</ul>
-</li>
-<li><a href="#_ableitung_der_allgemeinen_exponentialfunktion">3. Ableitung der allgemeinen Exponentialfunktion</a></li>
+<li><a href="#_ableitung_einer_funktionenschar">2. Ableitung einer Funktionenschar</a></li>
+<li><a href="#_ortskurve">3. Ortskurve</a></li>
 </ul>
 </div>
 </div>
@@ -445,384 +435,79 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_motivation">1. Motivation</h2>
 <div class="sectionbody">
-<div class="exampleblock">
-<div class="content">
 <div class="paragraph">
-<p><strong>Aufgabe:</strong></p>
+<p>Will man den Verlauf eines Küstenabschnitts modellieren, so kann dies mit Hilfe einer Funktion \$f(x)\$ erfolgen. Da sich eine Küste durch Wind und Wasser in ständigem Wandel befindet, wird man zu verschiedenen Zeitpunkten auch unterschiedliche Küstenverläufe vorfinden. In einem solchen Fall ist es sinnvoll, einen Parameter t einzuführen, der den Verlauf des Schaubilds so ändert, dass für jedes t die korrekte Küstenlinie dargestellt wird. Nun erhält man eine Menge von Funktionen \$f_t(x)\$ mit dem Parameter \$t\$.</p>
 </div>
 <div class="paragraph">
-<p>Die von Bakterien in einer Petri-Schale bedeckte Fläche soll durch die Funktion \$f(x)=e^x\$ beschrieben werden (\$x\$ in Stunden, \$f(x)\$ in \$cm^2\$).</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Berechne, welche Fläche nach 2 Stunden bedeckt ist.</p>
-</li>
-<li>
-<p>Gib an, wann genau 5 \$cm^2\$ von den Bakterien bedeckt sind.</p>
-</li>
-</ol>
-</div>
-</div>
+<p>Eine solche Menge von Funktionen, die sich nur in einen gemeinsamen Parameter t unterscheiden, nennt man <strong>Funktionenschar</strong>.</p>
 </div>
 <div class="paragraph">
-<p><strong>Lösung:</strong></p>
-</div>
-<div class="paragraph">
-<p>Um zu berechnen, welche Fläche nach 2 Stunden bedeckt ist, muss \$f(2)=e^2~~7,39\$ \$cm^2\$ berechnet werden.</p>
-</div>
-<div class="paragraph">
-<p>Der umgekehrte Fall ist etwas kniffliger, denn zu lösen ist nun die Gleichung \$f(x)=5\$, also \$e^x=5\$.</p>
-</div>
-<div class="paragraph">
-<p>Zeichnet man die Situation in ein Schaubild, so kann man die Aufgabe graphisch lösen:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="Bilder/Ableitungen/Logarithmus_Aufgabe.png" alt="Aufgabe zum Logarithmus">
-</div>
-</div>
-<div class="paragraph">
-<p>Schwarz gestrichelt kann man den ersten Teil der Aufgabe erkennen: man startet bei der 2 auf der <em>x-Achse</em> und erhält über den Graphen von f den y-Wert 7,39, wie oben berechnet.</p>
-</div>
-<div class="paragraph">
-<p>Rot gestrichelt sieht man die Lösung zum zweiten Teil: nun starten wir bei 5 auf der <em>y-Achse</em> und erhalten als x-Wert in etwas 1,6. Die Probe ergibt \$e^{1,6}~~4,953\$. Wir sind also schon ziemlich nah dran, aber perfekt ist es noch nicht.</p>
+<p>In diesem Kapitel betrachten wir die Ableitung einer solchen Funktion, was es mit Ortskurven auf sich hat und wie man gemeinsame Punkte bestimmen kann.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_der_natürliche_logarithmus">2. Der natürliche Logarithmus</h2>
+<h2 id="_ableitung_einer_funktionenschar">2. Ableitung einer Funktionenschar</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_definition">2.1. Definition</h3>
-<div class="exampleblock">
-<div class="content">
 <div class="paragraph">
-<p><strong>Der natürliche Logarithmus</strong></p>
+<p>Als Beispiel für dieses Kapitel wählen wir die Funktion</p>
 </div>
 <div class="paragraph">
-<p>Man nennt die Zahl, mit der man \$e\$ potenzieren muss, um a zu erhalten, den <strong>natürlichen Logarithmus von a</strong>, kurz \$ln(a)\$ (kleines L und kleines N für "logarithmus naturalis").</p>
+<p>\$f_t(x)=x^3-t*x^2+3t*x\$.</p>
 </div>
 <div class="paragraph">
-<p>Diese Zahl ist auch die Lösung der Gleichung \$e^x=a\$ mit \$a&gt;0\$, also \$e^{ln(a)}=a\$.</p>
-</div>
-</div>
+<p>Hierbei ist \$t\$ der <strong>Parameter</strong> der Funktionenschar.</p>
 </div>
 <div class="paragraph">
-<p>Eine alternative Bezeichnungsweise für den natürlichen Logarithmus ist der <strong>Logarithmus zur Basis \$e\$</strong>, was auch als \$log_e(a)\$ bezeichnet werden könnte (sprich: "Logarithmus von a zur Basis e").</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_logarithmus_gesetze_mit_beispielen">2.2. Logarithmus-Gesetze mit Beispielen</h3>
-<div class="paragraph">
-<p>Der Logarithmus ist bereits von früher bekannt und von daher auch die Logarithmus-Gesetze, die unverändert auch für den natürlichen Logarithmus gelten:</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Logarithmus-Gesetze:</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>\$ln(a*b)=ln(a)+ln(b)\$</p>
-</li>
-<li>
-<p>\$ln(a/b)=ln(a)-ln(b)\$</p>
-</li>
-<li>
-<p>\$ln(a^b)=b*ln(a)\$ ("Hut-ab-Regel")</p>
-</li>
-</ol>
-</div>
-</div>
+<p>Da keine weitere Angaben gemacht werden, soll \$t in RR\$ sein.</p>
 </div>
 <div class="paragraph">
-<p>Dazu einige Beispiele:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>\$ln(x*e)=ln(x)+ln(e)=ln(x)+1\$</p>
-</li>
-<li>
-<p>\$ln(1/e)=ln(1)-ln(e)=0-1=-1\$</p>
-</li>
-<li>
-<p>\$ln(e^2)=2*ln(e)=2*1=2\$</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_lösung_der_eingangsaufgabe">2.3. Lösung der Eingangsaufgabe</h3>
-<div class="paragraph">
-<p>Mit Hilfe des natürlichen Logarithmus und seiner Gesetze können wir die Aufgabe von oben nun exakt lösen:</p>
+<p>Leitet man diesen Ausdruck ab, so erhält man</p>
 </div>
 <div class="paragraph">
-<p>\$e^x=5 | ln\$</p>
+<p>\$f'_t(x)=3*x^2-2*t*x+3*t\$.</p>
 </div>
 <div class="paragraph">
-<p>\$ln(e^x)=ln(5)\$</p>
-</div>
-<div class="paragraph">
-<p>Mit dem 3. Logarithmus-Gesetz erhält man</p>
-</div>
-<div class="paragraph">
-<p>\$x*ln(e)=ln(5)\$</p>
-</div>
-<div class="paragraph">
-<p>Nach der Definition des natürlichen Logarithmus ist \$ln(e)\$ die Zahl, mit der man \$e\$ potenzieren muss um \$e\$ zu erhalten. Das ist hier natürlich die 1, d. h. \$ln(e)=1\$. Somit wird unsere Gleichung zu</p>
-</div>
-<div class="paragraph">
-<p>\$x*1=x=ln(5)~~1,609\$</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_spezielle_werte_des_ln">2.4. Spezielle Werte des ln</h3>
-<div class="paragraph">
-<p>Ein weiterer spezieller Wert des Logarithmus ist übrigens \$ln(1)\$, nämlich die Zahl, mit der man \$e\$ potenzieren muss, um 1 zu erhalten. Das ist die 0, denn \$e^0=1\$. Somit gilt auch \$ln(1)=0\$.</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Einige besondere Werte des natürlichen Logarithmus:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>\$ln(e)=1\$</p>
-</li>
-<li>
-<p>\$ln(1)=0\$</p>
-</li>
-<li>
-<p>\$ln(e^2)=2*ln(e)=2*1=2\$</p>
-</li>
-<li>
-<p>\$ln(e^3)=3\$</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Für Werte kleiner gleich 0 ist der Logarithmus nicht definiert, da es auch keine Zahl gibt mit der man \$e\$ potenzieren kann, um etwas Negatives zu erhalten. Schließlich nimmt die e-Funktion auf dem gesamten Definitionsbereich \$RR\$ positive Werte an.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_exponentialgleichungen_mit_anderer_basis_als_e">2.5. Exponentialgleichungen mit anderer Basis als e</h3>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Aufgabe:</strong></p>
-</div>
-<div class="paragraph">
-<p>Bestimme ein \$x\$ so, dass \$2^x=10\$ ist.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Eine direkte Lösung dafür wäre \$x=log_2 (10)\$, also der Logarithmus von 10 zur Basis 2. Leider gibt es nicht auf allen Taschenrechnern dafür eine entsprechende Taste.</p>
-</div>
-<div class="paragraph">
-<p>Probieren wir es mit dem natürlichen Logarithmus:</p>
-</div>
-<div class="paragraph">
-<p>\$2^x=10 | ln\$</p>
-</div>
-<div class="paragraph">
-<p>\$ln(2^x)=ln(10)\$</p>
-</div>
-<div class="paragraph">
-<p>\$x*ln(2)=ln(10) | : ln(2)\$</p>
-</div>
-<div class="paragraph">
-<p>\$x={ln(10)}/{ln(2)}~~3,322\$</p>
-</div>
-<div class="paragraph">
-<p>Probe: \$2^{3,322}~~10,000\$, stimmt also.</p>
-</div>
-<div class="paragraph">
-<p>Wenn man die 2 mit a und die 10 mit b ersetzt ergibt sich die Gleichung \$a^x=b\$ mit der Lösung \$x={ln(b)}/{ln(a)}\$. Zusammengefasst:</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Allgemeine Exponentialgleichung:</strong></p>
-</div>
-<div class="paragraph">
-<p>Die Gleichung</p>
-</div>
-<div class="paragraph">
-<p>\$a^x=b\$</p>
-</div>
-<div class="paragraph">
-<p>mit \$a, b&gt;0\$ hat die Lösung</p>
-</div>
-<div class="paragraph">
-<p>\$x={ln(b)}/{ln(a)}\$.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_graph_der_natürlichen_logarithmusfunktion">2.6. Graph der natürlichen Logarithmusfunktion</h3>
-<div class="paragraph">
-<p>Der Graph der natürlichen Logarithmusfunktion sieht so aus:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="Bilder/Ableitungen/Logarithmus_Funktion.png" alt="Graph natürlicher Logarithmus">
-</div>
-</div>
-<div class="paragraph">
-<p>Man sieht hier nochmal die besonderen Werte des natürlichen Logarithmus: \$ln(1)=0\$ und \$ln(e)=1\$.</p>
-</div>
-<div class="paragraph">
-<p>Wie oben bereits erwähnt, ist er nur für positive x-Werte definiert und strebt für \$x-&gt;0\$ gegen \$-oo\$.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_die_ableitung_der_logarithmusfunktion">2.7. Die Ableitung der Logarithmusfunktion</h3>
-<div class="paragraph">
-<p>Wie üblich setzen wir an:</p>
-</div>
-<div class="paragraph">
-<p>\$f'(x)=lim_{h-&gt;0} {ln(x+h)-ln(x)}/h\$,</p>
-</div>
-<div class="paragraph">
-<p>wobei wir das 2. Logarithmusgesetz nutzen können und im Zähler \$ln(x+h)-ln(x)\$ als \$ln({x+h}/x)=ln(1+h/x)\$ schreiben können.</p>
-</div>
-<div class="paragraph">
-<p>Nun ersetzen wir, wie bei der Herleitung der Ableitung der e-Funktion, alle \$h\$ durch \$1/n\$ und lassen das \$n-&gt;oo\$ laufen, anstatt das \$h-&gt;0\$. Somit erhält man</p>
-</div>
-<div class="paragraph">
-<p>\$f'(x)=lim_{n-&gt;oo} ln(1+1/{n*x})/{1/n}\$.</p>
-</div>
-<div class="paragraph">
-<p>Anstatt durch \$1/n\$ zu dividieren kann man den Zähler auch mit \$n\$ multiplizieren, so dass man den Term</p>
-</div>
-<div class="paragraph">
-<p>\$lim_{n-&gt;oo} n*ln(1+1/{n*x})\$</p>
-</div>
-<div class="paragraph">
-<p>erhält. Mit dem 3. Logarithmusgesetz erhält man</p>
-</div>
-<div class="paragraph">
-<p>\$lim_{n-&gt;oo} ln((1+1/{n*x})^n)=lim_{n-&gt;oo} ln((1+{1/x}/n)^n)\$.</p>
-</div>
-<div class="paragraph">
-<p>Da der ln selbst mit dem \$n\$ nichts zu tun hat, kann man den Limes in den ln ziehen und erhält als Ausdruck</p>
-</div>
-<div class="paragraph">
-<p>\$ln(lim_{n-&gt;oo}(1+{1/x}/n)^n)\$</p>
-</div>
-<div class="paragraph">
-<p>Den inneren Teil kennen wir schon aus der Herleitung der Eulerschen Zahl. Dort wurde in der <a href="Ableitungen_Efunktion.html#Vertiefung">Vertiefung</a> erwähnt, dass \$lim_{n-&gt;oo} (1+a/n)^{n}\$ gegen \$e^a\$ läuft. Bei uns entspricht das \$1/x\$ dem a, so dass der Ausdruck im ln für \$n-&gt;oo\$ gegen \$e^{1/x}\$ läuft. Also bleibt übrig:</p>
-</div>
-<div class="paragraph">
-<p>\$f'(x)=ln(e^{1/x})=1/x * ln(e)=1/x*1=1/x\$</p>
-</div>
-<div class="paragraph">
-<p>Somit erhält man als überraschend einfaches Ergebnis für die</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Ableitung der natürlichen Logarithmusfunktion:</strong></p>
-</div>
-<div class="paragraph">
-<p>Die Ableitung von \$f(x)=ln(x)\$ ist \$f'(x)=1/x\$.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Um beispielsweise die Ableitung von \$f(x)=ln(x^2)\$ zu bestimmen, könnte man unter Einsatz der Kettenregel so vorgehen:</p>
-</div>
-<div class="paragraph">
-<p>\$f'(x)=1/{x^2} *2x={2x}/{x^2}=2/x\$</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Alternative Herleitung <em>ohne</em> Differenzialquotient:</strong></p>
-</div>
-<div class="paragraph">
-<p>\$e^{ln(x)}=x\$ (Definition des ln)</p>
-</div>
-<div class="paragraph">
-<p>Ableiten beider Seiten unter Anwendung der Kettenregel:</p>
-</div>
-<div class="paragraph">
-<p>\$e^{ln(x)} * (ln(x))'=1\$</p>
-</div>
-<div class="paragraph">
-<p>Jetzt \$e^{ln(x)}\$ wieder durch \$x\$ ersetzen:</p>
-</div>
-<div class="paragraph">
-<p>\$x * (ln(x))'=1\$</p>
-</div>
-<div class="paragraph">
-<p>und nach (ln(x))' auflösen:</p>
-</div>
-<div class="paragraph">
-<p>\$(ln(x))'=1/x\$</p>
-</div>
-</div>
-</div>
+<p>Da nach \$x\$ abgeleitet wurde und nicht nach t, behandelt man das t bei der Ableitung wie eine normale Zahl.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_ableitung_der_allgemeinen_exponentialfunktion">3. Ableitung der allgemeinen Exponentialfunktion</h2>
+<h2 id="_ortskurve">3. Ortskurve</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Im <a href="Ableitungen_Efunktion.html#EFunktion">Kapitel über die e-Funktion</a> war als Eingangsaufgabe die Ableitung von \$g(x)=2^x\$ zu bilden. Mit den Erkenntnissen aus diesem Kapitel ist es nun auch möglich, diese Aufgabe zu lösen. Zunächst formen wir den Term so um, dass die e-Funktion ins Spiel kommt:</p>
+<p>Unter einer <strong>Ortskurve der Extrempunkte</strong> versteht man den Graph der Funktion auf der sich alle Extremkurve der Funkionenschar befinden. Genauso gibt es eine Ortskurve der Wendepunkte usw.</p>
 </div>
 <div class="paragraph">
-<p>\$g(x)=2^x=(e^{ln(2)})^x\$</p>
+<p>In unserem Beispiel bestimmen wir zunächst die Extremstellen:</p>
 </div>
 <div class="paragraph">
-<p>Diese Umformung stimmt, da \$e^{ln(2)}=2\$ ist. Mit dem Potenzgesetz \$(a^b)^c=a^{b*c}\$ kann man den Term noch umschreiben zu:</p>
+<p>\$f'_t(x)=0\$</p>
 </div>
 <div class="paragraph">
-<p>\$g(x)=e^{ln(2)*x}\$</p>
+<p>\$3*x^2-2*t*x+3*t=0\$</p>
 </div>
 <div class="paragraph">
-<p>und diesen kann man mit Hilfe der Kettenregel ableiten zu</p>
+<p>Mitternachtsformel anwenden:</p>
 </div>
 <div class="paragraph">
-<p>\$g'(x)=e^{ln(2)*x}*ln(2)=2^x*ln(2)\$,</p>
+<p>\$x_{1;2}={2+-sqrt{4-4*3*3*t)}/6={2+-sqrt{4-36*t)}/6\$</p>
 </div>
 <div class="paragraph">
-<p>womit die Aufgabe gelöst ist. Allgemein kann man formulieren:</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Ableitung einer Exponentialfunktion:</strong></p>
+<p>Aus der Wurzel kann man die 4 ziehen, so dass letzten Endes der Ausdruck</p>
 </div>
 <div class="paragraph">
-<p>Die Ableitung einer Exponentialfunktion der Form</p>
+<p>\${1+-sqrt{1-9t}}/3\$</p>
 </div>
 <div class="paragraph">
-<p>\$f(x)=a^x\$</p>
-</div>
-<div class="paragraph">
-<p>mit \$a&gt;0\$ lautet</p>
-</div>
-<div class="paragraph">
-<p>\$f'(x)=a^x * ln(a)=f(x)*ln(a)\$.</p>
-</div>
-</div>
+<p>übrig bleibt.</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-11-28 20:57:24 Mitteleuropõische Zeit
+Last updated 2016-11-28 21:41:10 Mitteleuropõische Zeit
 </div>
 </div>
 <script type="text/x-mathjax-config">

@@ -83,6 +83,7 @@ Potenziert man die Gleichung nun auf beiden Seiten mit stem:[n], so erhält man
 
 stem:[a=(1+1/n)^{n}]
 
+
 Setzt man für stem:[n] nun immer größere Werte ein, so wird man überrascht feststellen, dass dieser Ausdruck gegen einen bestimmten Wert zu streben scheint:
 
 |===
