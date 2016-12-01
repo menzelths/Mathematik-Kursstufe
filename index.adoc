@@ -17,5 +17,9 @@
 
 <<Ableitungen_Efunktion.adoc#Efunktion, Die e-Funktion und ihre Ableitung>>
 
+<<Ableitungen_Ln.adoc#Logarithmus, Der natürliche Logarithmus und die Ableitung von Exponentialfunktionen>>
+
+<<Ableitungen_Zusammenfassung.adoc#Zusammenfassung, Zusammenfassung zu Ableitungen>>
+
 
 
