@@ -1,0 +1,41 @@
+= [[Integrale_Einfuehrung]] Einführung in die Integralrechnung
+:stem: 
+:toc: left
+:toc-title: Inhaltsverzeichnis
+:sectnums:
+:icons: font
+:keywords: ableitung, Exponentialfunktion
+
+== Motivation
+
+====
+*Beispielaufgabe aus Klasse 7*
+
+Marina möchte ein Bad nehmen und lässt in die zu Beginn leere Badewanne 5 Minuten lang Wasser mit der Fließgeschwindigkeit stem:[z(t)=20] ein, wobei die Fließgeschwindigkeit in stem:[l/min] angegeben wird.
+
+Als sie nach dem Bad den Stöpsel zieht, fließt das Wasser mit konstanter Fließgeschwindigkeit wieder ab, so dass die Badewanne nach 10 Minuten geleert ist.
+
+. Zeichne das Schaubild des aktuellen Wasserstands in der Badewanne beim Einlassen des Wasssers und in das gleiche Koordinatensystem das Schaubild der zugehörigen Fließgeschwindigkeit zu jedem Zeitpunkt. Bestimme für beide Schaubilder die zugehörigen Funktionsterme Z(t) für den Wasserstand zum Zeitpunkt t und z(t) für die Fließgeschwindigkeit zum Zeitpunkt t.
+
+. Wiederhole diese Schritte für den Fall des Abfließens des Wassers. Gib entsprechend die Funktionsterme A(t) und a(t) an.
+====
+
+*Lösung:*
+
+*Teilaufgabe 1:*
+
+[Zufluss]
+.Schaubild für den Wasserstand Z(t) und die Fließgeschwindigkeit z(t)
+image::Bilder/Integrale/Zufluss_Badewanne.png[Zufluss]
+
+Der Term für die Fließgeschwindigkeit lautet stem:[z(t)=20], der für den Wasserstand stem:[Z(t)=20*t].
+
+*Teilaufgabe 2:*
+
+Zu Beginn des Abfließens sind 100 Liter in der Badewanne, wobei sich diese in 10 Minuten vollständig entleert, so dass stem:[10 l/min] abfließen. Das entspricht bereits dem Funktionsterm von stem:[a(t)=-10]. Das negative Vorzeichen kommt dadurch zustande, dass das Abfließen von Wasser einem negativen Zufluss entspricht.
+
+FÜr den Funktionsterm des aktuellen Wasserstands gilt in diesem Fall stem:[A(t)=100-10*t], da zu Beginn 100 Liter in der Badewanne sind und pro Minute 10 Liter abfließen.
+
+[Abfluss]
+.Schaubild für den Wasserstand A(t) und die Fließgeschwindigkeit a(t)
+image::Bilder/Integrale/Abfluss_Badewanne.png[Abfluss]

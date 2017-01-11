@@ -21,5 +21,9 @@
 
 <<Ableitungen_Zusammenfassung.adoc#Zusammenfassung, Zusammenfassung zu Ableitungen>>
 
+== Integralrechnung
+
+<<Integrale_Einfuehrung.adoc#Einfuehrung, Einführung in die Integralrechnung>>
+
 
 

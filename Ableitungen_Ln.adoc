@@ -11,7 +11,7 @@
 ====
 *Aufgabe:*
 
-Die von Bakterien in einer Petrischale bedeckte Fläche soll durch die Funktion stem:[f(x)=e^x] beschrieben werden (stem:[x] in Stunden, stem:[f(x)] in stem:[cm^2]).
+Die von \$x^3\$ Bakterien in einer Petrischale bedeckte Fläche soll durch die Funktion stem:[f(x)=e^x] beschrieben werden (stem:[x] in Stunden, stem:[f(x)] in stem:[cm^2]).
 
 . Berechne, welche Fläche nach 2 Stunden bedeckt ist.
 . Gib an, wann genau 5 stem:[cm^2] von den Bakterien bedeckt sind.
