@@ -28,14 +28,164 @@ Als sie nach dem Bad den Stöpsel zieht, fließt das Wasser mit konstanter Flie�
 .Schaubild für den Wasserstand Z(t) und die Fließgeschwindigkeit z(t)
 image::Bilder/Integrale/Zufluss_Badewanne.png[Zufluss]
 
-Der Term für die Fließgeschwindigkeit lautet stem:[z(t)=20], der für den Wasserstand stem:[Z(t)=20*t].
+Der Term für die Fließgeschwindigkeit lautet stem:[z(t)=20], der für den Wasserstand zum Zeitpunkt t stem:[Z(t)=20*t].
 
 *Teilaufgabe 2:*
 
 Zu Beginn des Abfließens sind 100 Liter in der Badewanne, wobei sich diese in 10 Minuten vollständig entleert, so dass stem:[10 l/min] abfließen. Das entspricht bereits dem Funktionsterm von stem:[a(t)=-10]. Das negative Vorzeichen kommt dadurch zustande, dass das Abfließen von Wasser einem negativen Zufluss entspricht.
 
-FÜr den Funktionsterm des aktuellen Wasserstands gilt in diesem Fall stem:[A(t)=100-10*t], da zu Beginn 100 Liter in der Badewanne sind und pro Minute 10 Liter abfließen.
+Für den Funktionsterm des aktuellen Wasserstands gilt in diesem Fall stem:[A(t)=100-10*t], da zu Beginn 100 Liter in der Badewanne sind und pro Minute 10 Liter abfließen.
 
 [Abfluss]
 .Schaubild für den Wasserstand A(t) und die Fließgeschwindigkeit a(t)
 image::Bilder/Integrale/Abfluss_Badewanne.png[Abfluss]
+
+== Zusammenhang zwischen z(t) und Z(t)
+=== Graphischer Zusammenhang
+
+Die Aufgaben aus dem letzten Abschnitt führen zu der Frage, inwieweit diese Aufgaben einem neuen Themengebiet, namentlich der _Integralrechnung_ zuzuordnen sind, da sie beide komplett mit bisherigen Mitteln zu lösen sind.
+
+Um diese Frage zu klären, soll nun der Zusammenhang zwischen z(t) und Z(t) genauer betrachtet werden: Z(t) liefert für einen eingesetzten Wert t den Wasserstand in Litern zu diesem Zeitpunkt zurück. So ist beispielsweise stem:[Z(2)=40], was nichts anderes bedeutet, als dass 2 Minuten nach Beginn des Einfließens des Wassers 40 Liter in der Badewanne sind.
+
+Diesen Wert kann man auch über stem:[z(t)=20] erhalten, denn z(t) liefert zu jedem Zeitpunkt die momentane Zuflussgeschwindigkeit in Litern pro Minute zurück. In unserem einfachen Fall sind das immer stem:[20 l/min]. Nach zwei Minuten sind also stem:[2*20 min * l/min=40 l] in die Badewanne geflossen. Da diese anfangs leer war, entsprechen diese 40 Liter dem Wasserstand in der Badewanne zum Zeitpunkt 2 Minuten.
+
+Wir haben also die momentane Zuflussgeschwindigkeit mit der Dauer des Zuflusses multipliziert, was man graphisch als Rechtecksfläche interpretieren kann:
+
+[Zusammenhang]
+.Zusammenhang zwischen z(t) und Z(t)
+image::Bilder/Integrale/Zufluss_Badewanne_Zusammenhang.png[Zusammenhang]
+
+Und diese Rechtecksfläche entspricht dem Funktionswert von Z(2). Man kann Z(t) also als Maß für den Flächeninhalt interpretieren, der vom Schaubild von z(t) und der t-Achse im Intervall von 0 bis t eingeschlossen wird. Somit entspricht jeder Funktionswert Z(t) dem Flächeninhalt unter z(t) zwischen 0 und t.
+
+Um den Flächeninhalt der Fläche zwischen dem Graphen einer Funktion f(x) und der x-Achse auf dem Intervall [a ; b] zu beschreiben, gibt es eine spezielle Schreibweise, nämlich
+
+stem:[int_a^b f(x) dx]
+
+a und b sind hier die untere und die obere *Integrationsgrenze*, f(x) heißt in diesem Zusammenhang *Integrand* und der gesamte Ausdruck wird gesprochen als "Integral von a bis b über f(x) dx". Das "dx" legt fest, über welche Variable integriert wird, hier ist die *Integrationsvariable* somit x.
+
+Auf unser Beispiel angewendet würde das für die Fläche stem:[A_1] bedeuten:
+
+stem:[A_1=int_0^2 z(t) dt].
+
+Das steht also für die Fläche zwischen dem Graph von z(t) und der t-Achse (daher auch dt und nicht dx) auf dem Intervall von 0 bis 2 und entspricht somit der schraffierten Fläche stem:[A_1] im Schaubild.
+
+Weitere Beispiele wären:
+
+* stem:[int_1^3 z(t) dt = 40]
+* stem:[int_2^2 z(t) dt = 0] (das eingeschlossene Rechteck hat die Breite 0)
+* stem:[int_3^1 z(t) dt=-40] (hier wird von rechts nach links integriert, so dass ein negativer Flächeninhalt herauskommt)
+
+Wie man am letzten Beispiel sieht, liefert das Integral nicht den geometrischen Flächeninhalt der eingeschlossenen Fläche zurück, der immer positiv wäre, sondern den sogenannten *orientierten Flächeninhalt*, der auch negative Werte annehmen kann.
+
+Das Beispiel stem:[int_1^3 z(t) dt] entspricht der Wassermenge, die zwischen der ersten und der dritten Minute hinzugekommen ist. Eine alternative Möglichkeit der Berechnung wäre, von der Wassermenge zum Zeitpunkt t=3 die Wassermenge zum Zeitpunkt t=1 abzuziehen, also stem:[int_1^3 z(t) dt=Z(3)-Z(1)] zu berechnen. Für unser Beispiel lässt sich also verallgemeinern:
+
+====
+stem:[int_a^b z(t) dt = Z(b) - Z(a)]
+====
+
+Überprüfen wir unsere Erkenntnisse am zweiten Beispiel, nämlich an den Graphen der Funktionen a(t) und A(t):
+
+stem:[int_2^4 a(t) dt = A(4) - A(2) = 60 - 80 = -20]
+
+Alternativ hätten wir auch den orientierten Flächeninhalt auf dem Intervall von 2 bis 4 zwischen dem Graph von a(t) und der t-Achse berechnen können, was stem:[int_2^4 a(t) dt = -10 * (4-2)= -20] liefert. Beachte, dass auch hier wieder ein negativer Flächeninhalt auftritt. Zwar wurde diesmal von links nach rechts integriert, allerdings für Werte unter der t-Achse, so dass auch hier ein negativer Zahlenwert sinnvoll ist.
+
+=== Zusammenhang über die Ableitung
+
+Ein weiterer Zusammenhang, der vielleicht schon aufgefallen ist, ist die Tatsache, dass z(t)=Z´(t) ist, denn
+
+stem:[Z(t)=20*t]
+
+stem:[Z´(t)=20=z(t)]
+
+Dies gilt auch für den Zusammenhang zwischen a(t) und A(t), denn
+
+stem:[A(t)=100-10*t]
+
+stem:[A´(t)=-10=a(t)]
+
+Ist dies ein seltsamer Zufall oder lässt sich dieser Zusammenhang über die Ableitung verallgemeinern?
+
+=== Hauptsatz der Differenzial- und Integralrechnung
+
+Um die Vermutung aus dem letzten Abschnitt zu beweisen führen wir eine spezielle Funktion, nämlich die *Integralfunktion* stem:[I_a(t)=int_a^t f(x) dx], ein. Sie liefert den Flächeninhalt zwischen der Funktion f(x) und der x-Achse zurück, wobei die linke Integrationsgrenze festgelegt ist (hier a) und die rechte jeden beliebigen Wert annehmen kann. Ein Beispiel für diese Integralfunktion hatten wir schon in der Einführungsaufgabe:
+
+stem:[int_0^t z(t) dt=Z(t)-Z(0)=Z(t)]
+
+Das bedeutet, dass Z(t) der Fläche zwischen der festen unteren Grenze 0 und der variablen oberen Grenze t entspricht. So gilt z. B.
+
+* stem:[Z(2)=int_0^2 z(t) dt]
+* stem:[Z(3)=int_0^3 z(t) dt]
+* usw.
+
+Somit entspricht stem:[Z(t)] der Integralfunktion stem:[I_0(t)=int_0^t z(t) dt].
+
+Nun wollen wir für unseren speziellen Fall zeigen, dass gilt: stem:[Z´(t)=z(t)] mit stem:[Z(t)=I_0(t)=int_0^t z(t) dt]. Wir müssten also zeigen, dass die Ableitung von stem:[int_0^t z(t) dt] die Funktion stem:[z(t)] selbst ergibt.
+
+Genau das zeigt der 
+
+====
+*Hauptsatz der Differenzial- und Integralrechnung:*
+
+Bildet man die Ableitungsfunktion der Integralfunktion stem:[I_a(x)=int_a^x f(t) dt], so erhält man die Integrandenfunktion f, kurz: stem:[I_a´(x)=f(x)].
+
+Dabei muss _f stetig_ sein, wodurch stem:[I_a] _differenzierbar_ ist.
+
+====
+
+*Beweis:*
+
+Leiten wir stem:[I_a(x)] ab:
+
+stem:[I_a´(x)=lim_{h->0} {I_a(x+h)-I_a(x)}/h]
+
+Setzt man die Definition stem:[I_a(x)=int_a^x f(t) dt] der Integralfunktion ein, so erhält man
+
+stem:[lim_{h->0} {int_a^{x+h} f(t) dt-int_a^x f(t) dt}/h]
+
+Der Zähler lässt sich als stem:[int_a^{x+h} f(t) dt-int_a^x f(t) dt=int_x^{x+h}f(t)dt] schreiben, wie man aus der Grafik ablesen kann, denn die von der gesamten Fläche stem:[int_a^{x+h} f(t) dt] (alles, was blau schraffiert ist), wird die rot schraffierte Fläche stem:[int_a^x f(t) dt] abgezogen, wodurch die ausschließlich blau schraffierte Fläche übrigbleibt, die durch das Integral stem:[int_x^{x+h}f(t)dt] beschrieben wird:
+
+[Linearitaet]
+.Veranschaulichung von stem:[int_a^{x+h} f(t) dt-int_a^x f(t) dt]
+image::Bilder/Integrale/Linearitaet.png[Linearitaet]
+
+Somit erhalten wir für die Ableitung der Integralfunktion den Ausdruck
+
+stem:[I_a´(x)= lim_{h->0} {int_x^{x+h}f(t)dt}/h]
+
+Leider können wir mit dem h als obere Grenze nicht weiterkommen und bedienen uns des folgenden Tricks:
+
+Da f nach Voraussetzung stetig ist (in unserem Fall bedeutet das "durchgängig zeichenbar"), so existiert ein Wert stem:[z in [x ; x+h]] mit stem:[f(z)*h=int_x^{x+h} f(t)dt].
+
+Das bedeutet, dass es ein Rechteck der Breite h und der Höhe f(z) gibt (mit z zwischen x und x+h), so dass der Flächeninhalt dieses Rechtecks dem Wert des Integrals entspricht.
+
+Graphisch kann man an unserem Beispiel zeigen, dass es einen Wert k auf [x ; x+h] gibt, so dass der Flächeninhalt des Rechtecks der Breite h und der Höhe f(k) auf jeden Fall _kleiner_ als der gesuchte Flächeninhalt stem:[int_x^{x+h}f(t)dt] ist:
+
+
+[zuKlein]
+.Flächeninhalt des Rechtecks mit der Höhe f(k) ist kleiner als der Wert des Integrals stem:[int_x^{x+h}f(t)dt]
+image::Bilder/Integrale/zuKlein.png[zuKlein]
+
+Ebenso ist das Rechteck, das in diesem graphischen Beispiel die Höhe f(x) hat, _größer_ als der Wert des Integrals:
+
+[zuGross]
+.Flächeninhalt des Rechtecks mit der Höhe f(x) ist größer als der Wert des Integrals stem:[int_x^{x+h}f(t)dt]
+image::Bilder/Integrale/zuGross.png[zuGross]
+
+Da f stetig ist, werden auch alle Zwischenwerte zwischen f(K) und f(x) angenommen, so dass es einen Wert z gibt, der auf jeden Fall zwischen x und x+h liegt und für den der Flächeninhalt des Rechtecks der Breite h und der Höhe f(z) genau dem Wert des Integrals entspricht:
+
+[genauRichtig]
+.Flächeninhalt des Rechtecks mit der Höhe f(z) ist gleich dem Wert des Integrals stem:[int_x^{x+h}f(t)dt]
+image::Bilder/Integrale/genauRichtig.png[genauRichtig]
+
+Insgesamt verhilft uns diese Erkenntnis dazu, den Term stem:[I_a´(x)= lim_{h->0} {int_x^{x+h}f(t)dt}/h] wegen stem:[f(z)*h=int_x^{x+h} f(t)dt] umzuschreiben zu
+
+stem:[I_a´(x)= lim_{h->0} {f(z)*h}/h=lim_{h->0}f(z)]
+
+Da wir wissen, dass stem:[x <= z <= x+h] ist, d. h. mit stem:[h->0] läuft auch stem:[z->x]. Da f eine stetige Funktion ist, gilt dadurch auch, dass stem:[lim_{h->0} f(z)=lim_{z->x}f(z)=f(x)] ist.
+
+Damit haben wir gezeigt, dass stem:[I_a´(x)=f(x)] ist, was zu beweisen war.
+
+Bezogen auf unser Beispiel mit dem Zufluss des Wassers in die Badewanne bedeutet das, dass stem:[Z´(t)=z(t)] ist, was wir schon zu Beginn vermutet hatten.
+
+
+

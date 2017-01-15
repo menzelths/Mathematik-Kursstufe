@@ -426,6 +426,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toctitle">Inhaltsverzeichnis</div>
 <ul class="sectlevel1">
 <li><a href="#_motivation">1. Motivation</a></li>
+<li><a href="#_zusammenhang_zwischen_z_t_und_z_t">2. Zusammenhang zwischen z(t) und Z(t)</a>
+<ul class="sectlevel2">
+<li><a href="#_graphischer_zusammenhang">2.1. Graphischer Zusammenhang</a></li>
+<li><a href="#_zusammenhang_über_die_ableitung">2.2. Zusammenhang über die Ableitung</a></li>
+<li><a href="#_hauptsatz_der_differenzial_und_integralrechnung">2.3. Hauptsatz der Differenzial- und Integralrechnung</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -469,7 +476,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Figure 1. Schaubild für den Wasserstand Z(t) und die Fließgeschwindigkeit z(t)</div>
 </div>
 <div class="paragraph">
-<p>Der Term für die Fließgeschwindigkeit lautet \$z(t)=20\$, der für den Wasserstand \$Z(t)=20*t\$.</p>
+<p>Der Term für die Fließgeschwindigkeit lautet \$z(t)=20\$, der für den Wasserstand zum Zeitpunkt t \$Z(t)=20*t\$.</p>
 </div>
 <div class="paragraph">
 <p><strong>Teilaufgabe 2:</strong></p>
@@ -478,7 +485,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Zu Beginn des Abfließens sind 100 Liter in der Badewanne, wobei sich diese in 10 Minuten vollständig entleert, so dass \$10 l/min\$ abfließen. Das entspricht bereits dem Funktionsterm von \$a(t)=-10\$. Das negative Vorzeichen kommt dadurch zustande, dass das Abfließen von Wasser einem negativen Zufluss entspricht.</p>
 </div>
 <div class="paragraph">
-<p>FÜr den Funktionsterm des aktuellen Wasserstands gilt in diesem Fall \$A(t)=100-10*t\$, da zu Beginn 100 Liter in der Badewanne sind und pro Minute 10 Liter abfließen.</p>
+<p>Für den Funktionsterm des aktuellen Wasserstands gilt in diesem Fall \$A(t)=100-10*t\$, da zu Beginn 100 Liter in der Badewanne sind und pro Minute 10 Liter abfließen.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -488,10 +495,247 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_zusammenhang_zwischen_z_t_und_z_t">2. Zusammenhang zwischen z(t) und Z(t)</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_graphischer_zusammenhang">2.1. Graphischer Zusammenhang</h3>
+<div class="paragraph">
+<p>Die Aufgaben aus dem letzten Abschnitt führen zu der Frage, inwieweit diese Aufgaben einem neuen Themengebiet, namentlich der <em>Integralrechnung</em> zuzuordnen sind, da sie beide komplett mit bisherigen Mitteln zu lösen sind.</p>
+</div>
+<div class="paragraph">
+<p>Um diese Frage zu klären, soll nun der Zusammenhang zwischen z(t) und Z(t) genauer betrachtet werden: Z(t) liefert für einen eingesetzten Wert t den Wasserstand in Litern zu diesem Zeitpunkt zurück. So ist beispielsweise \$Z(2)=40\$, was nichts anderes bedeutet, als dass 2 Minuten nach Beginn des Einfließens des Wassers 40 Liter in der Badewanne sind.</p>
+</div>
+<div class="paragraph">
+<p>Diesen Wert kann man auch über \$z(t)=20\$ erhalten, denn z(t) liefert zu jedem Zeitpunkt die momentane Zuflussgeschwindigkeit in Litern pro Minute zurück. In unserem einfachen Fall sind das immer \$20 l/min\$. Nach zwei Minuten sind also \$2*20 min * l/min=40 l\$ in die Badewanne geflossen. Da diese anfangs leer war, entsprechen diese 40 Liter dem Wasserstand in der Badewanne zum Zeitpunkt 2 Minuten.</p>
+</div>
+<div class="paragraph">
+<p>Wir haben also die momentane Zuflussgeschwindigkeit mit der Dauer des Zuflusses multipliziert, was man graphisch als Rechtecksfläche interpretieren kann:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="Bilder/Integrale/Zufluss_Badewanne_Zusammenhang.png" alt="Zusammenhang">
+</div>
+<div class="title">Figure 3. Zusammenhang zwischen z(t) und Z(t)</div>
+</div>
+<div class="paragraph">
+<p>Und diese Rechtecksfläche entspricht dem Funktionswert von Z(2). Man kann Z(t) also als Maß für den Flächeninhalt interpretieren, der vom Schaubild von z(t) und der t-Achse im Intervall von 0 bis t eingeschlossen wird. Somit entspricht jeder Funktionswert Z(t) dem Flächeninhalt unter z(t) zwischen 0 und t.</p>
+</div>
+<div class="paragraph">
+<p>Um den Flächeninhalt der Fläche zwischen dem Graphen einer Funktion f(x) und der x-Achse auf dem Intervall [a ; b] zu beschreiben, gibt es eine spezielle Schreibweise, nämlich</p>
+</div>
+<div class="paragraph">
+<p>\$int_a^b f(x) dx\$</p>
+</div>
+<div class="paragraph">
+<p>a und b sind hier die untere und die obere <strong>Integrationsgrenze</strong>, f(x) heißt in diesem Zusammenhang <strong>Integrand</strong> und der gesamte Ausdruck wird gesprochen als "Integral von a bis b über f(x) dx". Das "dx" legt fest, über welche Variable integriert wird, hier ist die <strong>Integrationsvariable</strong> somit x.</p>
+</div>
+<div class="paragraph">
+<p>Auf unser Beispiel angewendet würde das für die Fläche \$A_1\$ bedeuten:</p>
+</div>
+<div class="paragraph">
+<p>\$A_1=int_0^2 z(t) dt\$.</p>
+</div>
+<div class="paragraph">
+<p>Das steht also für die Fläche zwischen dem Graph von z(t) und der t-Achse (daher auch dt und nicht dx) auf dem Intervall von 0 bis 2 und entspricht somit der schraffierten Fläche \$A_1\$ im Schaubild.</p>
+</div>
+<div class="paragraph">
+<p>Weitere Beispiele wären:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\$int_1^3 z(t) dt = 40\$</p>
+</li>
+<li>
+<p>\$int_2^2 z(t) dt = 0\$ (das eingeschlossene Rechteck hat die Breite 0)</p>
+</li>
+<li>
+<p>\$int_3^1 z(t) dt=-40\$ (hier wird von rechts nach links integriert, so dass ein negativer Flächeninhalt herauskommt)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Wie man am letzten Beispiel sieht, liefert das Integral nicht den geometrischen Flächeninhalt der eingeschlossenen Fläche zurück, der immer positiv wäre, sondern den sogenannten <strong>orientierten Flächeninhalt</strong>, der auch negative Werte annehmen kann.</p>
+</div>
+<div class="paragraph">
+<p>Das Beispiel \$int_1^3 z(t) dt\$ entspricht der Wassermenge, die zwischen der ersten und der dritten Minute hinzugekommen ist. Eine alternative Möglichkeit der Berechnung wäre, von der Wassermenge zum Zeitpunkt t=3 die Wassermenge zum Zeitpunkt t=1 abzuziehen, also \$int_1^3 z(t) dt=Z(3)-Z(1)\$ zu berechnen. Für unser Beispiel lässt sich also verallgemeinern:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>\$int_a^b z(t) dt = Z(b) - Z(a)\$</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Überprüfen wir unsere Erkenntnisse am zweiten Beispiel, nämlich an den Graphen der Funktionen a(t) und A(t):</p>
+</div>
+<div class="paragraph">
+<p>\$int_2^4 a(t) dt = A(4) - A(2) = 60 - 80 = -20\$</p>
+</div>
+<div class="paragraph">
+<p>Alternativ hätten wir auch den orientierten Flächeninhalt auf dem Intervall von 2 bis 4 zwischen dem Graph von a(t) und der t-Achse berechnen können, was \$int_2^4 a(t) dt = -10 * (4-2)= -20\$ liefert. Beachte, dass auch hier wieder ein negativer Flächeninhalt auftritt. Zwar wurde diesmal von links nach rechts integriert, allerdings für Werte unter der t-Achse, so dass auch hier ein negativer Zahlenwert sinnvoll ist.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_zusammenhang_über_die_ableitung">2.2. Zusammenhang über die Ableitung</h3>
+<div class="paragraph">
+<p>Ein weiterer Zusammenhang, der vielleicht schon aufgefallen ist, ist die Tatsache, dass z(t)=Z´(t) ist, denn</p>
+</div>
+<div class="paragraph">
+<p>\$Z(t)=20*t\$</p>
+</div>
+<div class="paragraph">
+<p>\$Z´(t)=20=z(t)\$</p>
+</div>
+<div class="paragraph">
+<p>Dies gilt auch für den Zusammenhang zwischen a(t) und A(t), denn</p>
+</div>
+<div class="paragraph">
+<p>\$A(t)=100-10*t\$</p>
+</div>
+<div class="paragraph">
+<p>\$A´(t)=-10=a(t)\$</p>
+</div>
+<div class="paragraph">
+<p>Ist dies ein seltsamer Zufall oder lässt sich dieser Zusammenhang über die Ableitung verallgemeinern?</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hauptsatz_der_differenzial_und_integralrechnung">2.3. Hauptsatz der Differenzial- und Integralrechnung</h3>
+<div class="paragraph">
+<p>Um die Vermutung aus dem letzten Abschnitt zu beweisen führen wir eine spezielle Funktion, nämlich die <strong>Integralfunktion</strong> \$I_a(t)=int_a^t f(x) dx\$, ein. Sie liefert den Flächeninhalt zwischen der Funktion f(x) und der x-Achse zurück, wobei die linke Integrationsgrenze festgelegt ist (hier a) und die rechte jeden beliebigen Wert annehmen kann. Ein Beispiel für diese Integralfunktion hatten wir schon in der Einführungsaufgabe:</p>
+</div>
+<div class="paragraph">
+<p>\$int_0^t z(t) dt=Z(t)-Z(0)=Z(t)\$</p>
+</div>
+<div class="paragraph">
+<p>Das bedeutet, dass Z(t) der Fläche zwischen der festen unteren Grenze 0 und der variablen oberen Grenze t entspricht. So gilt z. B.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\$Z(2)=int_0^2 z(t) dt\$</p>
+</li>
+<li>
+<p>\$Z(3)=int_0^3 z(t) dt\$</p>
+</li>
+<li>
+<p>usw.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Somit entspricht \$Z(t)\$ der Integralfunktion \$I_0(t)=int_0^t z(t) dt\$.</p>
+</div>
+<div class="paragraph">
+<p>Nun wollen wir für unseren speziellen Fall zeigen, dass gilt: \$Z´(t)=z(t)\$ mit \$Z(t)=I_0(t)=int_0^t z(t) dt\$. Wir müssten also zeigen, dass die Ableitung von \$int_0^t z(t) dt\$ die Funktion \$z(t)\$ selbst ergibt.</p>
+</div>
+<div class="paragraph">
+<p>Genau das zeigt der</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Hauptsatz der Differenzial- und Integralrechnung:</strong></p>
+</div>
+<div class="paragraph">
+<p>Bildet man die Ableitungsfunktion der Integralfunktion \$I_a(x)=int_a^x f(t) dt\$, so erhält man die Integrandenfunktion f, kurz: \$I_a´(x)=f(x)\$.</p>
+</div>
+<div class="paragraph">
+<p>Dabei muss <em>f stetig</em> sein, wodurch \$I_a\$ <em>differenzierbar</em> ist.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Beweis:</strong></p>
+</div>
+<div class="paragraph">
+<p>Leiten wir \$I_a(x)\$ ab:</p>
+</div>
+<div class="paragraph">
+<p>\$I_a´(x)=lim_{h-&gt;0} {I_a(x+h)-I_a(x)}/h\$</p>
+</div>
+<div class="paragraph">
+<p>Setzt man die Definition \$I_a(x)=int_a^x f(t) dt\$ der Integralfunktion ein, so erhält man</p>
+</div>
+<div class="paragraph">
+<p>\$lim_{h-&gt;0} {int_a^{x+h} f(t) dt-int_a^x f(t) dt}/h\$</p>
+</div>
+<div class="paragraph">
+<p>Der Zähler lässt sich als \$int_a^{x+h} f(t) dt-int_a^x f(t) dt=int_x^{x+h}f(t)dt\$ schreiben, wie man aus der Grafik ablesen kann, denn die von der gesamten Fläche \$int_a^{x+h} f(t) dt\$ (alles, was blau schraffiert ist), wird die rot schraffierte Fläche \$int_a^x f(t) dt\$ abgezogen, wodurch die ausschließlich blau schraffierte Fläche übrigbleibt, die durch das Integral \$int_x^{x+h}f(t)dt\$ beschrieben wird:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="Bilder/Integrale/Linearitaet.png" alt="Linearitaet">
+</div>
+<div class="title">Figure 4. Veranschaulichung von \$int_a^{x+h} f(t) dt-int_a^x f(t) dt\$</div>
+</div>
+<div class="paragraph">
+<p>Somit erhalten wir für die Ableitung der Integralfunktion den Ausdruck</p>
+</div>
+<div class="paragraph">
+<p>\$I_a´(x)= lim_{h-&gt;0} {int_x^{x+h}f(t)dt}/h\$</p>
+</div>
+<div class="paragraph">
+<p>Leider können wir mit dem h als obere Grenze nicht weiterkommen und bedienen uns des folgenden Tricks:</p>
+</div>
+<div class="paragraph">
+<p>Da f nach Voraussetzung stetig ist (in unserem Fall bedeutet das "durchgängig zeichenbar"), so existiert ein Wert \$z in [x ; x+h\$] mit \$f(z)*h=int_x^{x+h} f(t)dt\$.</p>
+</div>
+<div class="paragraph">
+<p>Das bedeutet, dass es ein Rechteck der Breite h und der Höhe f(z) gibt (mit z zwischen x und x+h), so dass der Flächeninhalt dieses Rechtecks dem Wert des Integrals entspricht.</p>
+</div>
+<div class="paragraph">
+<p>Graphisch kann man an unserem Beispiel zeigen, dass es einen Wert k auf [x ; x+h] gibt, so dass der Flächeninhalt des Rechtecks der Breite h und der Höhe f(k) auf jeden Fall <em>kleiner</em> als der gesuchte Flächeninhalt \$int_x^{x+h}f(t)dt\$ ist:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="Bilder/Integrale/zuKlein.png" alt="zuKlein">
+</div>
+<div class="title">Figure 5. Flächeninhalt des Rechtecks mit der Höhe f(k) ist kleiner als der Wert des Integrals \$int_x^{x+h}f(t)dt\$</div>
+</div>
+<div class="paragraph">
+<p>Ebenso ist das Rechteck, das in diesem graphischen Beispiel die Höhe f(x) hat, <em>größer</em> als der Wert des Integrals:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="Bilder/Integrale/zuGross.png" alt="zuGross">
+</div>
+<div class="title">Figure 6. Flächeninhalt des Rechtecks mit der Höhe f(x) ist größer als der Wert des Integrals \$int_x^{x+h}f(t)dt\$</div>
+</div>
+<div class="paragraph">
+<p>Da f stetig ist, werden auch alle Zwischenwerte zwischen f(K) und f(x) angenommen, so dass es einen Wert z gibt, der auf jeden Fall zwischen x und x+h liegt und für den der Flächeninhalt des Rechtecks der Breite h und der Höhe f(z) genau dem Wert des Integrals entspricht:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="Bilder/Integrale/genauRichtig.png" alt="genauRichtig">
+</div>
+<div class="title">Figure 7. Flächeninhalt des Rechtecks mit der Höhe f(z) ist gleich dem Wert des Integrals \$int_x^{x+h}f(t)dt\$</div>
+</div>
+<div class="paragraph">
+<p>Insgesamt verhilft uns diese Erkenntnis dazu, den Term \$I_a´(x)= lim_{h-&gt;0} {int_x^{x+h}f(t)dt}/h\$ wegen \$f(z)*h=int_x^{x+h} f(t)dt\$ umzuschreiben zu</p>
+</div>
+<div class="paragraph">
+<p>\$I_a´(x)= lim_{h-&gt;0} {f(z)*h}/h=lim_{h-&gt;0}f(z)\$</p>
+</div>
+<div class="paragraph">
+<p>Da wir wissen, dass \$x &lt;= z &lt;= x+h\$ ist, d. h. mit \$h-&gt;0\$ läuft auch \$z-&gt;x\$. Da f eine stetige Funktion ist, gilt dadurch auch, dass \$lim_{h-&gt;0} f(z)=lim_{z-&gt;x}f(z)=f(x)\$ ist.</p>
+</div>
+<div class="paragraph">
+<p>Damit haben wir gezeigt, dass \$I_a´(x)=f(x)\$ ist, was zu beweisen war.</p>
+</div>
+<div class="paragraph">
+<p>Bezogen auf unser Beispiel mit dem Zufluss des Wassers in die Badewanne bedeutet das, dass \$Z´(t)=z(t)\$ ist, was wir schon zu Beginn vermutet hatten.</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-01-11 22:18:19 Mitteleuropõische Zeit
+Last updated 2017-01-15 16:32:53 Mitteleuropõische Zeit
 </div>
 </div>
 <script type="text/x-mathjax-config">
