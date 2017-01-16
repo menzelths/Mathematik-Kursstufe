@@ -433,6 +433,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_hauptsatz_der_differenzial_und_integralrechnung">2.3. Hauptsatz der Differenzial- und Integralrechnung</a></li>
 </ul>
 </li>
+<li><a href="#_die_stammfunktion">3. Die Stammfunktion</a></li>
+<li><a href="#_berechnung_des_orientierten_flächeninhalts_mit_hilfe_des_integrals">4. Berechnung des orientierten Flächeninhalts mit Hilfe des Integrals</a></li>
 </ul>
 </div>
 </div>
@@ -446,7 +448,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><strong>Beispielaufgabe aus Klasse 7</strong></p>
 </div>
 <div class="paragraph">
-<p>Marina möchte ein Bad nehmen und lässt in die zu Beginn leere Badewanne 5 Minuten lang Wasser mit der Fließgeschwindigkeit \$z(t)=20\$ ein, wobei die Fließgeschwindigkeit in \$l/min\$ angegeben wird.</p>
+<p>Petra möchte ein Bad nehmen und lässt in die zu Beginn leere Badewanne 5 Minuten lang Wasser mit der Fließgeschwindigkeit \$z(t)=20\$ ein, wobei die Fließgeschwindigkeit in \$l/min\$ angegeben wird.</p>
 </div>
 <div class="paragraph">
 <p>Als sie nach dem Bad den Stöpsel zieht, fließt das Wasser mit konstanter Fließgeschwindigkeit wieder ab, so dass die Badewanne nach 10 Minuten geleert ist.</p>
@@ -482,7 +484,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><strong>Teilaufgabe 2:</strong></p>
 </div>
 <div class="paragraph">
-<p>Zu Beginn des Abfließens sind 100 Liter in der Badewanne, wobei sich diese in 10 Minuten vollständig entleert, so dass \$10 l/min\$ abfließen. Das entspricht bereits dem Funktionsterm von \$a(t)=-10\$. Das negative Vorzeichen kommt dadurch zustande, dass das Abfließen von Wasser einem negativen Zufluss entspricht.</p>
+<p>Zu Beginn des Abfließens sind 100 Liter in der Badewanne, wobei sich diese in 10 Minuten vollständig entleert, so dass 10 \$l/min\$ abfließen. Das entspricht bereits dem Funktionsterm von \$a(t)=-10\$. Das negative Vorzeichen kommt dadurch zustande, dass das Abfließen von Wasser einem negativen Zufluss entspricht.</p>
 </div>
 <div class="paragraph">
 <p>Für den Funktionsterm des aktuellen Wasserstands gilt in diesem Fall \$A(t)=100-10*t\$, da zu Beginn 100 Liter in der Badewanne sind und pro Minute 10 Liter abfließen.</p>
@@ -569,7 +571,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph">
-<p>Überprüfen wir unsere Erkenntnisse am zweiten Beispiel, nämlich an den Graphen der Funktionen a(t) und A(t):</p>
+<p>Überprüfen wir unsere Erkenntnisse an einem zweiten Beispiel, nämlich an den Graphen der Funktionen a(t) und A(t):</p>
 </div>
 <div class="paragraph">
 <p>\$int_2^4 a(t) dt = A(4) - A(2) = 60 - 80 = -20\$</p>
@@ -605,13 +607,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_hauptsatz_der_differenzial_und_integralrechnung">2.3. Hauptsatz der Differenzial- und Integralrechnung</h3>
 <div class="paragraph">
-<p>Um die Vermutung aus dem letzten Abschnitt zu beweisen führen wir eine spezielle Funktion, nämlich die <strong>Integralfunktion</strong> \$I_a(t)=int_a^t f(x) dx\$, ein. Sie liefert den Flächeninhalt zwischen der Funktion f(x) und der x-Achse zurück, wobei die linke Integrationsgrenze festgelegt ist (hier a) und die rechte jeden beliebigen Wert annehmen kann. Ein Beispiel für diese Integralfunktion hatten wir schon in der Einführungsaufgabe:</p>
+<p>Um die Vermutung aus dem letzten Abschnitt zu beweisen, führen wir zunächst eine spezielle Funktion ein, nämlich die <strong>Integralfunktion</strong> \$I_a(t)=int_a^t f(x) dx\$. Sie liefert den Flächeninhalt zwischen der Funktion f(x) und der x-Achse zurück, wobei die linke Integrationsgrenze festgelegt ist (hier a) und die rechte jeden beliebigen Wert annehmen kann. Ein Beispiel für diese Integralfunktion hatten wir schon in der Einführungsaufgabe:</p>
 </div>
 <div class="paragraph">
 <p>\$int_0^t z(t) dt=Z(t)-Z(0)=Z(t)\$</p>
 </div>
 <div class="paragraph">
-<p>Das bedeutet, dass Z(t) der Fläche zwischen der festen unteren Grenze 0 und der variablen oberen Grenze t entspricht. So gilt z. B.</p>
+<p>Das bedeutet, dass Z(t) dem Flächeninhalt zwischen der festen unteren Grenze 0 und der variablen oberen Grenze t entspricht. So gilt z. B.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -648,6 +650,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Beachte, dass hier \$I_a(x)=int_a^x f(t) dt\$ statt \$I_a(x)=int_a^x f(x) dx\$ verwendet wird. Beide Ausdrücke sind formal identisch, allerdings erleichtert die Einführung des t als Integrationsvariable die Unterscheidung zwischen der Integrationsvariable t und der oberen variablen Grenze x.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p><strong>Beweis:</strong></p>
 </div>
@@ -664,7 +680,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>\$lim_{h-&gt;0} {int_a^{x+h} f(t) dt-int_a^x f(t) dt}/h\$</p>
 </div>
 <div class="paragraph">
-<p>Der Zähler lässt sich als \$int_a^{x+h} f(t) dt-int_a^x f(t) dt=int_x^{x+h}f(t)dt\$ schreiben, wie man aus der Grafik ablesen kann, denn die von der gesamten Fläche \$int_a^{x+h} f(t) dt\$ (alles, was blau schraffiert ist), wird die rot schraffierte Fläche \$int_a^x f(t) dt\$ abgezogen, wodurch die ausschließlich blau schraffierte Fläche übrigbleibt, die durch das Integral \$int_x^{x+h}f(t)dt\$ beschrieben wird:</p>
+<p>Der Zähler lässt sich als \$int_a^{x+h} f(t) dt-int_a^x f(t) dt=int_x^{x+h}f(t)dt\$ schreiben, wie man aus der Grafik ablesen kann, denn von der gesamten Fläche \$int_a^{x+h} f(t) dt\$ (alles, was blau schraffiert ist) wird die rot schraffierte Fläche \$int_a^x f(t) dt\$ abgezogen, wodurch die ausschließlich blau schraffierte Fläche übrigbleibt, die durch das Integral \$int_x^{x+h}f(t)dt\$ beschrieben wird:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -679,7 +695,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>\$I_a´(x)= lim_{h-&gt;0} {int_x^{x+h}f(t)dt}/h\$</p>
 </div>
 <div class="paragraph">
-<p>Leider können wir mit dem h als obere Grenze nicht weiterkommen und bedienen uns des folgenden Tricks:</p>
+<p>Leider können wir mit dem x+h als obere Grenze nicht weiterkommen und bedienen uns des folgenden Tricks:</p>
 </div>
 <div class="paragraph">
 <p>Da f nach Voraussetzung stetig ist (in unserem Fall bedeutet das "durchgängig zeichenbar"), so existiert ein Wert \$z in [x ; x+h\$] mit \$f(z)*h=int_x^{x+h} f(t)dt\$.</p>
@@ -688,31 +704,31 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Das bedeutet, dass es ein Rechteck der Breite h und der Höhe f(z) gibt (mit z zwischen x und x+h), so dass der Flächeninhalt dieses Rechtecks dem Wert des Integrals entspricht.</p>
 </div>
 <div class="paragraph">
-<p>Graphisch kann man an unserem Beispiel zeigen, dass es einen Wert k auf [x ; x+h] gibt, so dass der Flächeninhalt des Rechtecks der Breite h und der Höhe f(k) auf jeden Fall <em>kleiner</em> als der gesuchte Flächeninhalt \$int_x^{x+h}f(t)dt\$ ist:</p>
+<p>Graphisch kann man an unserem Beispiel zeigen, dass es einen Wert k auf [x ; x+h] gibt, so dass der Flächeninhalt des Rechtecks der Breite h und der Höhe f(k) auf jeden Fall <em>kleiner oder gleich</em> dem gesuchten Flächeninhalt \$int_x^{x+h}f(t)dt\$ ist. Zum Beispiel wählt man dazu die Stelle k auf der x-Achse, an der der Funktionswert von f minimal wird.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="Bilder/Integrale/zuKlein.png" alt="zuKlein">
 </div>
-<div class="title">Figure 5. Flächeninhalt des Rechtecks mit der Höhe f(k) ist kleiner als der Wert des Integrals \$int_x^{x+h}f(t)dt\$</div>
+<div class="title">Figure 5. Flächeninhalt des Rechtecks der Breite h und der Höhe f(k) ist kleiner gleich dem Wert des Integrals \$int_x^{x+h}f(t)dt\$</div>
 </div>
 <div class="paragraph">
-<p>Ebenso ist das Rechteck, das in diesem graphischen Beispiel die Höhe f(x) hat, <em>größer</em> als der Wert des Integrals:</p>
+<p>Ebenso ist in diesem Beispiel der Flächeninhalt des Rechtecks, das in diesem graphischen Beispiel die Höhe f(x) hat, <em>größer gleich</em> dem Wert des Integrals:</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="Bilder/Integrale/zuGross.png" alt="zuGross">
 </div>
-<div class="title">Figure 6. Flächeninhalt des Rechtecks mit der Höhe f(x) ist größer als der Wert des Integrals \$int_x^{x+h}f(t)dt\$</div>
+<div class="title">Figure 6. Flächeninhalt des Rechtecks der Breite h und der Höhe f(x) ist größer gleich dem Wert des Integrals \$int_x^{x+h}f(t)dt\$</div>
 </div>
 <div class="paragraph">
-<p>Da f stetig ist, werden auch alle Zwischenwerte zwischen f(K) und f(x) angenommen, so dass es einen Wert z gibt, der auf jeden Fall zwischen x und x+h liegt und für den der Flächeninhalt des Rechtecks der Breite h und der Höhe f(z) genau dem Wert des Integrals entspricht:</p>
+<p>Da f stetig ist, werden auch alle Zwischenwerte zwischen f(k) und f(x) angenommen, so dass es einen Wert z gibt, der auf jeden Fall zwischen x und x+h liegt und für den der Flächeninhalt des Rechtecks der Breite h und der Höhe f(z) genau dem Wert des Integrals entspricht:</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="Bilder/Integrale/genauRichtig.png" alt="genauRichtig">
 </div>
-<div class="title">Figure 7. Flächeninhalt des Rechtecks mit der Höhe f(z) ist gleich dem Wert des Integrals \$int_x^{x+h}f(t)dt\$</div>
+<div class="title">Figure 7. Flächeninhalt des Rechtecks der Breite h und der Höhe f(z) ist gleich dem Wert des Integrals \$int_x^{x+h}f(t)dt\$</div>
 </div>
 <div class="paragraph">
 <p>Insgesamt verhilft uns diese Erkenntnis dazu, den Term \$I_a´(x)= lim_{h-&gt;0} {int_x^{x+h}f(t)dt}/h\$ wegen \$f(z)*h=int_x^{x+h} f(t)dt\$ umzuschreiben zu</p>
@@ -732,10 +748,145 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_die_stammfunktion">3. Die Stammfunktion</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Stammfunktion</strong></p>
+</div>
+<div class="paragraph">
+<p>Eine Funktion F(x) heißt <strong>Stammfunktion von f(x)</strong>, wenn gilt, dass F´(x)=f(x).</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Bezogen auf unser Badewannenbeispiel ist die Funktion Z(t) (also die Funktion, die zu jedem Zeitpunkt den Wasserstand zurückgibt) die Stammfunktion von z(t) (die Funktion, die zu jedem Zeitpunkt die momentane Änderungsrate zurückliefert).</p>
+</div>
+<div class="paragraph">
+<p>Denn \$Z(t)=20*t\$ und \$Z´(t)=20=z(t)\$, was nach Definition bedeutet, das Z(t) die Stammfunktion von z(t) ist.</p>
+</div>
+<div class="paragraph">
+<p>Um eine Stammfunktion F(x) einer Funktion f(x) zu erhalten muss man f(x) "rückwärts ableiten". Ein Beispiel soll das veranschaulichen:</p>
+</div>
+<div class="paragraph">
+<p>\$f(x)=cos(x)\$</p>
+</div>
+<div class="paragraph">
+<p>Nun sucht man als Stammfunktion eine Funktion, die abgeleitet \$cos(x)\$ ergibt, also beispielsweise \$sin(x)\$. Weitere Beispiele für Stammfunktionen von \$cos(x)\$ wären \$sin(x)+1\$ oder \$sin(x)-2\$, da diese nur parallel verschoben sind und somit an jeder Stelle die gleich Steigung aufweisen wie \$sin(x)\$.</p>
+</div>
+<div class="paragraph">
+<p>Somit lässt sich die Menge aller Stammfunktionen von \$f(x)=cos(x)\$ notieren als</p>
+</div>
+<div class="paragraph">
+<p>\$F(x)=sin(x)+c text( mit ) c in RR\$</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_berechnung_des_orientierten_flächeninhalts_mit_hilfe_des_integrals">4. Berechnung des orientierten Flächeninhalts mit Hilfe des Integrals</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In einem der vorigen Abschnitte hatten wir bereits gezeigt, dass man das zwischen zwei Zeitpunkten a und b in die Badewanne gelaufene Wasser auf zwei Arten berechnen kann:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Die Fläche zwischen dem Graphen von z(t) und der Zeitachse auf dem Intervall [a;b] berechnen</p>
+</li>
+<li>
+<p>Den Wasserstand in der Wanne zum Zeitpunkt a vom Wasserstand zum Zeitpunkt b abziehen, also Z(b)-Z(a)</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Zusammengefasst also</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>\$int_a^b z(t) dt = Z(b) - Z(a)\$</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Da beide Berechnungen zum selben Ergebnis führen, könnte man für die Flächenberechnung auch die Methode mit den Differenzen verwenden.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Beispiel:</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Aufgabe:</strong></p>
+</div>
+<div class="paragraph">
+<p>Berechne \$int_1^3 x^2 dx\$.</p>
+</div>
+<div class="paragraph">
+<p><strong>Lösung:</strong></p>
+</div>
+<div class="paragraph">
+<p>Wenn wir eine Stammfunktion F(x) von \$x^2\$ kennen, müssten wir F(3) - F(1) berechnen, um den Flächeninhalt zu erhalten.</p>
+</div>
+<div class="paragraph">
+<p>Eine mögliche Stammfunktion von \$f(x)=x^2\$ wäre z. B. \$F(x)=1/3 * x^3\$, denn \$F´(x)=3* 1/3 *x^2=x^2=f(x)\$.</p>
+</div>
+<div class="paragraph">
+<p>Berechnet man nun \$F(3)-F(1)\$ so erhält man \$1/3 * 3^3 - 1/3 * 1^3=9-1/3=26/3\$.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Nun gibt es nur noch eine offene Frage: was wäre passiert, wenn man in der Berechnung statt \$F(x)=1/3 * x^3\$ eine andere mögliche Stammfunktion, wie z. B. \$1/3 * x^3 -1\$ verwendet hätte?</p>
+</div>
+<div class="paragraph">
+<p>Überprüfen wir das allgemein:</p>
+</div>
+<div class="paragraph">
+<p>Dazu führen wir eine weitere Stammfunktion \$G(x)=F(x)+c text( mit )c in RR\$ ein und berechnen das Ergebnis von \$int_a^b f(x) dx = F(b)-F(a)\$ mit der Stammfunktion \$G(x)\$:</p>
+</div>
+<div class="paragraph">
+<p>\$G(b)-G(a)=F(b) + c - (F(a) +c)=F(b) + c - F(a) -c= F(b) - F(a)\$</p>
+</div>
+<div class="paragraph">
+<p>Dieses Ergebnis zeigt, dass es egal ist, welche Stammfunktion man für die Berechnung heranzieht.</p>
+</div>
+<div class="paragraph">
+<p>Mit korrekter Notation gilt somit allgemein:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>\$ int_a^b f(x) dx =  [F(x)]_a^b = F(b)-F(a) \$</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>wobei F(x) eine beliebige Stammfunktion von f(x) ist.</p>
+</div>
+<div class="paragraph">
+<p>Angewendet auf unser Beispiel bedeutet das:</p>
+</div>
+<div class="paragraph">
+<p>\$ int_1^3 x^2 dx = [  1/3 * x^3 ]_1^3 = 1/3 * 3^3 - 1/3 *1^3 =26/3 \$</p>
+</div>
+<div class="paragraph">
+<p>Graphisch betrachtet haben wir somit den Flächeninhalt zwischen dem Schaubild von \$f(x)=x^2\$ und der x-Achse auf dem Intervall von 1 bis 3 berechnet, was hier nochmals graphisch gezeigt ist.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="Bilder/Integrale/Integral_Parabel.png" alt="FlaecheParabel">
+</div>
+<div class="title">Figure 8. Die eingezeichnete Fläche hat den (orientierten) Flächeninhalt \$int_1^3 x^2 dx=26/3\$</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-01-15 16:32:53 Mitteleuropõische Zeit
+Last updated 2017-01-16 15:49:50 Mitteleuropõische Zeit
 </div>
 </div>
 <script type="text/x-mathjax-config">
