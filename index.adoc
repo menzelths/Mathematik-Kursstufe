@@ -25,5 +25,10 @@
 
 <<Integrale_Einfuehrung.adoc#Einfuehrung, Einführung in die Integralrechnung>>
 
+== Funktionseigenschaften
+
+<<Funktionseigenschaften_Symmetrie.adoc#Symmetrie, Punktsymmetrie zum Ursprung und Achsensymmetrie zur y-Achse>>
+
+
 
 

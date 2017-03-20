@@ -5,7 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<title>Kapitelübersicht</title>
+<meta name="keywords" content="Symmetrie, Achsensymmetrie, Punktsymmetrie">
+<title>Symmetrie</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -416,65 +417,286 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
-<body class="article">
+<body class="article toc2 toc-left">
 <div id="header">
-<h1>Kapitelübersicht</h1>
+<h1><a id="Symmetrie"></a>Symmetrie</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Inhaltsverzeichnis</div>
+<ul class="sectlevel1">
+<li><a href="#_motivation">1. Motivation</a></li>
+<li><a href="#_achsensymmetrie_zur_y_achse">2. Achsensymmetrie zur y-Achse</a>
+<ul class="sectlevel2">
+<li><a href="#_definition">2.1. Definition</a></li>
+<li><a href="#_beispiele_zum_nachweis_der_achsensymmetrie">2.2. Beispiele zum Nachweis der Achsensymmetrie</a></li>
+</ul>
+</li>
+<li><a href="#_punktsymmetrie_zum_ursprung">3. Punktsymmetrie zum Ursprung</a>
+<ul class="sectlevel2">
+<li><a href="#_definition_2">3.1. Definition</a></li>
+<li><a href="#_beispiele_zum_nachweis_der_punktsymmetrie">3.2. Beispiele zum Nachweis der Punktsymmetrie</a></li>
+</ul>
+</li>
+<li><a href="#_ganzrationale_funktionen_und_symmetrie">4. Ganzrationale Funktionen und Symmetrie</a></li>
+<li><a href="#_sinus_und_kosinus">5. Sinus und Kosinus</a></li>
+</ul>
+</div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_ableitungen">Ableitungen</h2>
+<h2 id="_motivation">1. Motivation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="Ableitungen_Extremstellen.html#Extremstellen">Erste und zweite hinreichende Bedingung für lokale Extremstellen</a></p>
+<p>Erkenntnisse über die Symmetrieeigenschaften eines Graphen können nützlich sein, um diesen zu zeichnen.</p>
 </div>
 <div class="paragraph">
-<p><a href="Ableitungen_Wendestellen.html#Wendestellen">Das Bestimmen von Wendestellen</a></p>
-</div>
-<div class="paragraph">
-<p><a href="Ableitungen_Tangente.html#Tangenten">Tangente und Normale</a></p>
-</div>
-<div class="paragraph">
-<p><a href="Ableitungen_Extremwertprobleme.html#Extremwertprobleme">Extremwertprobleme mit Nebenbedingungen</a></p>
-</div>
-<div class="paragraph">
-<p><a href="Ableitungen_Kettenregel.html#Kettenregel">Die Kettenregel</a></p>
-</div>
-<div class="paragraph">
-<p><a href="Ableitungen_Produktregel.html#Produktregel">Die Produktregel und die Quotientenregel</a></p>
-</div>
-<div class="paragraph">
-<p><a href="Ableitungen_Efunktion.html#Efunktion">Die e-Funktion und ihre Ableitung</a></p>
-</div>
-<div class="paragraph">
-<p><a href="Ableitungen_Ln.html#Logarithmus">Der natürliche Logarithmus und die Ableitung von Exponentialfunktionen</a></p>
-</div>
-<div class="paragraph">
-<p><a href="Ableitungen_Zusammenfassung.html#Zusammenfassung">Zusammenfassung zu Ableitungen</a></p>
+<p>In unserem Fall behandeln wir nur die Achsensymmetrie zur y-Achse und die Punktsymmetrie zum Ursprung. Auch Symmetrien zu anderen Achsen und Punkten wären jedoch denkbar.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_integralrechnung">Integralrechnung</h2>
+<h2 id="_achsensymmetrie_zur_y_achse">2. Achsensymmetrie zur y-Achse</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_definition">2.1. Definition</h3>
+<div class="imageblock">
+<div class="content">
+<img src="Bilder/Funktionseigenschaften/Achsensymmetrie.png" alt="Achsensymmetrie">
+</div>
+<div class="title">Figure 1. Achsensymmetrie</div>
+</div>
 <div class="paragraph">
-<p><a href="Integrale_Einfuehrung.html#Einfuehrung">Einführung in die Integralrechnung</a></p>
+<p>Weist der Graph einer Funktion eine <strong>Achsensymmetrie zur y-Achse</strong> auf, so befindet sich neben einem Punkt \$P(a|f(a))\$ auch der an der y-Achse gespiegelte Punkt \$P'(-a|f(a))\$ auf dem Graph. Dies gilt für alle Werte von \$a\$.</p>
+</div>
+<div class="paragraph">
+<p>Aus dem Schaubild kann man entnehmen, dass im Falle der Achsensymmetrie stets \$f(-a)=f(a)\$ ist.</p>
+</div>
+<div class="paragraph">
+<p>Somit gilt:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Achsensymmetrie zur y-Achse</strong></p>
+</div>
+<div class="paragraph">
+<p>Wenn man nachweisen kann, dass \$f(-a)=f(a)\$ für alle \$a in D\$, dann ist der \$G_f\$, also der Graph von f, <strong>achsensymmetrisch zur y-Achse</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_beispiele_zum_nachweis_der_achsensymmetrie">2.2. Beispiele zum Nachweis der Achsensymmetrie</h3>
+<div class="paragraph">
+<p>Überprüfe die folgenden Beispiele auf Achsensymmetrie zur y-Achse:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\$f(x)=x^4-x^2+1\$</p>
+</li>
+<li>
+<p>\$g(x)=e^x+e^{-x}\$</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Lösung:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\$f(-x)=(-x)^4-(-x)^2+1=x^4-x^2+1=f(x)\$</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Da \$f(-x)=f(x)\$ gilt, unabhängig vom Wert von x, ist der Graph der Funktion f achsensymmetrisch zur y-Achse.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\$g(-x)=e^{-x}+e^{-(-x)}=e^{-x}+e^x=g(x)\$</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Auch hier gilt wieder, dass \$g(-x)=g(x)\$ ist, so dass auch \$G_g\$ achsensymmetrisch zur y-Achse ist.</p>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_funktionseigenschaften">Funktionseigenschaften</h2>
+<h2 id="_punktsymmetrie_zum_ursprung">3. Punktsymmetrie zum Ursprung</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_definition_2">3.1. Definition</h3>
+<div class="imageblock">
+<div class="content">
+<img src="Bilder/Funktionseigenschaften/Punktsymmetrie.png" alt="Punktsymmetrie">
+</div>
+<div class="title">Figure 2. Punktsymmetrie</div>
+</div>
+<div class="paragraph">
+<p>Analog wir bei der Achsensymmetrie zur y-Achse muss für jeden Punkt \$P(a|f(a))\$ gelten, dass auch sein Spiegelpunkt \$P'(-a|f(-a))\$ auf dem Graph liegt, wobei nun gelten muss, dass \$f(-a)=-f(a)\$ ist für alle a aus dme Definitionsbereich.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Punktsymmetrie zum Ursprung</strong></p>
+</div>
+<div class="paragraph">
+<p>Wenn für alle \$a in D\$ gilt, dass \$f(-a)=-f(a)\$ ist, so ist \$G_f\$ <strong>punktsymmetrisch zum Ursprung</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_beispiele_zum_nachweis_der_punktsymmetrie">3.2. Beispiele zum Nachweis der Punktsymmetrie</h3>
+<div class="paragraph">
+<p>Überprüfe die folgenden Beispiele auf Punktsymmetrie zum Ursprung:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\$f(x)=-x^3+x\$</p>
+</li>
+<li>
+<p>\$g(x)=x^2 / {x^3-x}\$</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Lösungen:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\$f(-x)=-(-x)^3+(-x)=-(-x^3)-x=x^3-x=\$</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>\$=-(-x^3+x)=-f(x)\$</p>
+</div>
+<div class="paragraph">
+<p>Somit ist die Bedingung \$f(-x)=-f(x)\$ für die Punktsymmetrie im Ursprung erfüllt.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\$g(-x)=(-x)^2 /{(-x)^3-(-x)}=x^2 / {-x^3+x}=\$</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>\$=x^2/ {-(x^3-x)}=- {x^2}/{x^3-x}=-g(x)\$</p>
+</div>
+<div class="paragraph">
+<p>Somit ist auch der Graph dieser Funktion punktsymmetrisch zum Ursprung.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ganzrationale_funktionen_und_symmetrie">4. Ganzrationale Funktionen und Symmetrie</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="Funktionseigenschaften_Symmetrie.html#Symmetrie">Punktsymmetrie zum Ursprung und Achsensymmetrie zur y-Achse</a></p>
+<p>Funktionen der Form \$a_n*x^n+a_{n-1}*x^{n-1}+...+a_1*x^1+a_0\$ mit \$a_n!=0, a_i in RR (iin {0,1,2, ...,n}), n in NN\$ heißen <strong>ganzrationale Funktionen vom Grad n</strong>. Der <strong>Grad</strong> entspricht hierbei der höchsten vorkommenden Potenz.</p>
+</div>
+<div class="paragraph">
+<p><strong>Beispiele:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\$f(x)=x^3+2x-1\$ ist eine ganzrationale Funktion vom Grad 3.</p>
+</li>
+<li>
+<p>\$g(x)=-2x^2+4x^7\$ ist eine ganzrationale Funktion vom Grad 7.</p>
+</li>
+<li>
+<p>\$2x^0=2\$ ist eine ganzrationale Funktion vom Grad 0.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Mit den Definitionen der vorangegangenen Artikeln wird deutlich:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Symmetrie bei ganzrationalen Funktionen</strong></p>
+</div>
+<div class="paragraph">
+<p>Eine ganzrationale Funktion, in der nur ungerade Potenzen vorkommen, ist punktsymmetrisch zum Ursprung, eine mit ausschließlich geraden Potenzen hingegen achsensymmetrisch zur y-Achse.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Beispiele:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\$f(x)=x^7+x^5-2x\$ enthält nur ungerade Hochzahlen (\$2x=2x^1\$), wodurch \$G_f\$ punktsymmetrisch zum Ursprung ist.</p>
+</li>
+<li>
+<p>\$g(x)=x^4-2\$ enthält nur gerade Hochzahlen (\$-2=-2x^0\$, wobei die Null zu den geraden Zahlen gehört), wodurch \$G_g\$ achsensymmetrisch zur y-Achse ist.</p>
+</li>
+<li>
+<p>\$h(x)=x^3-x^2\$ enthält gerade und ungerade Hochzahlen, so dass \$G_h\$ weder achsensymmetrisch zur y-Achse noch punktsymmetrisch zum Ursprung ist.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sinus_und_kosinus">5. Sinus und Kosinus</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Symmetrie des Sinus und Kosinus:</strong></p>
+</div>
+<div class="paragraph">
+<p>Es gilt:</p>
+</div>
+<div class="paragraph">
+<p>\$cos(-x)=cos(x)\$ (punktsymmetrisch zum Ursprung)</p>
+</div>
+<div class="paragraph">
+<p>und</p>
+</div>
+<div class="paragraph">
+<p>\$sin(-x)=-sin(x)\$ (achsensymmetrisch zur y-Achse).</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-03-20 15:30:17 Mitteleuropõische Zeit
+Last updated 2017-03-20 15:28:56 Mitteleuropõische Zeit
 </div>
 </div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
 </body>
 </html>
