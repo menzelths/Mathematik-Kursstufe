@@ -29,6 +29,8 @@
 
 <<Funktionseigenschaften_Symmetrie.adoc#Symmetrie, Punktsymmetrie zum Ursprung und Achsensymmetrie zur y-Achse>>
 
+<<Funktionseigenschaften_Definitionsluecken.adoc#Definitionsluecken, Funktionen mit Definitionslücken und Verhalten von Funktionen gegen Unendlich>>
+
 
 
 

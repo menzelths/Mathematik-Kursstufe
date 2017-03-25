@@ -1,4 +1,4 @@
-= [[Defintionsluecken]]Funktionen mit Definitionslücken
+= [[Defintionsluecken]]Funktionen mit Definitionslücken und Verhalten von Funktionen gegen Unendlich
 :stem: 
 :toc: left
 :toc-title: Inhaltsverzeichnis
