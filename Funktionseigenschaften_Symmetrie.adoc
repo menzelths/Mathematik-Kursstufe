@@ -79,7 +79,7 @@ stem:[=x^2/ {-(x^3-x)}=- {x^2}/{x^3-x}=-g(x)]
 
 Somit ist auch der Graph dieser Funktion punktsymmetrisch zum Ursprung.
 
-== Ganzrationale Funktionen und Symmetrie
+== [[GRF]]Ganzrationale Funktionen und Symmetrie
 Funktionen der Form stem:[a_n*x^n+a_{n-1}*x^{n-1}+...+a_1*x^1+a_0] mit stem:[a_n!=0, a_i in RR (iin {0,1,2, ...,n}), n in NN] heißen *ganzrationale Funktionen vom Grad n*. Der *Grad* entspricht hierbei der höchsten vorkommenden Potenz.
 
 *Beispiele:*
