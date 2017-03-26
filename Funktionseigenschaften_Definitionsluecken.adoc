@@ -72,7 +72,7 @@ Im Beispiel zu den Definitionslücken konnten wir dem Schaubild entnehmen, dass 
 
 Warum ist dies der Fall?
 
-Multipliziert man den Nenner aus, so erhält man stem:[f(x)={x+2}/{(x+1)(x-3)^2}={x + 2}/{x^{3} - 5  x^{2} + 3 x + 9}]. Im Zähler und Nenner liegt jeweils eine <<Funktionseigenschaften_Symmetrie.adoc#GR, ganzrationale Funktion>> vor, im Zähler vom Grad 1 und im Nenner vom Grad 3. Eine solche Funktion heißt auch *gebrochenrationale Funktion*. Klammert man aus Zähler und Nenner nun jeweils stem:[x^3] aus (hoch 3, da dies der höchste Grad von Zähler und Nenner ist) und betrachtet den Grenzwert für stem:[x->  oo], so erhält man:
+Multipliziert man den Nenner aus, so erhält man stem:[f(x)={x+2}/{(x+1)(x-3)^2}={x + 2}/{x^{3} - 5  x^{2} + 3 x + 9}]. Im Zähler und Nenner liegt jeweils eine <<Funktionseigenschaften_Symmetrie.adoc#GRF, ganzrationale Funktion>> vor, im Zähler vom Grad 1 und im Nenner vom Grad 3. Eine solche Funktion heißt auch *gebrochenrationale Funktion*. Klammert man aus Zähler und Nenner nun jeweils stem:[x^3] aus (hoch 3, da dies der höchste Grad von Zähler und Nenner ist) und betrachtet den Grenzwert für stem:[x->  oo], so erhält man:
 
 stem:[lim_{x-> oo} f(x)=lim_{x-> oo}{x + 2}/{x^{3} - 5  x^{2} + 3 x + 9}=]
 
