@@ -11,14 +11,14 @@
 ====
 *Aufgabe:*
 
-Leite die beiden Funktionen stem:[f(x)=x^2] und stem:[g(x)=2^x] ab.
+Leite die beiden Funktionen stem:[f(x)=x^2] und stem:[g(x)=2^x] ab. 
 ====
 
 *Lösung:*
 
 stem:[f'(x)=2x], aber für stem:[g(x)] haben wir _noch keine Regel_.
 
-[WARNING]
+[NOTE]
 ====
 Die "Ableitung" stem:[g'(x)=x * 2^{x-1}] ist _falsch_! 
 ====
