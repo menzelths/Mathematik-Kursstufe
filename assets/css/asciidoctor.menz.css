@@ -1,0 +1,422 @@
+/* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
+/* Remove comment around @import statement below when using as a custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+.adoccss article,.adoccss aside,.adoccss details,.adoccss figcaption,.adoccss figure,.adoccss footer,.adoccss header,.adoccss hgroup,.adoccss main,.adoccss nav,.adoccss section,.adoccss summary{display:block}
+.adoccss audio,.adoccss canvas,.adoccss video{display:inline-block}
+.adoccss audio:not([controls]){display:none;height:0}
+.adoccss [hidden],.adoccss template{display:none}
+.adoccss script{display:none!important}
+.adoccss body{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+.adoccss {margin:0}
+.adoccss a{background:transparent}
+.adoccss a:focus{outline:thin dotted}
+.adoccss a:active,.adoccss a:hover{outline:0}
+.adoccss 	h1{font-size:2em;margin:.67em 0}
+.adoccss 	abbr[title]{border-bottom:1px dotted}
+.adoccss 	b,.adoccss strong{font-weight:bold}
+.adoccss 	dfn{font-style:italic}
+.adoccss 	hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+.adoccss 	mark{background:#ff0;color:#000}
+.adoccss 	code,.adoccss kbd,.adoccss pre,.adoccss samp{font-family:monospace;font-size:1em}
+.adoccss 	pre{white-space:pre-wrap}
+.adoccss 	q{quotes:"\201C" "\201D" "\2018" "\2019"}
+.adoccss 	small{font-size:80%}
+.adoccss 	sub,.adoccss sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+.adoccss 	sup{top:-.5em}
+.adoccss 	sub{bottom:-.25em}
+.adoccss 	img{border:0}
+.adoccss 	svg:not(:root){overflow:hidden}
+.adoccss 	figure{margin:0}
+.adoccss 	fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+.adoccss 	legend{border:0;padding:0}
+.adoccss 	button,.adoccss input,.adoccss select,.adoccss textarea{font-family:inherit;font-size:100%;margin:0}
+.adoccss 	button,.adoccss input{line-height:normal}
+.adoccss 	button,.adoccss select{text-transform:none}
+.adoccss 	button,.adoccss html input[type="button"],.adoccss input[type="reset"],.adoccss input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+.adoccss 	button[disabled],.adoccss html input[disabled]{cursor:default}
+.adoccss 	input[type="checkbox"],.adoccss input[type="radio"]{box-sizing:border-box;padding:0}
+.adoccss 	input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+.adoccss 	input[type="search"]::-webkit-search-cancel-button,.adoccss input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+.adoccss 	button::-moz-focus-inner,.adoccss input::-moz-focus-inner{border:0;padding:0}
+.adoccss 	textarea{overflow:auto;vertical-align:top}
+.adoccss 	table{border-collapse:collapse;border-spacing:0}
+.adoccss 	*,.adoccss *:before,.adoccss *:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+.adoccss 	{font-size:100%}
+.adoccss 	{background:#fff;color:rgba(0, 0, 0, .8);padding:0;margin:0;font-family:"Noto Serif", "DejaVu Serif", serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
+.adoccss 	a:hover{cursor:pointer}
+.adoccss 	img,.adoccss object,.adoccss embed{max-width:100%;height:auto}
+.adoccss 	object,.adoccss embed{height:100%}
+.adoccss 	img{-ms-interpolation-mode:bicubic}
+.adoccss 	.left{float:left!important}
+.adoccss 	.right{float:right!important}
+.adoccss 	.text-left{text-align:left!important}
+.adoccss 	.text-right{text-align:right!important}
+.adoccss 	.text-center{text-align:center!important}
+.adoccss 	.text-justify{text-align:justify!important}
+.adoccss 	.hide{display:none}
+.adoccss 	{-webkit-font-smoothing:antialiased}
+.adoccss 	img,.adoccss object,.adoccss svg{display:inline-block;vertical-align:middle}
+.adoccss 	textarea{height:auto;min-height:50px}
+.adoccss 	select{width:100%}
+.adoccss 	.center{margin-left:auto;margin-right:auto}
+.adoccss 	.spread{width:100%}
+.adoccss 	p.lead,.adoccss .paragraph.lead>p,.adoccss #preamble>.sectionbody>.paragraph:first-of-type p{font-size:1.21875em;line-height:1.6}
+.adoccss 	.subheader,.adoccss .admonitionblock td.content>.title,.adoccss .audioblock>.title,.adoccss .exampleblock>.title,.adoccss .imageblock>.title,.adoccss .listingblock>.title,.adoccss .literalblock>.title,.adoccss .stemblock>.title,.adoccss .openblock>.title,.adoccss .paragraph>.title,.adoccss .quoteblock>.title,.adoccss table.tableblock>.title,.adoccss .verseblock>.title,.adoccss .videoblock>.title,.adoccss .dlist>.title,.adoccss .olist>.title,.adoccss .ulist>.title,.adoccss .qlist>.title,.adoccss .hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+.adoccss 	div,.adoccss dl,.adoccss dt,.adoccss dd,.adoccss ul,.adoccss ol,.adoccss li,.adoccss h1,.adoccss h2,.adoccss h3,.adoccss #toctitle,.adoccss .sidebarblock>.content>.title,.adoccss h4,.adoccss h5,.adoccss h6,.adoccss pre,.adoccss form,.adoccss p,.adoccss blockquote,.adoccss th,.adoccss td{margin:0;padding:0;direction:ltr}
+.adoccss 	a{color:#2156a5;text-decoration:underline;line-height:inherit}
+.adoccss 	a:hover,.adoccss a:focus{color:#1d4b8f}
+.adoccss 	a img{border:none}
+.adoccss 	p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+.adoccss 	p aside{font-size:.875em;line-height:1.35;font-style:italic}
+.adoccss h1,.adoccss h2,.adoccss h3,.adoccss #toctitle,.adoccss .sidebarblock>.content>.title,.adoccss h4,.adoccss h5,.adoccss h6{font-family:"Open Sans", "DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+.adoccss 	h1 small,.adoccss h2 small,.adoccss h3 small,.adoccss #toctitle small,.adoccss .sidebarblock>.content>.title small,.adoccss h4 small,.adoccss h5 small,.adoccss h6 small{font-size:60%;color:#e99b8f;line-height:0}
+.adoccss 	h1{font-size:2.125em}
+.adoccss 	h2{font-size:1.6875em}
+.adoccss 	h3,.adoccss #toctitle,.adoccss .sidebarblock>.content>.title{font-size:1.375em}
+.adoccss 	h4,.adoccss h5{font-size:1.125em}
+.adoccss 	h6{font-size:1em}
+.adoccss 	hr{border:solid #ddddd8;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+.adoccss 	em,.adoccss i{font-style:italic;line-height:inherit}
+
+.adoccss 	strong,.adoccss b{font-weight:bold;line-height:inherit}
+.adoccss 	small{font-size:60%;line-height:inherit}
+.adoccss 	code{font-family:"Droid Sans Mono","DejaVu Sans Mono", monospace;font-weight:400;color:rgba(0, 0, 0, .9)}
+.adoccss 	ul,.adoccss ol,.adoccss dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+.adoccss 	ul,.adoccss ol,.adoccss ul.no-bullet,.adoccss ol.no-bullet{margin-left:1.5em}
+.adoccss 	ul li ul,.adoccss ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+.adoccss 	ul.square li ul,.adoccss ul.circle li ul,.adoccss ul.disc li ul{list-style:inherit}
+.adoccss 	ul.square{list-style-type:square}
+.adoccss 	ul.circle{list-style-type:circle}
+.adoccss 	ul.disc{list-style-type:disc}
+.adoccss 	ul.no-bullet{list-style:none}
+.adoccss 	ol li ul,.adoccss ol li ol{margin-left:1.25em;margin-bottom:0}
+.adoccss 	dl dt{margin-bottom:.3125em;font-weight:bold}
+.adoccss 	dl dd{margin-bottom:1.25em}
+.adoccss 	abbr,.adoccss acronym{text-transform:uppercase;font-size:90%;color:rgba(0, 0, 0, .8);border-bottom:1px dotted #ddd;cursor:help}
+.adoccss 	abbr{text-transform:none}
+.adoccss 	blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+.adoccss 	blockquote cite{display:block;font-size:.9375em;color:rgba(0, 0, 0, .6)}
+.adoccss 	blockquote cite:before{content:"\2014 \0020"}
+.adoccss 	blockquote cite a,.adoccss blockquote cite a:visited{color:rgba(0, 0, 0, .6)}
+.adoccss 	blockquote,.adoccss blockquote p{line-height:1.6;color:rgba(0, 0, 0, .85)}
+.adoccss 	@media only screen and (min-width:768px){.adoccss h1,.adoccss h2,.adoccss h3,.adoccss #toctitle,.adoccss .sidebarblock>.content>.title,.adoccss h4,.adoccss h5,.adoccss h6{line-height:1.2}
+.adoccss 	h1{font-size:2.75em}
+.adoccss 	h2{font-size:2.3125em}
+.adoccss 	h3,.adoccss #toctitle,.adoccss .sidebarblock>.content>.title{font-size:1.6875em}
+.adoccss 	h4{font-size:1.4375em}}
+.adoccss 	table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+.adoccss 	table thead,.adoccss table tfoot{background:#f7f8f7;font-weight:bold}
+.adoccss 	table thead tr th,.adoccss table thead tr td,.adoccss table tfoot tr th,.adoccss table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0, 0, 0, .8);text-align:left}
+.adoccss 	table tr th,.adoccss table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0, 0, 0, .8)}
+.adoccss 	table tr.even,.adoccss table tr.alt,.adoccss table tr:nth-of-type(even){background:#f8f8f7}
+.adoccss 	table thead tr th,.adoccss table tfoot tr th,.adoccss table tbody tr td,.adoccss table tr td,.adoccss table tfoot tr td{display:table-cell;line-height:1.6}
+.adoccss 	{tab-size:4}
+.adoccss 	h1,.adoccss h2,.adoccss h3,.adoccss #toctitle,.adoccss .sidebarblock>.content>.title,.adoccss h4,.adoccss h5,.adoccss h6{line-height:1.2;word-spacing:-.05em}
+.adoccss 	h1 strong,.adoccss h2 strong,.adoccss h3 strong,.adoccss #toctitle strong,.adoccss .sidebarblock>.content>.title strong,.adoccss h4 strong,.adoccss h5 strong,.adoccss h6 strong{font-weight:400}
+.adoccss 	.clearfix:before,.adoccss .clearfix:after,.adoccss .float-group:before,.adoccss .float-group:after{content:" ";display:table}
+.adoccss 	.clearfix:after,.adoccss .float-group:after{clear:both}
+.adoccss 	*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+.adoccss 	pre,.adoccss pre>code{line-height:1.45;color:rgba(0, 0, 0, .9);font-family:"Droid Sans Mono", "DejaVu Sans Mono", monospace;font-weight:400;text-rendering:optimizeSpeed}
+.adoccss 	.keyseq{color:rgba(51, 51, 51, .8)}
+.adoccss 	kbd{font-family:"Droid Sans Mono", "DejaVu Sans Mono", monospace;display:inline-block;color:rgba(0, 0, 0, .8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0, 0, 0, .2), 0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0, 0, 0, .2), 0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.adoccss 	.keyseq kbd:first-child{margin-left:0}
+.adoccss 	.keyseq kbd:last-child{margin-right:0}
+.adoccss 	.menuseq,.adoccss .menu{color:rgba(0, 0, 0, .8)}
+.adoccss 	b.button:before,.adoccss b.button:after{position:relative;top:-1px;font-weight:400}
+.adoccss 	b.button:before{content:"[";padding:0 3px 0 2px}
+.adoccss 	b.button:after{content:"]";padding:0 2px 0 3px}
+.adoccss 	p a>code:hover{color:rgba(0, 0, 0, .9)}
+.adoccss 	#header,.adoccss #content,.adoccss #footnotes,.adoccss #footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+.adoccss 	#header:before,.adoccss #header:after,.adoccss #content:before,.adoccss #content:after,.adoccss #footnotes:before,.adoccss #footnotes:after,.adoccss #footer:before,.adoccss #footer:after{content:" ";display:table}
+.adoccss 	#header:after,.adoccss #content:after,.adoccss #footnotes:after,.adoccss #footer:after{clear:both}
+.adoccss 	#content{margin-top:1.25em}
+.adoccss 	#content:before{content:none}
+.adoccss 	#header>h1:first-child{color:rgba(0, 0, 0, .85);margin-top:2.25rem;margin-bottom:0}
+.adoccss 	#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #ddddd8}
+.adoccss 	#header>h1:only-child,.adoccss body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #ddddd8;padding-bottom:8px}
+.adoccss 	#header .details{border-bottom:1px solid #ddddd8;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0, 0, 0, .6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+.adoccss 	#header .details span:first-child{margin-left:-.125em}
+.adoccss 	#header .details span.email a{color:rgba(0, 0, 0, .85)}
+.adoccss 	#header .details br{display:none}
+.adoccss 	#header .details br+span:before{content:"\00a0\2013\00a0"}
+.adoccss 	#header .details br+span.author:before{content:"\00a0\22c5\00a0";color:rgba(0, 0, 0, .85)}
+.adoccss 	#header .details br+span#revremark:before{content:"\00a0|\00a0"}
+.adoccss 	#header #revnumber{text-transform:capitalize}
+.adoccss 	#header #revnumber:after{content:"\00a0"}
+.adoccss 	#content>h1:first-child:not([class]){color:rgba(0, 0, 0, .85);border-bottom:1px solid #ddddd8;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+.adoccss 	#toc{border-bottom:1px solid #efefed;padding-bottom:.5em}
+.adoccss 	#toc>ul{margin-left:.125em}
+.adoccss 	#toc ul.sectlevel0>li>a{font-style:italic}
+.adoccss 	#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+.adoccss 	#toc ul{font-family:"Open Sans", "DejaVu Sans", sans-serif;list-style-type:none}
+.adoccss 	#toc li{line-height:1.3334;margin-top:.3334em}
+.adoccss 	#toc a{text-decoration:none}
+.adoccss 	#toc a:active{text-decoration:underline}
+.adoccss 	#toctitle{color:#7a2518;font-size:1.2em}
+.adoccss 	@media only screen and (min-width:768px){#toctitle{font-size:1.375em}
+.adoccss 	body.toc2{padding-left:15em;padding-right:0}
+.adoccss 	#toc.toc2{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+.adoccss 	#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+.adoccss 	#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+.adoccss 	#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+.adoccss 	#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+.adoccss 	body.toc2.toc-right{padding-left:0;padding-right:15em}
+.adoccss 	body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #efefed;left:auto;right:0}}
+.adoccss 	@media only screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+.adoccss 	#toc.toc2{width:20em}
+.adoccss 	#toc.toc2 #toctitle{font-size:1.375em}
+.adoccss 	#toc.toc2>ul{font-size:.95em}
+.adoccss 	#toc.toc2 ul ul{padding-left:1.25em}
+.adoccss 	body.toc2.toc-right{padding-left:0;padding-right:20em}}
+.adoccss 	#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+.adoccss 	#content #toc>:first-child{margin-top:0}
+.adoccss 	#content #toc>:last-child{margin-bottom:0}
+.adoccss 	#footer{max-width:100%;background-color:rgba(0, 0, 0, .8);padding:1.25em}
+.adoccss 	#footer-text{color:rgba(255, 255, 255, .8);line-height:1.44}
+.adoccss 	.sect1{padding-bottom:.625em}
+.adoccss 	@media only screen and (min-width:768px){.sect1{padding-bottom:1.25em}}
+.adoccss 	.sect1+.sect1{border-top:1px solid #efefed}
+.adoccss 	#content h1>a.anchor,.adoccss h2>a.anchor,.adoccss h3>a.anchor,.adoccss #toctitle>a.anchor,.adoccss .sidebarblock>.content>.title>a.anchor,.adoccss h4>a.anchor,.adoccss h5>a.anchor,.adoccss h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+.adoccss 	#content h1>a.anchor:before,.adoccss h2>a.anchor:before,.adoccss h3>a.anchor:before,.adoccss #toctitle>a.anchor:before,.adoccss .sidebarblock>.content>.title>a.anchor:before,.adoccss h4>a.anchor:before,.adoccss h5>a.anchor:before,.adoccss h6>a.anchor:before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+.adoccss 	#content h1:hover>a.anchor,.adoccss #content h1>a.anchor:hover,.adoccss h2:hover>a.anchor,.adoccss h2>a.anchor:hover,.adoccss h3:hover>a.anchor,.adoccss #toctitle:hover>a.anchor,.adoccss .sidebarblock>.content>.title:hover>a.anchor,.adoccss h3>a.anchor:hover,.adoccss #toctitle>a.anchor:hover,.adoccss .sidebarblock>.content>.title>a.anchor:hover,.adoccss h4:hover>a.anchor,.adoccss h4>a.anchor:hover,.adoccss h5:hover>a.anchor,.adoccss h5>a.anchor:hover,.adoccss h6:hover>a.anchor,.adoccss h6>a.anchor:hover{visibility:visible}
+.adoccss 	#content h1>a.link,.adoccss h2>a.link,.adoccss h3>a.link,.adoccss #toctitle>a.link,.adoccss .sidebarblock>.content>.title>a.link,.adoccss h4>a.link,.adoccss h5>a.link,.adoccss h6>a.link{color:#ba3925;text-decoration:none}
+.adoccss 	#content h1>a.link:hover,.adoccss h2>a.link:hover,.adoccss h3>a.link:hover,.adoccss #toctitle>a.link:hover,.adoccss .sidebarblock>.content>.title>a.link:hover,.adoccss h4>a.link:hover,.adoccss h5>a.link:hover,.adoccss h6>a.link:hover{color:#a53221}
+.adoccss 	.audioblock,.adoccss .imageblock,.adoccss .literalblock,.adoccss .listingblock,.adoccss .stemblock,.adoccss .videoblock{margin-bottom:1.25em}
+.adoccss 	.admonitionblock td.content>.title,.adoccss .audioblock>.title,.adoccss .exampleblock>.title,.adoccss .imageblock>.title,.adoccss .listingblock>.title,.adoccss .literalblock>.title,.adoccss .stemblock>.title,.adoccss .openblock>.title,.adoccss .paragraph>.title,.adoccss .quoteblock>.title,.adoccss table.tableblock>.title,.adoccss .verseblock>.title,.adoccss .videoblock>.title,.adoccss .dlist>.title,.adoccss .olist>.title,.adoccss .ulist>.title,.adoccss .qlist>.title,.adoccss .hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif", "DejaVu Serif", serif;font-size:1rem;font-style:italic}
+.adoccss 	table.tableblock>caption.title{white-space:nowrap;overflow:visible;max-width:0}
+.adoccss 	.paragraph.lead>p,.adoccss #preamble>.sectionbody>.paragraph:first-of-type p{color:rgba(0, 0, 0, .85)}
+.adoccss 	table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inherit}
+.adoccss 	.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.adoccss 	.admonitionblock>table td.icon{text-align:center;width:80px}
+.adoccss 	.admonitionblock>table td.icon img{max-width:none}
+.adoccss 	.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans", "DejaVu Sans", sans-serif;text-transform:uppercase}
+.adoccss 	.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #ddddd8;color:rgba(0, 0, 0, .6)}
+.adoccss 	.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.adoccss 	.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.adoccss 	.exampleblock>.content>:first-child{margin-top:0}
+.adoccss 	.exampleblock>.content>:last-child{margin-bottom:0}
+.adoccss 	.sidebarblock{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+.adoccss 	.sidebarblock>:first-child{margin-top:0}
+.adoccss 	.sidebarblock>:last-child{margin-bottom:0}
+.adoccss 	.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.adoccss 	.exampleblock>.content>:last-child>:last-child,.adoccss .exampleblock>.content .olist>ol>li:last-child>:last-child,.adoccss .exampleblock>.content .ulist>ul>li:last-child>:last-child,.adoccss .exampleblock>.content .qlist>ol>li:last-child>:last-child,.adoccss .sidebarblock>.content>:last-child>:last-child,.adoccss .sidebarblock>.content .olist>ol>li:last-child>:last-child,.adoccss .sidebarblock>.content .ulist>ul>li:last-child>:last-child,.adoccss .sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.adoccss 	.literalblock pre,.adoccss .listingblock pre:not(.highlight),.adoccss .listingblock pre[class="highlight"],.adoccss .listingblock pre[class^="highlight "],.adoccss .listingblock pre.CodeRay,.adoccss .listingblock pre.prettyprint{background:#f7f7f8}
+.adoccss 	.sidebarblock .literalblock pre,.adoccss .sidebarblock .listingblock pre:not(.highlight),.adoccss .sidebarblock .listingblock pre[class="highlight"],.adoccss .sidebarblock .listingblock pre[class^="highlight "],.adoccss .sidebarblock .listingblock pre.CodeRay,.adoccss .sidebarblock .listingblock pre.prettyprint{background:#f2f1f1}
+.adoccss 	.literalblock pre,.adoccss .literalblock pre[class],.adoccss .listingblock pre,.adoccss .listingblock pre[class]{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;padding:1em;font-size:.8125em}
+.adoccss 	.literalblock pre.nowrap,.adoccss .literalblock pre[class].nowrap,.adoccss .listingblock pre.nowrap,.adoccss .listingblock pre[class].nowrap{overflow-x:auto;white-space:pre;word-wrap:normal}
+.adoccss 	@media only screen and (min-width:768px){.literalblock pre,.adoccss .literalblock pre[class],.adoccss .listingblock pre,.adoccss .listingblock pre[class]{font-size:.90625em}}
+.adoccss 	@media only screen and (min-width:1280px){.literalblock pre,.adoccss .literalblock pre[class],.adoccss .listingblock pre,.adoccss .listingblock pre[class]{font-size:1em}}
+.adoccss 	.literalblock.output pre{color:#f7f7f8;background-color:rgba(0, 0, 0, .9)}
+.adoccss 	.listingblock pre.highlightjs{padding:0}
+.adoccss 	.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.adoccss 	.listingblock pre.prettyprint{border-width:0}
+.adoccss 	.listingblock>.content{position:relative}
+.adoccss 	.listingblock code[data-lang]:before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:#999}
+.adoccss 	.listingblock:hover code[data-lang]:before{display:block}
+.adoccss 	.listingblock.terminal pre .command:before{content:attr(data-prompt);padding-right:.5em;color:#999}
+.adoccss 	.listingblock.terminal pre .command:not([data-prompt]):before{content:"$"}
+.adoccss 	table.pyhltable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+.adoccss 	table.pyhltable td{vertical-align:top;padding-top:0;padding-bottom:0;line-height:1.45}
+.adoccss 	table.pyhltable td.code{padding-left:.75em;padding-right:0}
+.adoccss 	pre.pygments .lineno,.adoccss table.pyhltable td:not(.code){color:#999;padding-left:0;padding-right:.5em;border-right:1px solid #ddddd8}
+.adoccss 	pre.pygments .lineno{display:inline-block;margin-right:.25em}
+.adoccss 	table.pyhltable .linenodiv{background:none!important;padding-right:0!important}
+.adoccss 	.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.adoccss 	.quoteblock>.title{margin-left:-1.5em;margin-bottom:.75em}
+.adoccss 	.quoteblock blockquote,.adoccss .quoteblock blockquote p{color:rgba(0, 0, 0, .85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.adoccss 	.quoteblock blockquote{margin:0;padding:0;border:0}
+.adoccss 	.quoteblock blockquote:before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0, 0, 0, .1)}
+.adoccss 	.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.adoccss 	.quoteblock .attribution{margin-top:.5em;margin-right:.5ex;text-align:right}
+.adoccss 	.quoteblock .quoteblock{margin-left:0;margin-right:0;padding:.5em 0;border-left:3px solid rgba(0, 0, 0, .6)}
+.adoccss 	.quoteblock .quoteblock blockquote{padding:0 0 0 .75em}
+.adoccss 	.quoteblock .quoteblock blockquote:before{display:none}
+.adoccss 	.verseblock{margin:0 1em 1.25em 1em}
+.adoccss 	.verseblock pre{font-family:"Open Sans", "DejaVu Sans", sans;font-size:1.15rem;color:rgba(0, 0, 0, .85);font-weight:300;text-rendering:optimizeLegibility}
+.adoccss 	.verseblock pre strong{font-weight:400}
+.adoccss 	.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.adoccss 	.quoteblock .attribution,.adoccss .verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.adoccss 	.quoteblock .attribution br,.adoccss .verseblock .attribution br{display:none}
+.adoccss 	.quoteblock .attribution cite,.adoccss .verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0, 0, 0, .6)}
+.adoccss 	.quoteblock.abstract{margin:0 0 1.25em 0;display:block}
+.adoccss 	.quoteblock.abstract blockquote,.adoccss .quoteblock.abstract blockquote p{text-align:left;word-spacing:0}
+.adoccss 	.quoteblock.abstract blockquote:before,.adoccss .quoteblock.abstract blockquote p:first-of-type:before{display:none}
+.adoccss 	table.tableblock{max-width:100%;border-collapse:separate}
+.adoccss 	table.tableblock td>.paragraph:last-child p>p:last-child,.adoccss table.tableblock th>p:last-child,.adoccss table.tableblock td>p:last-child{margin-bottom:0}
+.adoccss 	table.tableblock,.adoccss th.tableblock,.adoccss td.tableblock{border:0 solid #dedede}
+.adoccss 	table.grid-all th.tableblock,.adoccss table.grid-all td.tableblock{border-width:0 1px 1px 0}
+.adoccss 	table.grid-all tfoot>tr>th.tableblock,.adoccss table.grid-all tfoot>tr>td.tableblock{border-width:1px 1px 0 0}
+.adoccss 	table.grid-cols th.tableblock,.adoccss table.grid-cols td.tableblock{border-width:0 1px 0 0}
+.adoccss 	table.grid-all *>tr>.tableblock:last-child,.adoccss table.grid-cols *>tr>.tableblock:last-child{border-right-width:0}
+.adoccss 	table.grid-rows th.tableblock,.adoccss table.grid-rows td.tableblock{border-width:0 0 1px 0}
+.adoccss 	table.grid-all tbody>tr:last-child>th.tableblock,.adoccss table.grid-all tbody>tr:last-child>td.tableblock,.adoccss table.grid-all thead:last-child>tr>th.tableblock,.adoccss table.grid-rows tbody>tr:last-child>th.tableblock,.adoccss table.grid-rows tbody>tr:last-child>td.tableblock,.adoccss table.grid-rows thead:last-child>tr>th.tableblock{border-bottom-width:0}
+.adoccss 	table.grid-rows tfoot>tr>th.tableblock,.adoccss table.grid-rows tfoot>tr>td.tableblock{border-width:1px 0 0 0}
+.adoccss 	table.frame-all{border-width:1px}
+.adoccss 	table.frame-sides{border-width:0 1px}
+.adoccss 	table.frame-topbot{border-width:1px 0}
+.adoccss 	th.halign-left,.adoccss td.halign-left{text-align:left}
+.adoccss 	th.halign-right,.adoccss td.halign-right{text-align:right}
+.adoccss 	th.halign-center,.adoccss td.halign-center{text-align:center}
+.adoccss 	th.valign-top,.adoccss td.valign-top{vertical-align:top}
+.adoccss 	th.valign-bottom,.adoccss td.valign-bottom{vertical-align:bottom}
+.adoccss 	th.valign-middle,.adoccss td.valign-middle{vertical-align:middle}
+.adoccss 	table thead th,.adoccss table tfoot th{font-weight:bold}
+.adoccss 	tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+.adoccss 	tbody tr th,.adoccss tbody tr th p,.adoccss tfoot tr th,.adoccss tfoot tr th p{color:rgba(0, 0, 0, .8);font-weight:bold}
+.adoccss 	p.tableblock>code:only-child{background:none;padding:0}
+.adoccss 	p.tableblock{font-size:1em}
+.adoccss 	td>div.verse{white-space:pre}
+.adoccss 	ol{margin-left:1.75em}
+.adoccss 	ul li ol{margin-left:1.5em}
+.adoccss 	dl dd{margin-left:1.125em}
+.adoccss 	dl dd:last-child,.adoccss dl dd:last-child>:last-child{margin-bottom:0}
+.adoccss 	ol>li p,.adoccss ul>li p,.adoccss ul dd,.adoccss ol dd,.adoccss .olist .olist,.adoccss .ulist .ulist,.adoccss .ulist .olist,.adoccss .olist .ulist{margin-bottom:.625em}
+.adoccss 	ul.unstyled,.adoccss ol.unnumbered,.adoccss ul.checklist,.adoccss ul.none{list-style-type:none}
+.adoccss 	ul.unstyled,.adoccss ol.unnumbered,.adoccss ul.checklist{margin-left:.625em}
+.adoccss 	ul.checklist li>p:first-child>.fa-square-o:first-child,.adoccss ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1em;font-size:.85em}
+.adoccss 	ul.checklist li>p:first-child>input[type="checkbox"]:first-child{width:1em;position:relative;top:1px}
+.adoccss 	ul.inline{margin:0 auto .625em auto;margin-left:-1.375em;margin-right:0;padding:0;list-style:none;overflow:hidden}
+.adoccss 	ul.inline>li{list-style:none;float:left;margin-left:1.375em;display:block}
+.adoccss 	ul.inline>li>*{display:block}
+.adoccss 	.unstyled dl dt{font-weight:400;font-style:normal}
+.adoccss 	ol.arabic{list-style-type:decimal}
+.adoccss 	ol.decimal{list-style-type:decimal-leading-zero}
+.adoccss 	ol.loweralpha{list-style-type:lower-alpha}
+.adoccss 	ol.upperalpha{list-style-type:upper-alpha}
+.adoccss 	ol.lowerroman{list-style-type:lower-roman}
+.adoccss 	ol.upperroman{list-style-type:upper-roman}
+.adoccss 	ol.lowergreek{list-style-type:lower-greek}
+.adoccss 	.hdlist>table,.adoccss .colist>table{border:0;background:none}
+.adoccss 	.hdlist>table>tbody>tr,.adoccss .colist>table>tbody>tr{background:none}
+.adoccss 	td.hdlist1,.adoccss td.hdlist2{vertical-align:top;padding:0 .625em}
+.adoccss 	td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+.adoccss 	.literalblock+.colist,.adoccss .listingblock+.colist{margin-top:-.5em}
+.adoccss 	.colist>table tr>td:first-of-type{padding:0 .75em;line-height:1}
+.adoccss 	.colist>table tr>td:last-of-type{padding:.25em 0}
+.adoccss 	.thumb,.adoccss .th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.adoccss 	.imageblock.left,.adoccss .imageblock[style*="float: left"]{margin:.25em .625em 1.25em 0}
+.adoccss 	.imageblock.right,.adoccss .imageblock[style*="float: right"]{margin:.25em 0 1.25em .625em}
+.adoccss 	.imageblock>.title{margin-bottom:0}
+.adoccss 	.imageblock.thumb,.adoccss .imageblock.th{border-width:6px}
+.adoccss 	.imageblock.thumb>.title,.adoccss .imageblock.th>.title{padding:0 .125em}
+.adoccss 	.image.left,.adoccss .image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.adoccss 	.image.left{margin-right:.625em}
+.adoccss 	.image.right{margin-left:.625em}
+.adoccss 	a.image{text-decoration:none;display:inline-block}
+.adoccss 	a.image object{pointer-events:none}
+.adoccss 	sup.footnote,.adoccss sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+.adoccss 	sup.footnote a,.adoccss sup.footnoteref a{text-decoration:none}
+.adoccss 	sup.footnote a:active,.adoccss sup.footnoteref a:active{text-decoration:underline}
+.adoccss 	#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+.adoccss 	#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em 0;border-width:1px 0 0 0}
+.adoccss 	#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;text-indent:-1.05em;margin-bottom:.2em}
+.adoccss 	#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none}
+.adoccss 	#footnotes .footnote:last-of-type{margin-bottom:0}
+.adoccss 	#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.adoccss 	.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.adoccss 	.gist .file-data>table td.line-data{width:99%}
+.adoccss 	div.unbreakable{page-break-inside:avoid}
+.adoccss 	.big{font-size:larger}
+.adoccss 	.small{font-size:smaller}
+.adoccss 	.underline{text-decoration:underline}
+.adoccss 	.overline{text-decoration:overline}
+.adoccss 	.line-through{text-decoration:line-through}
+.adoccss 	.aqua{color:#00bfbf}
+.adoccss 	.aqua-background{background-color:#00fafa}
+.adoccss 	.black{color:#000}
+.adoccss 	.black-background{background-color:#000}
+.adoccss 	.blue{color:#0000bf}
+.adoccss 	.blue-background{background-color:#0000fa}
+.adoccss 	.fuchsia{color:#bf00bf}
+.adoccss 	.fuchsia-background{background-color:#fa00fa}
+.adoccss 	.gray{color:#606060}
+.adoccss 	.gray-background{background-color:#7d7d7d}
+.adoccss 	.green{color:#006000}
+.adoccss 	.green-background{background-color:#007d00}
+.adoccss 	.lime{color:#00bf00}
+.adoccss 	.lime-background{background-color:#00fa00}
+.adoccss 	.maroon{color:#600000}
+.adoccss 	.maroon-background{background-color:#7d0000}
+.adoccss 	.navy{color:#000060}
+.adoccss 	.navy-background{background-color:#00007d}
+.adoccss 	.olive{color:#606000}
+.adoccss 	.olive-background{background-color:#7d7d00}
+.adoccss 	.purple{color:#600060}
+.adoccss 	.purple-background{background-color:#7d007d}
+.adoccss 	.red{color:#bf0000}
+.adoccss 	.red-background{background-color:#fa0000}
+.adoccss 	.silver{color:#909090}
+.adoccss 	.silver-background{background-color:#bcbcbc}
+.adoccss 	.teal{color:#006060}
+.adoccss 	.teal-background{background-color:#007d7d}
+.adoccss 	.white{color:#bfbfbf}
+.adoccss 	.white-background{background-color:#fafafa}
+.adoccss 	.yellow{color:#bfbf00}
+.adoccss 	.yellow-background{background-color:#fafa00}
+.adoccss 	span.icon>.fa{cursor:default}
+.adoccss 	.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0, 0, 0, .5);cursor:default}
+.adoccss 	.admonitionblock td.icon .icon-note:before{content:"\f05a";color:#19407c}
+.adoccss 	.admonitionblock td.icon .icon-tip:before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155, 155, 0, .8);color:#111}
+.adoccss 	.admonitionblock td.icon .icon-warning:before{content:"\f071";color:#bf6900}
+.adoccss 	.admonitionblock td.icon .icon-caution:before{content:"\f06d";color:#bf3400}
+.adoccss 	.admonitionblock td.icon .icon-important:before{content:"\f06a";color:#bf0000}
+.adoccss 	.conum[data-value]{display:inline-block;color:#fff!important;background-color:rgba(0, 0, 0, .8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans", "DejaVu Sans", sans-serif;font-style:normal;font-weight:bold}
+.adoccss 	.conum[data-value] *{color:#fff!important}
+.adoccss 	.conum[data-value]+b{display:none}
+.adoccss 	.conum[data-value]:after{content:attr(data-value)}
+.adoccss 	pre .conum[data-value]{position:relative;top:-.125em}
+.adoccss 	b.conum *{color:inherit!important}
+.adoccss 	.conum:not([data-value]):empty{display:none}
+.adoccss 	dt,.adoccss th.tableblock,.adoccss td.content,.adoccss div.footnote{text-rendering:optimizeLegibility}
+.adoccss 	h1,.adoccss h2,.adoccss p,.adoccss td.content,.adoccss span.alt{letter-spacing:-.01em}
+.adoccss 	p strong,.adoccss td.content strong,.adoccss div.footnote strong{letter-spacing:-.005em}
+.adoccss 	p,.adoccss blockquote,.adoccss dt,.adoccss td.content,.adoccss span.alt{font-size:1.0625rem}
+.adoccss 	p{margin-bottom:1.25rem}
+.adoccss 	.sidebarblock p,.adoccss .sidebarblock dt,.adoccss .sidebarblock td.content,.adoccss p.tableblock{font-size:1em}
+.adoccss 	.exampleblock>.content{background-color:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.adoccss 	.print-only{display:none!important}
+.adoccss 	@media print{@page{margin:1.25cm .75cm}
+.adoccss 	*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+.adoccss 	a{color:inherit!important;text-decoration:underline!important}
+.adoccss 	a.bare,.adoccss a[href^="#"],.adoccss a[href^="mailto:"]{text-decoration:none!important}
+.adoccss 	a[href^="http:"]:not(.bare):after,.adoccss a[href^="https:"]:not(.bare):after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+.adoccss 	abbr[title]:after{content:" (" attr(title) ")"}
+.adoccss 	pre,.adoccss blockquote,.adoccss tr,.adoccss img,.adoccss object,.adoccss svg{page-break-inside:avoid}
+.adoccss 	thead{display:table-header-group}
+.adoccss 	svg{max-width:100%}
+.adoccss 	p,.adoccss blockquote,.adoccss dt,.adoccss td.content{font-size:1em;orphans:3;widows:3}
+.adoccss 	h2,.adoccss h3,.adoccss #toctitle,.adoccss .sidebarblock>.content>.title{page-break-after:avoid}
+.adoccss 	#toc,.adoccss .sidebarblock,.adoccss .exampleblock>.content{background:none!important}
+.adoccss 	#toc{border-bottom:1px solid #ddddd8!important;padding-bottom:0!important}
+.adoccss 	.sect1{padding-bottom:0!important}
+.adoccss 	.sect1+.sect1{border:0!important}
+.adoccss 	#header>h1:first-child{margin-top:1.25rem}
+.adoccss    .book #header{text-align:center}
+.adoccss    .book #header>h1:first-child{border:0!important;margin:2.5em 0 1em 0}
+.adoccss 	.book #header .details{border:0!important;display:block;padding:0!important}
+.adoccss 	.book #header .details span:first-child{margin-left:0!important}
+.adoccss 	.book #header .details br{display:block}
+.adoccss 	.book #header .details br+span:before{content:none!important}
+.adoccss 	.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+.adoccss 	.book #toc,.adoccss .book #preamble,.adoccss .book h1.sect0,.adoccss .book .sect1>h2{page-break-before:always}
+.adoccss 	.listingblock code[data-lang]:before{display:block}
+.adoccss 	#footer{background:none!important;padding:0 .9375em}
+.adoccss 	#footer-text{color:rgba(0, 0, 0, .6)!important;font-size:.9em}
+.adoccss 	.hide-on-print{display:none!important}
+.adoccss 	.print-only{display:block!important}
+.adoccss 	.hide-for-print{display:none!important}
+.adoccss 	.show-for-print{display:inherit!important}}
+.adoccss .icon>i {font-style:normal; line-height:inherit}
+
+.qrcode img {
+    margin: 20px;
+    display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.center {
+ font-family: arial;
+ text-align: center;
+ margin-bottom: 10px;
+}
