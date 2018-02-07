@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html><html><head><meta name='description' content='Journal for HTML' ><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<link rel='stylesheet' href='../../assets/css/style.css'>
-<link rel='stylesheet' href='../../assets/css/font-awesome.css'>
-<link rel='stylesheet' href='../../assets/css/katex.css'>
-<link rel='stylesheet' href='../../assets/css/asciidoctor.menz.css'>
-<link rel='stylesheet' href='../../assets/css/prism.css'>
-<script src='../../assets/js/jquery.min.js'></script>
+<link rel='stylesheet' href='assets/css/style.css'>
+<link rel='stylesheet' href='assets/css/font-awesome.css'>
+<link rel='stylesheet' href='assets/css/katex.css'>
+<link rel='stylesheet' href='assets/css/asciidoctor.menz.css'>
+<link rel='stylesheet' href='assets/css/prism.css'>
+<script src='assets/js/jquery.min.js'></script>
 <script>function nextLayer(evt){var a =evt.firstChild;var zaehler=0;for (var i=0;i<10;i++){var element=a.getElementById('layer_'+i);if (element!=null&&element.getAttribute('visibility')=='hidden'){element.setAttribute('visibility','visible');  break;}zaehler++;}if (zaehler==10){for (var i=0;i<10;i++){var element=a.getElementById('layer_'+i);if (element!=null) {element.setAttribute('visibility','hidden');  } } for (var i=0;i<10;i++){ var element=a.getElementById('layer_'+i);if (element!=null&&element.getAttribute('visibility')=='hidden'){ element.setAttribute('visibility','visible');break; }}}}</script><script>var saveAs=saveAs||function(view){"use strict";if(typeof navigator!=="undefined"&&/MSIE [1-9]\./.test(navigator.userAgent)){return}var doc=view.document,get_URL=function(){return view.URL||view.webkitURL||view},save_link=doc.createElementNS("http://www.w3.org/1999/xhtml","a"),can_use_save_link="download"in save_link,click=function(node){var event=new MouseEvent("click");node.dispatchEvent(event)},is_safari=/Version\/[\d\.]+.*Safari/.test(navigator.userAgent),webkit_req_fs=view.webkitRequestFileSystem,req_fs=view.requestFileSystem||webkit_req_fs||view.mozRequestFileSystem,throw_outside=function(ex){(view.setImmediate||view.setTimeout)(function(){throw ex},0)},force_saveable_type="application/octet-stream",fs_min_size=0,arbitrary_revoke_timeout=500,revoke=function(file){var revoker=function(){if(typeof file==="string"){get_URL().revokeObjectURL(file)}else{file.remove()}};if(view.chrome){revoker()}else{setTimeout(revoker,arbitrary_revoke_timeout)}},dispatch=function(filesaver,event_types,event){event_types=[].concat(event_types);var i=event_types.length;while(i--){var listener=filesaver["on"+event_types[i]];if(typeof listener==="function"){try{listener.call(filesaver,event||filesaver)}catch(ex){throw_outside(ex)}}}},auto_bom=function(blob){if(/^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(blob.type)){return new Blob(["\ufeff",blob],{type:blob.type})}return blob},FileSaver=function(blob,name,no_auto_bom){if(!no_auto_bom){blob=auto_bom(blob)}var filesaver=this,type=blob.type,blob_changed=false,object_url,target_view,dispatch_all=function(){dispatch(filesaver,"writestart progress write writeend".split(" "))},fs_error=function(){if(target_view&&is_safari&&typeof FileReader!=="undefined"){var reader=new FileReader;reader.onloadend=function(){var base64Data=reader.result;target_view.location.href="data:attachment/file"+base64Data.slice(base64Data.search(/[,;]/));filesaver.readyState=filesaver.DONE;dispatch_all()};reader.readAsDataURL(blob);filesaver.readyState=filesaver.INIT;return}if(blob_changed||!object_url){object_url=get_URL().createObjectURL(blob)}if(target_view){target_view.location.href=object_url}else{var new_tab=view.open(object_url,"_blank");if(new_tab==undefined&&is_safari){view.location.href=object_url}}filesaver.readyState=filesaver.DONE;dispatch_all();revoke(object_url)},abortable=function(func){return function(){if(filesaver.readyState!==filesaver.DONE){return func.apply(this,arguments)}}},create_if_not_found={create:true,exclusive:false},slice;filesaver.readyState=filesaver.INIT;if(!name){name="download"}if(can_use_save_link){object_url=get_URL().createObjectURL(blob);setTimeout(function(){save_link.href=object_url;save_link.download=name;click(save_link);dispatch_all();revoke(object_url);filesaver.readyState=filesaver.DONE});return}if(view.chrome&&type&&type!==force_saveable_type){slice=blob.slice||blob.webkitSlice;blob=slice.call(blob,0,blob.size,force_saveable_type);blob_changed=true}if(webkit_req_fs&&name!=="download"){name+=".download"}if(type===force_saveable_type||webkit_req_fs){target_view=view}if(!req_fs){fs_error();return}fs_min_size+=blob.size;req_fs(view.TEMPORARY,fs_min_size,abortable(function(fs){fs.root.getDirectory("saved",create_if_not_found,abortable(function(dir){var save=function(){dir.getFile(name,create_if_not_found,abortable(function(file){file.createWriter(abortable(function(writer){writer.onwriteend=function(event){target_view.location.href=file.toURL();filesaver.readyState=filesaver.DONE;dispatch(filesaver,"writeend",event);revoke(file)};writer.onerror=function(){var error=writer.error;if(error.code!==error.ABORT_ERR){fs_error()}};"writestart progress write abort".split(" ").forEach(function(event){writer["on"+event]=filesaver["on"+event]});writer.write(blob);filesaver.abort=function(){writer.abort();filesaver.readyState=filesaver.DONE};filesaver.readyState=filesaver.WRITING}),fs_error)}),fs_error)};dir.getFile(name,{create:false},abortable(function(file){file.remove();save()}),abortable(function(ex){if(ex.code===ex.NOT_FOUND_ERR){save()}else{fs_error()}}))}),fs_error)}),fs_error)},FS_proto=FileSaver.prototype,saveAs=function(blob,name,no_auto_bom){return new FileSaver(blob,name,no_auto_bom)};if(typeof navigator!=="undefined"&&navigator.msSaveOrOpenBlob){return function(blob,name,no_auto_bom){if(!no_auto_bom){blob=auto_bom(blob)}return navigator.msSaveOrOpenBlob(blob,name||"download")}}FS_proto.abort=function(){var filesaver=this;filesaver.readyState=filesaver.DONE;dispatch(filesaver,"abort")};FS_proto.readyState=FS_proto.INIT=0;FS_proto.WRITING=1;FS_proto.DONE=2;FS_proto.error=FS_proto.onwritestart=FS_proto.onprogress=FS_proto.onwrite=FS_proto.onabort=FS_proto.onerror=FS_proto.onwriteend=null;return saveAs}(typeof self!=="undefined"&&self||typeof window!=="undefined"&&window||this.content);if(typeof module!=="undefined"&&module.exports){module.exports.saveAs=saveAs}else if(typeof define!=="undefined"&&define!==null&&define.amd!=null){define([],function(){return saveAs})}
 </script>
 <script>    this.saveObject=function(){
@@ -61,7 +61,7 @@ zeigeHashTags(t)}),$(document).ready(function(){var t=location.hash.substring(1)
 <p>Auch medizinische Tests bilden nicht immer zu Hundert Prozent die Realität ab: ergibt eine Blutabnahme, dass ein Patient an einer schweren Krankheit leidet, so kann es dennoch sein, dass der Patient eigentlich gesund ist, der Test bei diesem einen Patienten aber versagt. Andererseits könnte bei einem kranken Patienten die Krankheit nicht erkannt und somit lebensrettende Maßnahmen nicht eingeleitet werden.  Hier gilt es, den Test so zu gestalten, dass bei möglichst wenigen Patienten, die die Krankheit tatsächlich haben, der Test die Krankheit nicht diagnostiziert und natürlich nach Möglichkeit auch so wenige gesunde Menschen wie möglich durch eine Fehldiagnose in Angst und Schrecken versetzt.</p>
 </div>
 <div class="paragraph">
-<p>In diesem Kapitel werden Aussagen über die Qualität von Stichproben auf Belastbarkeit hin untersucht.</p>
+<p>In diesem Kapitel werden Aussagen über die Qualität von Stichproben auf Belastbarkeit hin untersucht. Die zugehörigen Testverfahren werden als <strong>Hypothesentests</strong> bzw. <strong>Signifikanztests</strong> bezeichnet.</p>
 </div></div><div class="originaltext" hidden="">Häufig ist es notwendig, über eine Stichprobe eine Aussage über die Güte eines Produkts zu treffen. 
 
 Beispielsweise überprüft man einige wenige elektronische Bauteile einer Produktionscharge auf Funktionsfähigkeit, um die Qualität der gesamten Charge zu beurteilen. 
@@ -70,7 +70,7 @@ Ein weiteres bekanntes Beispiel ist die Zulassung von Medikamenten: das neue Pro
 
 Auch medizinische Tests bilden nicht immer zu Hundert Prozent die Realität ab: ergibt eine Blutabnahme, dass ein Patient an einer schweren Krankheit leidet, so kann es dennoch sein, dass der Patient eigentlich gesund ist, der Test bei diesem einen Patienten aber versagt. Andererseits könnte bei einem kranken Patienten die Krankheit nicht erkannt und somit lebensrettende Maßnahmen nicht eingeleitet werden.  Hier gilt es, den Test so zu gestalten, dass bei möglichst wenigen Patienten, die die Krankheit tatsächlich haben, der Test die Krankheit nicht diagnostiziert und natürlich nach Möglichkeit auch so wenige gesunde Menschen wie möglich durch eine Fehldiagnose in Angst und Schrecken versetzt.
 
-In diesem Kapitel werden Aussagen über die Qualität von Stichproben auf Belastbarkeit hin untersucht. 
+In diesem Kapitel werden Aussagen über die Qualität von Stichproben auf Belastbarkeit hin untersucht. Die zugehörigen Testverfahren werden als *Hypothesentests* bzw. *Signifikanztests* bezeichnet.
 
 </div></div></div>
 <div sb='@' ft='='  style='display:none;' class='markdown tshareElement adoccss'><div class="markdownText"><div><div class="sect2">
@@ -243,7 +243,7 @@ Das *kleinste a*, das diese Bedingung erfüllt ist $$a=36$$. Der *Annahmebereich
 |===
  </div></div></div>
 <div sb='@' ft='='  style='display:none;' class='markdown tshareElement adoccss'><div class="markdownText"><div><div class="sect2">
-<h3 id="ref25415837">Linksseitiger Hypothesentest</h3>
+<h3 id="ref32996921">Linksseitiger Hypothesentest</h3>
 <div class="paragraph">
 <p>Eine Partei hat bei der letzten Wahl die Stimmen von 35% der Bevölkerung erhalten. Die Parteispitze befürchtet, dass die Partei inzwischen weniger beliebt ist. Bei einer repräsentativen Umfrage mit 1000 befragten Personen soll mit einem <strong>Signifikanzniveau von 1%</strong> überprüft werden, ob die Partei inzwischen tatsächlich unbeliebter ist.</p>
 </div>
@@ -386,4 +386,135 @@ Zum Auffinden des richtigen Wertes für $$a$$ in der Tabelle ist die Verwendung 
 <h3 id="_zweiseitiger_hypothesentest">Zweiseitiger Hypothesentest</h3>
 
 </div></div><div class="originaltext" hidden="">=== Zweiseitiger Hypothesentest</div></div></div>
+<div sb='@' ft='='  style='display:none;' class='markdown tshareElement adoccss'><div class="markdownText"><div><div class="paragraph">
+<p>Der Laptop-Hersteller JCN hat im Vorjahr 30 Prozent des Marktes beherrscht. Im Rahmen einer Marktforschung soll überprüft werden, ob dies immer noch der Fall ist. Deshalb werden in einem Elektronikladen die letzten 500 Laptop-Käufe anonym untersucht, um in Erfahrung zu bringen, ob der Marktanteil noch gegeben ist.</p>
+</div>
+<table class="tableblock frame-none grid-all">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon red"><i class="fa fa-question-circle fa-3x"></i></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">In welchem Intervall muss die Anzahl der verkauften JCN-Laptops liegen, damit man mit einer Irrtumswahrscheinlichkeit von höchstens 5% davon ausgehen kann, dass sich der Marktanteil im Vergleich zum Vorjahr nicht geändert hat?</p></td>
+</tr>
+</tbody>
+</table></div><div class="originaltext" hidden="">Der Laptop-Hersteller JCN hat im Vorjahr 30 Prozent des Marktes beherrscht. Im Rahmen einer Marktforschung soll überprüft werden, ob dies immer noch der Fall ist. Deshalb werden in einem Elektronikladen die letzten 500 Laptop-Käufe anonym untersucht, um in Erfahrung zu bringen, ob der Marktanteil noch gegeben ist.
+
+[%autowidth,frame=none , cols=2  ]
+|===
+ 
+|icon:question-circle[3x,role=red]  
+|In welchem Intervall muss die Anzahl der verkauften JCN-Laptops liegen, damit man mit einer Irrtumswahrscheinlichkeit von höchstens 5% davon ausgehen kann, dass sich der Marktanteil im Vergleich zum Vorjahr nicht geändert hat?
+|===
+
+</div></div></div>
+<div sb='@' ft='='  style='display:none;' class='markdown tshareElement adoccss'><div class="markdownText"><div><table class="tableblock frame-none grid-all">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nullhypothese aufstellen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68em;"></span><span class="strut bottom" style="height: 0.83em; vertical-align: -0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right: 0.08em;">H</span><span class="msupsub"><span class="vlist"><span style="top: 0.15em; margin-right: 0.05em; margin-left: -0.08em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span>​</span></span></span></span></span></span></span></span>: Der Marktanteil ist unverändert. Somit ist die Zufallsvariable X, die die Anzahl der gekauften Laptops wiedergibt, <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>B</mi><mrow><mn>5</mn><mn>0</mn><mn>0</mn><mo separator="true">;</mo><mn>0</mn><mo separator="true">,</mo><mn>3</mn></mrow></msub></mrow><annotation encoding="application/x-tex">B_{500;0,3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68em;"></span><span class="strut bottom" style="height: 0.96em; vertical-align: -0.28em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right: 0.05em;">B</span><span class="msupsub"><span class="vlist"><span style="top: 0.15em; margin-right: 0.05em; margin-left: -0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">5</span><span class="mord mathrm mtight">0</span><span class="mord mathrm mtight">0</span><span class="mpunct mtight">;</span><span class="mord mathrm mtight">0</span><span class="mpunct mtight">,</span><span class="mord mathrm mtight">3</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span>​</span></span></span></span></span></span></span></span>-verteilt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gegenhypothese formulieren</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>H</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">H_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68em;"></span><span class="strut bottom" style="height: 0.83em; vertical-align: -0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right: 0.08em;">H</span><span class="msupsub"><span class="vlist"><span style="top: 0.15em; margin-right: 0.05em; margin-left: -0.08em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span>​</span></span></span></span></span></span></span></span>: Der Marktanteil hat sich verändert, also <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>≠</mo><mn>0</mn><mo separator="true">,</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">p\ne 0,3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.71em;"></span><span class="strut bottom" style="height: 0.93em; vertical-align: -0.21em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span><span class="mrel">≠</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">3</span></span></span></span></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Annahmebereich und Ablehnungsbereich definieren</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die Nullhypothese wird <strong>angenommen</strong>, wenn die Anzahl der Käufe im <strong>Annahmebereich</strong> <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>=</mo><mo>[</mo><mi>a</mi><mo separator="true">;</mo><mi>b</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">A=[a;b]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.75em;"></span><span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mrel">=</span><span class="mopen">[</span><span class="mord mathit">a</span><span class="mpunct">;</span><span class="mord mathit">b</span><span class="mclose">]</span></span></span></span></span> liegt. Der Ablehnungsbereich ist <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>A</mi></mrow><mo>¯</mo></mover><mo>=</mo><mo>[</mo><mn>0</mn><mo separator="true">;</mo><mi>a</mi><mo>−</mo><mn>1</mn><mo>]</mo><mo>∪</mo><mo>[</mo><mi>b</mi><mo>+</mo><mn>1</mn><mo separator="true">;</mo><mn>5</mn><mn>0</mn><mn>0</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">\bar{A}= [0;a-1]\cup [b+1;500]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.82em;"></span><span class="strut bottom" style="height: 1.07em; vertical-align: -0.25em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top: 0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span><span class="mord textstyle cramped"><span class="mord mathit">A</span></span></span><span style="top: -0.25em; margin-left: 0.27em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span><span class="accent-body"><span>¯</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span>​</span></span></span><span class="mrel">=</span><span class="mopen">[</span><span class="mord mathrm">0</span><span class="mpunct">;</span><span class="mord mathit">a</span><span class="mbin">−</span><span class="mord mathrm">1</span><span class="mclose">]</span><span class="mbin">∪</span><span class="mopen">[</span><span class="mord mathit">b</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mpunct">;</span><span class="mord mathrm">5</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mclose">]</span></span></span></span></span>
+</p><p class="tableblock">Da der Ablehnungsbereich links und rechts liegt, liegt hier ein <strong>zweiseitiger Hypothesentest</strong> vor.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>Annahmebereich berechnen</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>Man verteilt die Irrtumswahrscheinlichkeit auf beide Seiten, also jeweils <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo separator="true">,</mo><mn>5</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">2,5\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.75em;"></span><span class="strut bottom" style="height: 0.94em; vertical-align: -0.19em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">2</span><span class="mpunct">,</span><span class="mord mathrm">5</span><span class="mord mathrm">%</span></span></span></span></span>:</p>
+</div>
+<div class="paragraph">
+<p><strong>Linke Seite:</strong>
+<span><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><mi>X</mi><mo>≤</mo><mi>a</mi><mo>−</mo><mn>1</mn><mo>)</mo><mo>≤</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mn>2</mn><mn>5</mn></mrow><annotation encoding="application/x-tex">
+P(X\le a-1) \le 0,025
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.75em;"></span><span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right: 0.13em;">P</span><span class="mopen">(</span><span class="mord mathit" style="margin-right: 0.07em;">X</span><span class="mrel">≤</span><span class="mord mathit">a</span><span class="mbin">−</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mrel">≤</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">2</span><span class="mord mathrm">5</span></span></span></span></span></span>
+Das <strong>größte a-1</strong>, für das diese Bedingung gilt ist <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo>−</mo><mn>1</mn><mo>=</mo><mn>1</mn><mn>2</mn><mn>9</mn></mrow><annotation encoding="application/x-tex">a-1=129</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.64em;"></span><span class="strut bottom" style="height: 0.72em; vertical-align: -0.08em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mbin">−</span><span class="mord mathrm">1</span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mord mathrm">2</span><span class="mord mathrm">9</span></span></span></span></span>, also <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo>=</mo><mn>1</mn><mn>3</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">a=130</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.64em;"></span><span class="strut bottom" style="height: 0.64em; vertical-align: 0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mord mathrm">3</span><span class="mord mathrm">0</span></span></span></span></span>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Rechte Seite:</strong>
+<span><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><mi>X</mi><mo>≥</mo><mi>b</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>≤</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mn>2</mn><mn>5</mn></mrow><annotation encoding="application/x-tex">
+P(X\ge b+1)\le 0,025
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.75em;"></span><span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right: 0.13em;">P</span><span class="mopen">(</span><span class="mord mathit" style="margin-right: 0.07em;">X</span><span class="mrel">≥</span><span class="mord mathit">b</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mrel">≤</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">2</span><span class="mord mathrm">5</span></span></span></span></span></span>
+entspricht
+<span><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>−</mo><mi>P</mi><mo>(</mo><mi>X</mi><mo>&lt;</mo><mi>b</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>≤</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mn>2</mn><mn>5</mn></mrow><annotation encoding="application/x-tex">
+1-P(X &lt; b+1)\le 0,025  
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.75em;"></span><span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathrm">1</span><span class="mbin">−</span><span class="mord mathit" style="margin-right: 0.13em;">P</span><span class="mopen">(</span><span class="mord mathit" style="margin-right: 0.07em;">X</span><span class="mrel">&lt;</span><span class="mord mathit">b</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mrel">≤</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">2</span><span class="mord mathrm">5</span></span></span></span></span></span>
+also:
+<span><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>−</mo><mi>P</mi><mo>(</mo><mi>X</mi><mo>≤</mo><mi>b</mi><mo>)</mo><mo>≤</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mn>2</mn><mn>5</mn><mtext><mtext>&nbsp;</mtext><mi mathvariant="normal">b</mi><mi mathvariant="normal">z</mi><mi mathvariant="normal">w</mi><mi mathvariant="normal">.</mi><mtext>&nbsp;</mtext></mtext><mi>P</mi><mo>(</mo><mi>X</mi><mo>≤</mo><mi>b</mi><mo>)</mo><mo>≥</mo><mn>0</mn><mo separator="true">,</mo><mn>9</mn><mn>7</mn><mn>5</mn></mrow><annotation encoding="application/x-tex">
+1- P(X \le b) \le 0,025 \text{ bzw. } P(X\le b)\ge0,975 
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.75em;"></span><span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathrm">1</span><span class="mbin">−</span><span class="mord mathit" style="margin-right: 0.13em;">P</span><span class="mopen">(</span><span class="mord mathit" style="margin-right: 0.07em;">X</span><span class="mrel">≤</span><span class="mord mathit">b</span><span class="mclose">)</span><span class="mrel">≤</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">2</span><span class="mord mathrm">5</span><span class="mord text displaystyle textstyle uncramped"><span class="mord mathrm">&nbsp;bzw.&nbsp;</span></span><span class="mord mathit" style="margin-right: 0.13em;">P</span><span class="mopen">(</span><span class="mord mathit" style="margin-right: 0.07em;">X</span><span class="mrel">≤</span><span class="mord mathit">b</span><span class="mclose">)</span><span class="mrel">≥</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">9</span><span class="mord mathrm">7</span><span class="mord mathrm">5</span></span></span></span></span></span>
+Somit ist hier das <strong>kleinste b</strong> gesucht, für das diese Bedingung gilt. Das ist hier erfüllt für <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi><mo>=</mo><mn>1</mn><mn>7</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">b=170</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.69em;"></span><span class="strut bottom" style="height: 0.69em; vertical-align: 0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">b</span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mord mathrm">7</span><span class="mord mathrm">0</span></span></span></span></span>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Gesamt:</strong></p>
+</div>
+<div class="paragraph">
+<p>Somit ist der Annahmebereich <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>=</mo><mo>[</mo><mn>1</mn><mn>3</mn><mn>0</mn><mo separator="true">;</mo><mn>1</mn><mn>7</mn><mn>0</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">A=[130;170]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.75em;"></span><span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mrel">=</span><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mord mathrm">3</span><span class="mord mathrm">0</span><span class="mpunct">;</span><span class="mord mathrm">1</span><span class="mord mathrm">7</span><span class="mord mathrm">0</span><span class="mclose">]</span></span></span></span></span>, der Ablehnungsbereich <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>A</mi></mrow><mo>¯</mo></mover><mo>=</mo><mo>[</mo><mn>0</mn><mo separator="true">;</mo><mn>1</mn><mn>2</mn><mn>9</mn><mo>]</mo><mo>∪</mo><mo>[</mo><mn>1</mn><mn>7</mn><mn>1</mn><mo separator="true">,</mo><mn>5</mn><mn>0</mn><mn>0</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">\bar{A}=[0;129]\cup[171,500]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.82em;"></span><span class="strut bottom" style="height: 1.07em; vertical-align: -0.25em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top: 0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span><span class="mord textstyle cramped"><span class="mord mathit">A</span></span></span><span style="top: -0.25em; margin-left: 0.27em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span><span class="accent-body"><span>¯</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span>​</span></span></span><span class="mrel">=</span><span class="mopen">[</span><span class="mord mathrm">0</span><span class="mpunct">;</span><span class="mord mathrm">1</span><span class="mord mathrm">2</span><span class="mord mathrm">9</span><span class="mclose">]</span><span class="mbin">∪</span><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mord mathrm">7</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">5</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mclose">]</span></span></span></span></span>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Antwort formulieren</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>Sollte die Anzahl der verkauften Laptops außerhalb des Intervalls <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>1</mn><mn>3</mn><mn>0</mn><mo separator="true">;</mo><mn>1</mn><mn>7</mn><mn>0</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">[130;170]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.75em;"></span><span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mord mathrm">3</span><span class="mord mathrm">0</span><span class="mpunct">;</span><span class="mord mathrm">1</span><span class="mord mathrm">7</span><span class="mord mathrm">0</span><span class="mclose">]</span></span></span></span></span> liegen, so ist bei einer Irrtumswahrscheinlichkeit von höchstens <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>5</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">5\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.75em;"></span><span class="strut bottom" style="height: 0.8em; vertical-align: -0.05em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">5</span><span class="mord mathrm">%</span></span></span></span></span> auszugehen, dass der Marktanteil des Herstellers <strong>nicht</strong> mehr bei <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mn>0</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">30\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.75em;"></span><span class="strut bottom" style="height: 0.8em; vertical-align: -0.05em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mord mathrm">0</span><span class="mord mathrm">%</span></span></span></span></span> liegt.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table></div><div class="originaltext" hidden="">[%autowidth,frame=none , cols=2  ]
+|===
+ 
+|Nullhypothese aufstellen   
+|$$H_0$$: Der Marktanteil ist unverändert. Somit ist die Zufallsvariable X, die die Anzahl der gekauften Laptops wiedergibt, $$B_{500;0,3}$$-verteilt.
+
+|Gegenhypothese formulieren
+|$$H_1$$: Der Marktanteil hat sich verändert, also $$p\ne 0,3$$ 
+
+|Annahmebereich und Ablehnungsbereich definieren
+|Die Nullhypothese wird *angenommen*, wenn die Anzahl der Käufe im *Annahmebereich* $$A=[a;b]$$ liegt. Der Ablehnungsbereich ist $$\bar{A}= [0;a-1]\cup [b+1;500]$$ 
+ 
+Da der Ablehnungsbereich links und rechts liegt, liegt hier ein *zweiseitiger Hypothesentest* vor. 
+
+
+a|Annahmebereich berechnen
+a|Man verteilt die Irrtumswahrscheinlichkeit auf beide Seiten, also jeweils $$2,5\%$$:
+
+*Linke Seite:*
+$$
+P(X\le a-1) \le 0,025
+$$
+Das *größte a-1*, für das diese Bedingung gilt ist $$a-1=129$$, also $$a=130$$. 
+
+*Rechte Seite:*
+$$
+P(X\ge b+1)\le 0,025
+$$
+entspricht
+$$
+1-P(X &lt; b+1)\le 0,025  
+$$
+also:
+$$
+1- P(X \le b) \le 0,025 \text{ bzw. } P(X\le b)\ge0,975 
+$$
+Somit ist hier das *kleinste b* gesucht, für das diese Bedingung gilt. Das ist hier erfüllt für $$b=170$$.
+
+*Gesamt:*
+
+Somit ist der Annahmebereich $$A=[130;170]$$, der Ablehnungsbereich $$\bar{A}=[0;129]\cup[171,500]$$. 
+ 
+|Antwort formulieren
+a|Sollte die Anzahl der verkauften Laptops außerhalb des Intervalls $$[130;170]$$ liegen, so ist bei einer Irrtumswahrscheinlichkeit von höchstens $$5\%$$ auszugehen, dass der Marktanteil des Herstellers *nicht* mehr bei $$30\%$$ liegt.   
+|=== </div></div></div>
 </body></html>
