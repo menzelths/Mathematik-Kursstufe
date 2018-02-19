@@ -2,12 +2,13 @@
 <link rel='stylesheet' href='assets/css/style.css'>
 <link rel='stylesheet' href='assets/css/font-awesome.css'>
 <link rel='stylesheet' href='assets/css/katex.css'>
-<link rel='stylesheet' href='assets/css/asciidoctor.menz.css'>
+<link rel='stylesheet' href='assets/css/reveal.css'>
+<link rel='stylesheet' href='assets/css/serif.css'>
 <link rel='stylesheet' href='assets/css/prism.css'>
-<script src='assets/js/jquery.min.js'></script>
+<script src='assets/js/reveal.js'></script>
 <script>function nextLayer(evt){var a =evt.firstChild;var zaehler=0;for (var i=0;i<10;i++){var element=a.getElementById('layer_'+i);if (element!=null&&element.getAttribute('visibility')=='hidden'){element.setAttribute('visibility','visible');  break;}zaehler++;}if (zaehler==10){for (var i=0;i<10;i++){var element=a.getElementById('layer_'+i);if (element!=null) {element.setAttribute('visibility','hidden');  } } for (var i=0;i<10;i++){ var element=a.getElementById('layer_'+i);if (element!=null&&element.getAttribute('visibility')=='hidden'){ element.setAttribute('visibility','visible');break; }}}}</script><script>var saveAs=saveAs||function(view){"use strict";if(typeof navigator!=="undefined"&&/MSIE [1-9]\./.test(navigator.userAgent)){return}var doc=view.document,get_URL=function(){return view.URL||view.webkitURL||view},save_link=doc.createElementNS("http://www.w3.org/1999/xhtml","a"),can_use_save_link="download"in save_link,click=function(node){var event=new MouseEvent("click");node.dispatchEvent(event)},is_safari=/Version\/[\d\.]+.*Safari/.test(navigator.userAgent),webkit_req_fs=view.webkitRequestFileSystem,req_fs=view.requestFileSystem||webkit_req_fs||view.mozRequestFileSystem,throw_outside=function(ex){(view.setImmediate||view.setTimeout)(function(){throw ex},0)},force_saveable_type="application/octet-stream",fs_min_size=0,arbitrary_revoke_timeout=500,revoke=function(file){var revoker=function(){if(typeof file==="string"){get_URL().revokeObjectURL(file)}else{file.remove()}};if(view.chrome){revoker()}else{setTimeout(revoker,arbitrary_revoke_timeout)}},dispatch=function(filesaver,event_types,event){event_types=[].concat(event_types);var i=event_types.length;while(i--){var listener=filesaver["on"+event_types[i]];if(typeof listener==="function"){try{listener.call(filesaver,event||filesaver)}catch(ex){throw_outside(ex)}}}},auto_bom=function(blob){if(/^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(blob.type)){return new Blob(["\ufeff",blob],{type:blob.type})}return blob},FileSaver=function(blob,name,no_auto_bom){if(!no_auto_bom){blob=auto_bom(blob)}var filesaver=this,type=blob.type,blob_changed=false,object_url,target_view,dispatch_all=function(){dispatch(filesaver,"writestart progress write writeend".split(" "))},fs_error=function(){if(target_view&&is_safari&&typeof FileReader!=="undefined"){var reader=new FileReader;reader.onloadend=function(){var base64Data=reader.result;target_view.location.href="data:attachment/file"+base64Data.slice(base64Data.search(/[,;]/));filesaver.readyState=filesaver.DONE;dispatch_all()};reader.readAsDataURL(blob);filesaver.readyState=filesaver.INIT;return}if(blob_changed||!object_url){object_url=get_URL().createObjectURL(blob)}if(target_view){target_view.location.href=object_url}else{var new_tab=view.open(object_url,"_blank");if(new_tab==undefined&&is_safari){view.location.href=object_url}}filesaver.readyState=filesaver.DONE;dispatch_all();revoke(object_url)},abortable=function(func){return function(){if(filesaver.readyState!==filesaver.DONE){return func.apply(this,arguments)}}},create_if_not_found={create:true,exclusive:false},slice;filesaver.readyState=filesaver.INIT;if(!name){name="download"}if(can_use_save_link){object_url=get_URL().createObjectURL(blob);setTimeout(function(){save_link.href=object_url;save_link.download=name;click(save_link);dispatch_all();revoke(object_url);filesaver.readyState=filesaver.DONE});return}if(view.chrome&&type&&type!==force_saveable_type){slice=blob.slice||blob.webkitSlice;blob=slice.call(blob,0,blob.size,force_saveable_type);blob_changed=true}if(webkit_req_fs&&name!=="download"){name+=".download"}if(type===force_saveable_type||webkit_req_fs){target_view=view}if(!req_fs){fs_error();return}fs_min_size+=blob.size;req_fs(view.TEMPORARY,fs_min_size,abortable(function(fs){fs.root.getDirectory("saved",create_if_not_found,abortable(function(dir){var save=function(){dir.getFile(name,create_if_not_found,abortable(function(file){file.createWriter(abortable(function(writer){writer.onwriteend=function(event){target_view.location.href=file.toURL();filesaver.readyState=filesaver.DONE;dispatch(filesaver,"writeend",event);revoke(file)};writer.onerror=function(){var error=writer.error;if(error.code!==error.ABORT_ERR){fs_error()}};"writestart progress write abort".split(" ").forEach(function(event){writer["on"+event]=filesaver["on"+event]});writer.write(blob);filesaver.abort=function(){writer.abort();filesaver.readyState=filesaver.DONE};filesaver.readyState=filesaver.WRITING}),fs_error)}),fs_error)};dir.getFile(name,{create:false},abortable(function(file){file.remove();save()}),abortable(function(ex){if(ex.code===ex.NOT_FOUND_ERR){save()}else{fs_error()}}))}),fs_error)}),fs_error)},FS_proto=FileSaver.prototype,saveAs=function(blob,name,no_auto_bom){return new FileSaver(blob,name,no_auto_bom)};if(typeof navigator!=="undefined"&&navigator.msSaveOrOpenBlob){return function(blob,name,no_auto_bom){if(!no_auto_bom){blob=auto_bom(blob)}return navigator.msSaveOrOpenBlob(blob,name||"download")}}FS_proto.abort=function(){var filesaver=this;filesaver.readyState=filesaver.DONE;dispatch(filesaver,"abort")};FS_proto.readyState=FS_proto.INIT=0;FS_proto.WRITING=1;FS_proto.DONE=2;FS_proto.error=FS_proto.onwritestart=FS_proto.onprogress=FS_proto.onwrite=FS_proto.onabort=FS_proto.onerror=FS_proto.onwriteend=null;return saveAs}(typeof self!=="undefined"&&self||typeof window!=="undefined"&&window||this.content);if(typeof module!=="undefined"&&module.exports){module.exports.saveAs=saveAs}else if(typeof define!=="undefined"&&define!==null&&define.amd!=null){define([],function(){return saveAs})}
-</script>
-<script>    this.saveObject=function(){
+
+    this.saveObject=function(){
         var e = window.event.srcElement;
 
         var objectData=e.previousSibling.getAttribute('data');
@@ -34,15 +35,9 @@
         
     var blob = new Blob(byteArrays, {type: typ});
 			saveAs(blob, name);
-    }</script>
-<script>function zeigeHashTags(t){var s=!1
-t.toUpperCase().startsWith("TAGS_")&&(t=t.split("_")[1],""==t&&(s=!0),$(".tshareElement").each(function(){var e=$(this).attr("sb");(null==e||""==e)&&(e="@")
-for(var a=-1,r=0;r<t.length;r++)e.includes(t.charAt(r))&&(a=r,r=t.length)
-a>=0||1==s?($(this).attr("style","display:true;"),$(this).next().attr("style","display:true"),$(this).removeClass("versteckt"),$(this).next().removeClass("versteckt")):($(this).attr("style","display:none;"),$(this).next().attr("style","display:none"),$(this).removeClass("versteckt").addClass("versteckt"),$(this).next().removeClass("versteckt").addClass("versteckt"))}))}$(window).on("hashchange",function(){var t=location.hash.substring(1).toUpperCase()
-zeigeHashTags(t)}),$(document).ready(function(){var t=location.hash.substring(1).toUpperCase()
-""==t&&(t="tags_@",location.hash="tags_@"),zeigeHashTags(t)})
-</script>
-</head><body><div sb='P' ft='+'  style='display:none;' class='markdown tshareElement adoccss'><div class="markdownText"><div><div class="sect2">
+    }</script><style>html{font-size:23px;}
+.reveal{font-size:23px;}
+</style></head><body><div class='reveal'><div class='slides'><section><section><div sb='P' ft='+'  class='markdown tshareElement adoccss'><div class="markdownText"><div><div class="sect2">
 <h3 id="ref78081071">Rechtsseitiger Hypothesentest</h3>
 <div class="paragraph">
 <p>Von der Wirksamkeit eines Medikaments zur Bekämpfung einer Kinderkrankheit ist bekannt, dass 60% der betroffenen Kinder nach Einnahme des Medikaments bereits am darauffolgenden Tag wieder gesund sind.</p>
@@ -57,7 +52,7 @@ Von der Wirksamkeit eines Medikaments zur Bekämpfung einer Kinderkrankheit ist 
 Der Nachfolger des Medikaments soll sogar noch besser sein. Um dies zu überprüfen, wird das Medikament an einer Gruppe von 50 kranken Kindern getestet.
 
  </div></div></div>
-<div sb='P' ft='/'  style='display:none;' class='markdown tshareElement adoccss'><div class="markdownText"><div><table class="tableblock frame-none grid-all">
+<span class='fragment'><div sb='P' ft='/'  class='markdown tshareElement adoccss'><div class="markdownText"><div><table class="tableblock frame-none grid-all">
 <colgroup>
 <col>
 <col>
@@ -77,7 +72,7 @@ Der Nachfolger des Medikaments soll sogar noch besser sein. Um dies zu überprü
 
 
  </div></div></div>
-<div sb='P' ft='++'  style='display:none;' class='markdown tshareElement adoccss'><div class="markdownText"><div><div class="paragraph">
+</span></section><section><div sb='P' ft='++'  class='markdown tshareElement adoccss'><div class="markdownText"><div><div class="paragraph">
 <p><strong>Nullhypothese aufstellen</strong></p>
 </div>
 <div class="paragraph">
@@ -94,7 +89,7 @@ Somit definieren wir die Zufallsvariable $$X$$, die die Anzahl der nach einem Ta
 
 
 </div></div></div>
-<div sb='P' ft='/'  style='display:none;' class='markdown tshareElement adoccss'><div class="markdownText"><div><div class="paragraph">
+<span class='fragment'><div sb='P' ft='/'  class='markdown tshareElement adoccss'><div class="markdownText"><div><div class="paragraph">
 <p><strong>Gegenhypothese formulieren</strong></p>
 </div>
 <div class="paragraph">
@@ -103,7 +98,7 @@ Somit definieren wir die Zufallsvariable $$X$$, die die Anzahl der nach einem Ta
 
 $$H_1$$: Das neue Medikament ist *besser* als das alte Medikament, d. h. $$p&gt;0,6$$. 
 </div></div></div>
-<div sb='P' ft='++'  style='display:none;' class='markdown tshareElement adoccss'><div class="markdownText"><div><div class="paragraph">
+</span></section><section><div sb='P' ft='++'  class='markdown tshareElement adoccss'><div class="markdownText"><div><div class="paragraph">
 <p><strong>Annahmebereich und Ablehnungsbereich definieren</strong></p>
 </div>
 <div class="paragraph">
@@ -113,7 +108,7 @@ $$H_1$$: Das neue Medikament ist *besser* als das alte Medikament, d. h. $$p&gt;
 
 Die Nullhypothese wird *angenommen*, wenn die Anzahl der geheilten Patienten im *Annahmebereich* $$A=[0 ; a]$$ liegt.
 </div></div></div>
-<div sb='P' ft='/'  style='display:none;' class='markdown tshareElement adoccss'><div class="markdownText"><div><div class="paragraph">
+<span class='fragment'><div sb='P' ft='/'  class='markdown tshareElement adoccss'><div class="markdownText"><div><div class="paragraph">
 <p><span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68em;"></span><span class="strut bottom" style="height: 0.83em; vertical-align: -0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right: 0.08em;">H</span><span class="msupsub"><span class="vlist"><span style="top: 0.15em; margin-right: 0.05em; margin-left: -0.08em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span>​</span></span></span></span></span></span></span></span> wird zugunsten von <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>H</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">H_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68em;"></span><span class="strut bottom" style="height: 0.83em; vertical-align: -0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right: 0.08em;">H</span><span class="msupsub"><span class="vlist"><span style="top: 0.15em; margin-right: 0.05em; margin-left: -0.08em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span>​</span></span></span></span></span></span></span></span> <strong>abgelehnt</strong>, wenn deutlich mehr Patienten als bisher innerhalb eines Tages genesen. Dazu sollte die Anzahl der geheilten Personen zwischen a+1 und 50, im <strong>Ablehnungsbereich</strong>, liegen, also im Intervall <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>A</mi></mrow><mo>¯</mo></mover><mo>=</mo><mo>[</mo><mi>a</mi><mo>+</mo><mn>1</mn><mo separator="true">;</mo><mn>5</mn><mn>0</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">\bar {A}=[a+1; 50]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.82em;"></span><span class="strut bottom" style="height: 1.07em; vertical-align: -0.25em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top: 0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span><span class="mord textstyle cramped"><span class="mord mathit">A</span></span></span><span style="top: -0.25em; margin-left: 0.27em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span><span class="accent-body"><span>¯</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span>​</span></span></span><span class="mrel">=</span><span class="mopen">[</span><span class="mord mathit">a</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mpunct">;</span><span class="mord mathrm">5</span><span class="mord mathrm">0</span><span class="mclose">]</span></span></span></span></span>.</p>
 </div>
 <div class="paragraph">
@@ -125,7 +120,7 @@ Da der Ablehnungsbereich rechts liegt, liegt hier ein *rechtsseitiger Hypothesen
 
  
 </div></div></div>
-<div sb='P' ft='++'  style='display:none;' class='markdown tshareElement adoccss'><div class="markdownText"><div><div class="paragraph">
+</span></section><section><div sb='P' ft='++'  class='markdown tshareElement adoccss'><div class="markdownText"><div><div class="paragraph">
 <p><strong>Annahmebereich berechnen</strong></p>
 </div>
 <div class="paragraph">
@@ -163,12 +158,12 @@ P(X \le a) \ge  0,95
 $$
 
 </div></div></div>
-<div sb='P' ft='/'  style='display:none;' class='markdown tshareElement adoccss'><div class="markdownText"><div><div class="paragraph">
+<span class='fragment'><div sb='P' ft='/'  class='markdown tshareElement adoccss'><div class="markdownText"><div><div class="paragraph">
 <p>Das <strong>kleinste a</strong>, das diese Bedingung erfüllt ist <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo>=</mo><mn>3</mn><mn>6</mn></mrow><annotation encoding="application/x-tex">a=36</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.64em;"></span><span class="strut bottom" style="height: 0.64em; vertical-align: 0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mrel">=</span><span class="mord mathrm">3</span><span class="mord mathrm">6</span></span></span></span></span>. Der <strong>Annahmebereich</strong> ist somit <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>=</mo><mo>[</mo><mn>0</mn><mo separator="true">;</mo><mn>3</mn><mn>6</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">A=[0;36]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.75em;"></span><span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mrel">=</span><span class="mopen">[</span><span class="mord mathrm">0</span><span class="mpunct">;</span><span class="mord mathrm">3</span><span class="mord mathrm">6</span><span class="mclose">]</span></span></span></span></span>, der <strong>Ablehnungsbereich</strong> <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>A</mi></mrow><mo>¯</mo></mover><mo>=</mo><mo>[</mo><mn>3</mn><mn>7</mn><mo separator="true">;</mo><mn>5</mn><mn>0</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">\bar{A}=[37;50]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.82em;"></span><span class="strut bottom" style="height: 1.07em; vertical-align: -0.25em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top: 0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span><span class="mord textstyle cramped"><span class="mord mathit">A</span></span></span><span style="top: -0.25em; margin-left: 0.27em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span><span class="accent-body"><span>¯</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size: 0em;">​</span></span>​</span></span></span><span class="mrel">=</span><span class="mopen">[</span><span class="mord mathrm">3</span><span class="mord mathrm">7</span><span class="mpunct">;</span><span class="mord mathrm">5</span><span class="mord mathrm">0</span><span class="mclose">]</span></span></span></span></span></p>
 </div></div><div class="originaltext" hidden="">Das *kleinste a*, das diese Bedingung erfüllt ist $$a=36$$. Der *Annahmebereich* ist somit $$A=[0;36]$$, der *Ablehnungsbereich* $$\bar{A}=[37;50]$$
 
 </div></div></div>
-<div sb='P' ft='++'  style='display:none;' class='markdown tshareElement adoccss'><div class="markdownText"><div><div class="paragraph">
+</span></section><section><div sb='P' ft='++'  class='markdown tshareElement adoccss'><div class="markdownText"><div><div class="paragraph">
 <p><strong>Antwort formulieren</strong></p>
 </div>
 <div class="paragraph">
@@ -179,4 +174,4 @@ Sollten nach der Einnahme des Medikaments mehr als 36 Kinder am nächsten Tag ge
 
 
 </div></div></div>
-</body></html>
+</section></section></div></div><script>Reveal.initialize();</script></body></html>
